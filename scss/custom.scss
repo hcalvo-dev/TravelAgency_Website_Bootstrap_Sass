@@ -1,0 +1,144 @@
+/* ESTILOS DEL HEADER */
+
+/* Estilo de los links del nav */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 95%;
+    background-color: rgb(69, 109, 143);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+/* Estilo del enlace activo */
+.nav-link.active::after {
+    opacity: 1;
+}
+
+/* Estilo del menú bocadillo */
+
+.navbar {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+// .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+//     width: 1.4em;
+//     height: 1.4em;
+//     background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="black" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 4L26 26M26 4L4 26" /%3e%3c/svg%3e');
+// }
+
+#menu.show .nav-link::after {
+    content: "";
+    width: 100% !important;
+}
+
+#menu.show .offcanvas-body {
+    flex-direction: column !important;
+
+}
+
+/* Barra de separación */
+#menu.show hr {
+    display: block !important;
+    width: 100%;
+}
+
+/* Estilo enlace idiomas */
+.dropdown-item:active {
+    background-color: #f8f9fa !important; /* Color de fondo más claro */
+}
+
+.dropdown-item:hover {
+    background-color: #e2e6ea !important; /* Fondo claro al pasar el ratón */
+}
+
+.dropdown-item:focus, .dropdown-item:active {
+    background-color: #e2e6ea !important; /* Fondo claro */
+}
+
+#menu.show .idioma{
+    margin: 8px 0 0 !important;
+}
+
+
+/* Estilo carrito de la compra */
+
+.bi-cart2::before {
+    width: 20px;
+    height: 20px;
+}
+
+#menu.show .cesta{
+    margin: 0 0 8px !important;
+}
+
+/* Estilo para el formulario de búsqueda */
+.form-control {
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 25%;
+
+}
+
+#menu.show .search-form {
+    width: 100% !important;
+}
+
+.logo:focus, .btn:focus, .dropdown-item:focus {
+    outline: 2px solid rgba(0, 123, 255, 0.5) !important; 
+}
+
+/* Ajuste de la altura para hacerlo más compacto */
+.form-control-sm {
+    height: 33px;
+}
+
+/* Ajuste del tamaño del icono */
+.btn i {
+    font-size: 1.3rem;
+}
+
+/* Estilo del login */
+#menu.show .login{
+    width: 100%;
+}
+
+/* FIN HEADER */
+
+/* Cambia el fondo de los controles a negro */
+.custom-carousel-icon {
+    background-color: black !important;
+
+}
+
+@import '../bootstrap/scss/bootstrap.scss';

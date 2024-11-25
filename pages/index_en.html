@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Destinos</title>
+    <link rel="stylesheet" href="../styles/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../resources/logos/logo_web.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- ENCABEZADO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <header class="p-3 bg-light ">
+        <div class="container-fluid">
+
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Logo -->
+                <div class="col-2 text-center">
+                    <a href="index_en.html" class="d-flex align-items-center text-black text-decoration-none" tabindex="0">
+                        <img src="../resources/logos/logo_web.png" alt="Logo" width="40" height="40" class="me-2">
+                        <span class="fs-5 fw-bold">Travel</span>
+                    </a>
+                </div>
+
+                <!-- Botón del menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navegación principal -->
+                <div class="offcanvas offcanvas-end" id="menu" tabindex="-1">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex align-items-center">
+                        <nav class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
+                                <li class="nav-item"><a href="#" class="nav-link active px-2 text-black">Home</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Destinations</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Guides</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Inspire me</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Contact</a></li>
+                            </ul>
+                        </nav>
+
+                         <!-- Barra de separación -->
+                         <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none"/>
+
+                        <!-- Buscador -->
+                        <form class="d-flex search-form" >
+                            <input type="search" class="form-control search-input" placeholder="Search..."
+                                aria-label="Search">
+                            <button class="btn search-btn" type="submit">
+                                <i class="bi bi-search" ></i>
+                            </button>
+                        </form>
+
+                        <!-- Selector de idiomas -->
+                        <div class="idioma dropdown">
+                            <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
+                                id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px" height="25px"
+                                    class="me-2" /> En
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">
+                                    <a class="text-decoration-none text-black" href="index_es.html"><img src="../resources/img/spain.png" alt="Bandera de España" width="25px"
+                                        height="25px" class="me-2" /> Es</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Carrito de la compra -->
+                        <button type="button" class="cesta btn me-2"><i class="bi bi-cart2"></i></button>
+
+                        <!-- Login -->
+                        <button type="button" class="login btn btn-primary btn-sm">Login</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- CAROUSEL -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/10106.jpg" class="d-block mx-auto w-50" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/4385.jpg" class="d-block mx-auto w-50" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/4429.jpg" class="d-block mx-auto w-50" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
