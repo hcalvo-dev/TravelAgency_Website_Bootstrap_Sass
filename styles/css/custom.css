@@ -4,7 +4,7 @@ body {
   font-family: "Helvetica" !important;
 }
 
-/* ESTILOS DEL CONTAINER-FLUID */
+/* ESTILOS DEL CONTAINER-FLUID (Modif Boostrap)*/
 .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
   margin: 0 !important;
   padding: 0 !important;
@@ -37,9 +37,21 @@ body {
   opacity: 1;
 }
 
-/* Estilo del menú bocadillo */
+/* Estilo del menú bocadillo (Modif Boostrap) */
 .navbar {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar {
+  transition: background-color 0.5s ease !important;
+}
+
+.navbar.scrolled {
+  background-color: #f8f9fa !important;
+}
+
+.bg-semitransparent {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-toggler {
@@ -65,28 +77,25 @@ body {
   width: 100%;
 }
 
-/* Estilo enlace idiomas */
+/* Estilo enlace idiomas (Modif Boostrap) */
 .dropdown-item:active {
   background-color: #f8f9fa !important;
-  /* Color de fondo más claro */
 }
 
 .dropdown-item:hover {
   background-color: #e2e6ea !important;
-  /* Fondo claro al pasar el ratón */
 }
 
 .dropdown-item:focus,
 .dropdown-item:active {
   background-color: #e2e6ea !important;
-  /* Fondo claro */
 }
 
 #menu.show .idioma {
   margin: 8px 0 0 !important;
 }
 
-/* Estilo carrito de la compra */
+/* Estilo carrito de la compra (Modif Boostrap)*/
 .bi-cart2::before {
   width: 20px;
   height: 20px;
@@ -96,7 +105,7 @@ body {
   margin: 0 0 8px !important;
 }
 
-/* Estilo para el formulario de búsqueda */
+/* Estilo para el formulario de búsqueda (Modif Boostrap) */
 .form-control {
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
@@ -145,18 +154,6 @@ body {
      object-fit: cover !important;
 }
 
-.navbar {
-  transition: background-color 0.5s ease !important;
-}
-
-.navbar.scrolled {
-  background-color: #f8f9fa !important;
-}
-
-.bg-semitransparent {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
 /* Estilo letras retando encima del eslogan */
 .styled-title {
   font-size: 4rem;
@@ -183,16 +180,22 @@ body {
   background-color: black !important;
 }
 
-/* ESTILO DEL CAROUSEL */
+/* ESTILO DEL CAROUSEL (Modif Boostrap) */
 .img-wrapper {
   max-width: 100% !important;
-  height: 65vw !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
 .carousel-img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
   max-width: 100% !important;
   max-height: 100% !important;
 }
@@ -207,7 +210,9 @@ body {
     flex: 0 0 33.3333333333% !important;
   }
   .img-wrapper {
-    height: 23vw !important;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (max-width: 759px) {
@@ -219,10 +224,10 @@ body {
   padding: 1em !important;
 }
 
-.card {
-  height: 500px !important;
+.card-carousel {
+  height: 600px !important;
   margin: 0 0.5em !important;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18) !important;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none !important;
 }
 
@@ -236,6 +241,96 @@ body {
   transform: translateY(-50%) !important;
 }
 
+/* Sombra de los textos */
+.text-shadow-kenia {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  /* Sombra más pronunciada y difusa */
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8), -2px -2px 8px rgba(0, 0, 0, 0.5), 0 12px 20px rgba(0, 0, 0, 0.6), 3px 3px 10px rgba(0, 0, 0, 0.7);
+  /* Sombra adicional para dar más profundidad */
+}
+
+/* Estilo Sección Hoteles*/
+.card-hotel {
+  width: 30em;
+  height: 300px !important;
+  margin: 0.5em 0.5em !important;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none !important;
+}
+
+@media screen and (max-width: 759px) {
+  .card-hotel {
+    width: 90% !important;
+    box-shadow: none !important;
+    margin: 0.5em 0 !important;
+  }
+  .enlaces-hotel {
+    width: 50%;
+  }
+  .enlaces-inspirame {
+    min-width: 150px;
+  }
+}
+/* Estilo imagen inspirame */
+.card-inspirame {
+  width: 100%;
+  height: 400px !important;
+  border: none !important;
+}
+
+.enlaces-inspirame {
+  width: 25%;
+}
+
+/* Estilo imagen recomendacion */
+.recom-img-hover {
+  transition: opacity 0.3s ease; /* Transición suave */
+  opacity: 0.6; /* Imagen oscura */
+}
+
+.recom-img-hover:hover {
+  opacity: 1; /* Imagen a su estado normal cuando el ratón pasa */
+}
+
+/* Estilo del footer*/
+footer {
+  background-color: rgb(39, 39, 39);
+}
+
+.link-footer {
+  position: relative;
+}
+
+.link-footer::after {
+  content: "";
+  opacity: 0;
+  transition: all 0.2s;
+  height: 2px;
+  width: 95%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.link-footer:hover::after {
+  opacity: 1;
+}
+
+/* Estilo del enlace activo */
+.link-footer.active::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 759px) {
+  .separador-footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
