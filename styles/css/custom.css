@@ -37,6 +37,20 @@ body {
   opacity: 1;
 }
 
+.li-dropdown {
+  display: flex;
+  align-items: center !important;
+  align-self: center !important;
+}
+
+.link-dropdown {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+
 /* Estilo del menú bocadillo (Modif Boostrap) */
 .navbar {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
@@ -287,12 +301,15 @@ body {
 
 /* Estilo imagen recomendacion */
 .recom-img-hover {
-  transition: opacity 0.3s ease; /* Transición suave */
-  opacity: 0.6; /* Imagen oscura */
+  transition: opacity 0.3s ease;
+  /* Transición suave */
+  opacity: 0.6;
+  /* Imagen oscura */
 }
 
 .recom-img-hover:hover {
-  opacity: 1; /* Imagen a su estado normal cuando el ratón pasa */
+  opacity: 1;
+  /* Imagen a su estado normal cuando el ratón pasa */
 }
 
 /* Estilo del footer*/
