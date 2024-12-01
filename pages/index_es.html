@@ -13,11 +13,16 @@
 
 <body>
 
+    <!-- Botón fijo con icono hacia arriba -->
+    <a href="#header" class="btn btn-primary position-fixed bottom-0 end-0 m-3 z-1" role="button">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- ENCABEZADO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <header class="px-4" role="banner">
+    <header id="header" class="px-4" role="banner">
         <div class="container-fluid">
 
             <!-- Barra de navegación -->
@@ -50,15 +55,15 @@
                     <div class="offcanvas-body d-flex align-items-center">
                         <nav class="navbar-nav me-auto mb-2 mb-lg-0">
                             <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="index_es.html" class="nav-link active px-2 text-black"
                                         aria-label="Ir a la página de inicio">Inicio</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="es/destinos.html" class="nav-link px-2 text-black"
                                         aria-label="Ver destinos">Destinos</a>
                                 </li>
-                                <li class="li-dropdown nav-item dropdown d-flex flex-column">
+                                <li class="li-dropdown me-1 nav-item dropdown d-flex flex-column">
                                     <a class="link-dropdown dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false"
                                         aria-label="Abrir el menú de colecciones">
@@ -75,11 +80,11 @@
                                                 aria-label="Ver colecciones de escalas">Escalas</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="es/inspirame.html" class="nav-link px-2 text-black"
                                         aria-label="Ver inspiraciones">Inspirame</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="es/contacto.html" class="nav-link px-2 text-black"
                                         aria-label="Ir a la página de contacto">Contacto</a>
                                 </li>
@@ -119,34 +124,28 @@
 
                         <!-- Carrito de la compra -->
                         <button type="button" class="cesta btn me-2"
-                            aria-label="Ver los productos en el carrito de la compra">
-                            <i class="bi bi-cart2" aria-hidden="true"></i>
+                            aria-label="Ver los productos en el carrito de la compra"><a
+                                class="text-decoration-none text-black" href="es/carrito_es.html"
+                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
                         </button>
 
                         <!-- Login -->
                         <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Iniciar sesión">Login</button>
+                            aria-label="Iniciar sesión"><a
+                            class="text-decoration-none text-white" href="es/login_es.html"
+                            aria-label="Ir a login">Login</a></button>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main>
-        <div class="container-fluid p-0 position-relative">
+        <div class="container-fluid p-0 position-relative z-2">
             <div class="content-center text-center">
-                <!-- <svg viewBox="0 0 130 130" class="d-inline-block rotating-circle">
-                <path d="M 65,15 A 50,50 0 1,1 64.99,15" id="circle"></path>
-                <text fill="white" font-size="8" font-family="Helvetica" textLength="300px">
-                    <textPath xlink:href="#circle" startOffset="50%" text-anchor="middle" dominant-baseline="middle">
-                        "18°ANIVERSARIO - 18°ANIVERSARIO - "
-                    </textPath>
-                </text>
-            </svg> -->
                 <header>
                     <h1 class="styled-title">VIAJES EXÓTICOS</h1>
                     <p class="styled-paragraph">Encuentra las vacaciones perfectas.<br />Viajes a medida y en
@@ -200,7 +199,8 @@
                     <div class="carousel-item active">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/sri_lanka.png" class="carousel-img" alt="Sri Lanka, paisaje tropical con playas y montañas">
+                                <img src="../resources/img/sri_lanka.png" class="carousel-img"
+                                    alt="Sri Lanka, paisaje tropical con playas y montañas">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>8 noches - 9 días</small></p>
@@ -209,7 +209,8 @@
                                     especialmente diseñado...</p>
                                 <p class="styled-paragraph text-center text-shadow ">Desde 2.280€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#lanka" target="_self" aria-label="Ver más sobre Vacaciones de Lujo en Sri Lanka">
+                                    href="es/destinos.html#sri_lanka" target="_self"
+                                    aria-label="Ver más sobre Vacaciones de Lujo en Sri Lanka">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -218,7 +219,8 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/arab-dubai.png" class="carousel-img" alt="Vista del atardecer de Dubai con un rascacielos">
+                                <img src="../resources/img/arab-dubai.png" class="carousel-img"
+                                    alt="Vista del atardecer de Dubai con un rascacielos">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>10 noches - 11 días</small></p>
@@ -228,7 +230,8 @@
                                     explorar...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 3.460€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#dubai" target="_self" aria-label="Ver más sobre Dubái & Seuchelles">
+                                    href="es/destinos.html#dubai" target="_self"
+                                    aria-label="Ver más sobre Dubái & Seuchelles">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -238,7 +241,8 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/viaje-india.png" class="carousel-img" alt="Monje de una tribu India">
+                                <img src="../resources/img/viaje-india.png" class="carousel-img"
+                                    alt="Monje de una tribu India">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>8 noches - 9 días</small></p>
@@ -247,7 +251,8 @@
                                     conocer...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 2.560€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#udaipur" target="_self" aria-label="Ver más sobre Golden Triangle & Udaipur">
+                                    href="es/destinos.html#udaipur" target="_self"
+                                    aria-label="Ver más sobre Golden Triangle & Udaipur">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -256,7 +261,8 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/mara-safari.png" class="carousel-img" alt="Kenia, habitación de Hotel con vistas a la montaña">
+                                <img src="../resources/img/mara-safari.png" class="carousel-img"
+                                    alt="Kenia, habitación de Hotel con vistas a la montaña">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow-kenia"><small>7 noches - 8 días</small></p>
@@ -267,7 +273,8 @@
                                     quien busca...</p>
                                 <p class="styled-paragraph text-center text-shadow-kenia">Desde 4.040€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#kenia" target="_self"  aria-label="Ver más sobre Kenia Luxury Safari">
+                                    href="es/destinos.html#construccion" target="_self"
+                                    aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -276,7 +283,8 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/tanzania.png" class="carousel-img" alt="Tanzania, grandes parques naturales y fauna africana">
+                                <img src="../resources/img/tanzania.png" class="carousel-img"
+                                    alt="Tanzania, grandes parques naturales y fauna africana">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>6 noches - 7 días</small></p>
@@ -285,7 +293,8 @@
                                 </p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 4.830€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#tanzania" target="_self" aria-label="Ver más sobre Grandes Parques de Tanzania">
+                                    href="es/destinos.html#construccion" target="_self"
+                                    aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -294,9 +303,10 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/ephelia.png" class="carousel-img"  alt="Seychelles, playa tropical en el resort Constance Ephelia"">
+                                <img src="../resources/img/ephelia.png" class="carousel-img"
+                                    alt="Seychelles, playa tropical en el resort Constance Ephelia"">
                             </div>
-                            <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
+                            <div class=" card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>6 noches - 7 días</small></p>
                                 <h5 class="card-title fs-2 text-shadow">Constancia Ephelia Seychelles</h5>
                                 <p class="styled-paragraph fs-5 text-shadow">Vive todo lo mejor que puede ofrecerte un
@@ -304,7 +314,8 @@
                                     a...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 2.730€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#ephelia" target="_self" aria-label="Ver más sobre Constancia Ephelia Seychelles">
+                                    href="es/destinos.html#construccion" target="_self"
+                                    aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -313,7 +324,8 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="../resources/img/viaje-polinesia.png" class="carousel-img" alt="Polinesia Francesa, Tahiti, Moorea y Bora Bora, vistas de playas paradisíacas">
+                                <img src="../resources/img/viaje-polinesia.png" class="carousel-img"
+                                    alt="Polinesia Francesa, Tahiti, Moorea y Bora Bora, vistas de playas paradisíacas">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>9 noches - 10 días</small></p>
@@ -323,7 +335,8 @@
                                     Polinesia...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 6.595€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#tahiti" target="_self" aria-label="Ver más sobre Tahiti, Moore & Bora Bora">
+                                    href="es/destinos.html#construccion" target="_self"
+                                    aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -370,7 +383,8 @@
             <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
                 <div class="card card-hotel">
                     <div class="img-wrapper">
-                        <img src="../resources/img/img_contact.png" class="carousel-img" alt="Desierto con grandes dunas">
+                        <img src="../resources/img/img_contact.png" class="carousel-img"
+                            alt="Desierto con grandes dunas">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h5 class="card-title text-white fs-2 text-shadow text-center">Contáctanos</h5>
@@ -395,7 +409,8 @@
                 </div>
                 <div class="card card-hotel">
                     <div class="img-wrapper">
-                        <img src="../resources/img/img_inspirate.png" class="carousel-img" alt="Campo de flores rojas con una persona recogiendolas">
+                        <img src="../resources/img/img_inspirate.png" class="carousel-img"
+                            alt="Campo de flores rojas con una persona recogiendolas">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h5 class="card-title fs-2 text-white text-shadow text-center ">¿Hablamos?</h5>
@@ -429,12 +444,14 @@
             <div class="container-fluid">
                 <div class="card card-inspirame">
                     <div class="img-wrapper">
-                        <img src="../resources/img/globo.png" class="carousel-img" alt="Ilustración de un globo aerostático sobre un paisaje, representando la idea de viajar y explorar nuevos destinos">
+                        <img src="../resources/img/globo.png" class="carousel-img"
+                            alt="Ilustración de un globo aerostático sobre un paisaje, representando la idea de viajar y explorar nuevos destinos">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center ">
                         <h5 class="card-title text-white fs-2 text-shadow text-center">¿Aún no sabes dónde viajar?</h5>
                         <a class="enlaces-inspirame btn btn-primary mt-5 fw-semibold d-flex align-self-center"
-                            href="es/inspirame.html" target="_self" aria-label="Ir a la página para obtener inspiración sobre destinos de viaje">
+                            href="es/inspirame.html" target="_self"
+                            aria-label="Ir a la página para obtener inspiración sobre destinos de viaje">
                             <p class="mb-0 w-100 text-center">Inspirame</p>
                         </a>
                     </div>
@@ -454,27 +471,31 @@
             <div class="container-fluid d-flex justify-content-around flex-wrap">
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
                     <div class=" mx-5 ">
-                        <img src="../resources/logos/logo-maldives-sunny-side1.png" class="w-75 h-100"  alt="Logo de Maldives Sunny Side, operador turístico de Maldivas">
+                        <img src="../resources/logos/logo-maldives-sunny-side1.png" class="w-75 h-100"
+                            alt="Logo de Maldives Sunny Side, operador turístico de Maldivas">
                     </div>
                     <div class=" mx-5">
                         <img src="../resources/logos/logo-certified-tahiti-specialist1.png" class="w-75 h-100"
-                        alt="Logo de Certified Tahiti Specialist, especialista en viajes a Tahití">
+                            alt="Logo de Certified Tahiti Specialist, especialista en viajes a Tahití">
                     </div>
                     <div class=" mx-5">
-                        <img src="../resources/logos/logo-visit-qatar1.png" class="w-75 h-100"  alt="Logo de Visit Qatar, autoridad de turismo de Qatar">
+                        <img src="../resources/logos/logo-visit-qatar1.png" class="w-75 h-100"
+                            alt="Logo de Visit Qatar, autoridad de turismo de Qatar">
                     </div>
                 </div>
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
 
                     <div class=" mx-5">
-                        <img src="../resources/logos/logo-seychelles-tourism1.png" class="w-75 h-100" alt="Logo de Seychelles Tourism, organización de turismo de Seychelles">
+                        <img src="../resources/logos/logo-seychelles-tourism1.png" class="w-75 h-100"
+                            alt="Logo de Seychelles Tourism, organización de turismo de Seychelles">
                     </div>
                     <div class=" mx-5">
                         <img src="../resources/logos/logo-oficina-turismo-japon-oficial.png" class="w-75 h-100"
-                        alt="Logo de la Oficina de Turismo de Japón, entidad oficial de turismo japonés">
+                            alt="Logo de la Oficina de Turismo de Japón, entidad oficial de turismo japonés">
                     </div>
                     <div class=" mx-5">
-                        <img src="../resources/logos/logo-tripadvisor-copia1.png" class="w-75 h-100" alt="Logo de TripAdvisor, plataforma de opiniones y recomendaciones de viajes">
+                        <img src="../resources/logos/logo-tripadvisor-copia1.png" class="w-75 h-100"
+                            alt="Logo de TripAdvisor, plataforma de opiniones y recomendaciones de viajes">
                     </div>
                 </div>
             </div>
@@ -537,10 +558,10 @@
                                     class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
                                     legal</a></li>
                             <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none aria-label="Aviso legal"">Condiciones
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Condiciones
                                     Generales</a></li>
                             <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none aria-label="Aviso legal"">Política de
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
                                     Privacidad</a></li>
                             <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
                                     class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
@@ -553,17 +574,18 @@
                     <!-- Redes sociales -->
                     <div class="col-4">
                         <span class="text-white">Síguenos:</span>
-                        <a href="https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/" class="text-white ms-2" target="_blank" aria-label="Instagram"><i
-                                class="bi bi-instagram"></i></a>
+                        <a href="https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="https://www.tiktok.com/" class="text-white ms-2" target="_blank" aria-label="TikTok"><i
                                 class="bi bi-tiktok"></i></a>
-                        <a href="https://www.linkedin.com/" class="text-white ms-2" target="_blank" aria-label="LinkedIn"><i
-                                class="bi bi-linkedin"></i></a>
-                        <a href="https://www.pinterest.com/" class="text-white ms-2" target="_blank" aria-label="Pinterest"><i
-                                class="bi bi-pinterest"></i></a>
-                        <a href="https://www.youtube.com/" class="text-white ms-2" target="_blank" aria-label="YouTube"><i
-                                class="bi bi-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
 
                     </div>
                 </div>

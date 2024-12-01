@@ -6200,7 +6200,7 @@ textarea.form-control-lg {
   --bs-spinner-height: 2rem;
   --bs-spinner-vertical-align: -0.125em;
   --bs-spinner-border-width: 0.25em;
-  --bs-spinner-animation-speed: 0.75s;
+  --bs-spinner-animation-speed: 2s;
   --bs-spinner-animation-name: spinner-border;
   border: var(--bs-spinner-border-width) solid currentcolor;
   border-right-color: transparent;
@@ -6225,7 +6225,7 @@ textarea.form-control-lg {
   --bs-spinner-width: 2rem;
   --bs-spinner-height: 2rem;
   --bs-spinner-vertical-align: -0.125em;
-  --bs-spinner-animation-speed: 0.75s;
+  --bs-spinner-animation-speed: 2s;
   --bs-spinner-animation-name: spinner-grow;
   background-color: currentcolor;
   opacity: 0;
@@ -6239,7 +6239,7 @@ textarea.form-control-lg {
 @media (prefers-reduced-motion: reduce) {
   .spinner-border,
   .spinner-grow {
-    --bs-spinner-animation-speed: 1.5s;
+    --bs-spinner-animation-speed: 4s;
   }
 }
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {

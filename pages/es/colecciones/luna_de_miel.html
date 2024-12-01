@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTravel</title>
+    <link rel="stylesheet" href="../../../styles/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../../../resources/logos/logo_web.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Botón fijo con icono hacia arriba -->
+    <a href="../#header" aria-label="Sube al header" class="btn btn-primary position-fixed bottom-0 end-0 m-3" role="button">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- ENCABEZADO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <header id="header" class="px-4" role="banner">
+        <div class="container-fluid">
+
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
+
+                <!-- Logo -->
+                <div class="col-2 text-center">
+                    <a href="../../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                        tabindex="0" aria-label="Ir a la página principal">
+                        <img src="../../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
+                            class="me-2" />
+                        <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
+                    </a>
+                </div>
+
+                <!-- Botón del menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                    aria-controls="offcanvasNavbar" aria-label="Abrir el menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navegación principal -->
+                <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar menú"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex align-items-center">
+                        <nav class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
+                                <li class="nav-item me-1">
+                                    <a href="../../index_es.html" class="nav-link px-2 text-black"
+                                        aria-label="Ir a la página de inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../../es/destinos.html" class="nav-link px-2 text-black"
+                                        aria-label="Ver destinos">Destinos</a>
+                                </li>
+                                <li class="li-dropdown active me-1 nav-item dropdown d-flex flex-column">
+                                    <a class="link-dropdown dropdown-toggle" href="../#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false"
+                                        aria-label="Abrir el menú de colecciones">
+                                        Colecciones
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="coleccionesMenu">
+                                        <li><a class="dropdown-item active" href="../../es/colecciones/luna_de_miel.html"
+                                                aria-label="Ver colecciones de luna de miel">Luna de
+                                                miel</a></li>
+                                        <li><a class="dropdown-item" href="../../es/colecciones/viajes_premium.html"
+                                                aria-label="Ver colecciones de viajes premium">Viajes
+                                                premium</a></li>
+                                        <li><a class="dropdown-item" href="../../es/colecciones/escalas.html"
+                                                aria-label="Ver colecciones de escalas">Escalas</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../../es/inspirame.html" class="nav-link px-2 text-black"
+                                        aria-label="Ver inspiraciones">Inspirame</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../../es/contacto.html" class="nav-link px-2 text-black"
+                                        aria-label="Ir a la página de contacto">Contacto</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Barra de separación -->
+                        <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
+
+                        <!-- Buscador -->
+                        <form class="d-flex search-form" role="search">
+                            <input type="search" class="form-control search-input" placeholder="Buscar..."
+                                aria-label="Buscar en el sitio">
+                            <button class="btn search-btn" type="submit" aria-label="Buscar">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+
+                        <!-- Selector de idiomas -->
+                        <div class="idioma dropdown">
+                            <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
+                                id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                aria-label="Seleccionar idioma">
+                                <img src="../../../resources/img/spain.png" alt="Bandera de España" width="25px"
+                                    height="25px" class="me-2" /> Es
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">
+                                    <a class="text-decoration-none text-black" href="../../en/destinations.html"
+                                        aria-label="Cambiar a inglés">
+                                        <img src="../../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
+                                            height="25px" class="me-2" /> En
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Carrito de la compra -->
+                        <button type="button" class="cesta btn me-2"
+                            aria-label="Ver los productos en el carrito de la compra">
+                            <i class="bi bi-cart2" aria-hidden="true"></i>
+                        </button>
+
+                        <!-- Login -->
+                        <button type="button" class="login btn btn-primary btn-sm" id="login"
+                            aria-label="Iniciar sesión">Login</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- CONTENIDO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <main>
+
+        <div class="container-fluid p-0 position-relative">
+            <div class="content-center text-center w-100">
+                <header>
+                    <h1 class="styled-title">Una luna de miel de ensueño </h1>
+                    <p class="styled-paragraph">El viaje de novios con que siempre habéis soñado</p>
+                </header>
+            </div>
+            <img src="../../../resources/img/hp-slider-san-valentin-viaje-maldivas.png" class="w-100"
+                aria-label="Dos personas celebrando su luna de miel en las maldivas"></img>
+        </div>
+
+        <!-- Sección Sri Lanka -->
+        <section id="sri_lanka" class="container-fluid my-element offset">
+            <div class="container-fluid">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Viaje a Sri
+                                Lanka</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">Añade las <span
+                        class="text-primary"><strong>excursiones</strong></span> y <span
+                        class="text-primary"><strong>experiencias</strong></span> que quieras y elige los <span
+                        class="text-primary"><strong>hoteles</strong></span> en cada zona que visites.</p>
+
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">Por eso, organizamos todos nuestros tours con
+                    disposición de
+                    <span class="text-primary"><strong>vehículos climatizados y un chófer privado</strong></span>,
+                </p>
+                <p class="fs-6 mb-5 mx-2 text-center text-black">con la mayor comodidad.</p>
+            </div>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
+                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-around">
+                    <div
+                        class="container-fluid d-flex justify-content-center align-items-center flex-column w-100 w-lg-50 mb-4 mb-lg-0">
+                        <header class="d-flex align-items-center justify-content-between py-3 w-100">
+                            <h2 class="fs-4 my-0 mx-2 text-center text-black w-100"><span
+                                    class="text-primary"><strong>Viajes a medida</strong></span></h2>
+                        </header>
+                        <div class="position-relative w-75 d-flex align-items-center justify-content-center mx-5 mb-4">
+                            <!-- Línea horizontal -->
+                            <div class="border-top border-primary w-100"></div>
+                            <!-- Rombo en el centro -->
+                            <div class="rombo position-absolute bg-primary"></div>
+                        </div>
+                        <p class="fs-6 my-0 mx-3 text-center text-black">Sri Lanka es una isla situada en el <span
+                                class="text-primary"><strong>Océano Índico</strong></span>, al sureste de la India, con
+                            forma de lágrima.</p>
+                        <p class="fs-6 mt-3 d-none d-lg-block mb-0 mx-3 text-center text-black">Es famosa por su <span
+                                class="text-primary"><strong>clima tropical</strong></span>, su hospitalidad, un rico
+                            <span class="text-primary"><strong>patrimonio cultural</strong></span>,
+                        </p>
+                        <p class="fs-6 my-0 d-none d-lg-block mx-3 mb-0 text-center text-black">, sus <span
+                                class="text-primary"><strong>playas</strong></span> de palmeras y aguas cálidas y, muy
+                            especialmente,<br /> por su <span class="text-primary"><strong>exuberante
+                                    naturaleza</strong></span>.</p>
+                        <p class="fs-6 mb-3 mt-3   text-center text-black">
+                            <span class="text-primary"><strong> Precio : 2.280€ </strong></span>
+                        </p>
+
+                        <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
+                            href="../destinos.html#sri_lanka" target="_self"
+                            aria-label="Añadir al carrito plan sri lanka">
+                            <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                        </a>
+                    </div>
+
+                    <!-- Estilo de la imagen -->
+                    <div class="img-destinos shadow p-2 bg-body w-sm-50 rounded-5 mx-lg-3 h-100" style="width: 100%; ">
+                        <img src="../../../resources/img/elephants-uduwalale-sri-lanka.png"
+                            class="img-fluid rounded-5 h-100 w-100 object-fit-cover" alt="Elefantes cruzando por un rio de Sri Lanka">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Dubái -->
+        <section id="dubai" class="container-fluid my-element offset">
+            <div class="container-fluid">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Viaje a
+                                Dubái</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">Alojate en el maravilloso <span
+                        class="text-primary"><strong>Pullman Dubai Downtown 5*</strong></span> con una excelente
+                    ubicación en la <span class="text-primary"><strong>Business Bay de Dubái muy cerca del iconico Burj
+                            Khalifa.</strong></span></p>
+
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">Disfruta de emocionantes
+                    <span class="text-primary"><strong>excursiónes en 4x4 por las dunas del desierto de
+                            Dubái</strong></span>
+                </p>
+                <p class="fs-6 mb-5 mx-2 text-center text-black"> o sumergete en el agua para hacer <span
+                        class="text-primary"><strong>Snorkel</strong></span>.</p>
+            </div>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
+                <div class="container-fluid d-flex flex-column  flex-lg-row justify-content-around">
+                    <!-- Estilo de la imagen -->
+                    <div class="img-destinos shadow p-2 order-1 order-lg-0 bg-body w-sm-50 rounded-5 mx-lg-3 h-100"
+                        style="width: 100%; ">
+                        <img src="../../../resources/img/viaje-a-emiratos-arabes-unidos-1.png"
+                            class="img-fluid rounded-5 h-100 w-100 object-fit-cover" alt="La ciudad de Dubái iluminada por la noche">
+                    </div>
+                    <div
+                        class="container-fluid d-flex order-0 order-lg-1 justify-content-center align-items-center flex-column w-100 w-lg-50 mb-4 mb-lg-0">
+                        <header class="d-flex align-items-center justify-content-between py-3 w-100">
+                            <h2 class="fs-4 my-0 mx-2 text-center text-black w-100"><span
+                                    class="text-primary"><strong>Visita lugares Increibles</strong></span></h2>
+                        </header>
+                        <div class="position-relative w-75 d-flex align-items-center justify-content-center mx-5 mb-4">
+                            <!-- Línea horizontal -->
+                            <div class="border-top border-primary w-100"></div>
+                            <!-- Rombo en el centro -->
+                            <div class="rombo position-absolute bg-primary"></div>
+                        </div>
+                        <p class="fs-6 my-0 mx-3 text-center text-black">Dubái es una ciudad emblemática en los <span
+                                class="text-primary"><strong>Emiratos Árabes Unidos</strong></span>, <br />conocida por
+                            su
+                            modernidad y lujo.</p>
+                        <p class="fs-6 mt-3 d-none d-lg-block mb-0 mx-3 text-center text-black">Es famosa por su <span
+                                class="text-primary"><strong>arquitectura vanguardista</strong></span>, su deslumbrante
+                            <span class="text-primary"><strong>vida nocturna</strong></span>,
+                        </p>
+                        <p class="fs-6 my-0 d-none d-lg-block mx-3 mb-0 text-center text-black"> sus <span
+                                class="text-primary"><strong>playas</strong></span> de arena blanca y su impresionante
+                            <span class="text-primary"><strong>desierto</strong></span> que ofrece <br /> experiencias
+                            únicas
+                            como paseos en camello y safaris.
+                        </p>
+                        <p class="fs-6 mb-3 mt-3 text-center text-black">
+                            <span class="text-primary"><strong> Precio : 3.460€ </strong></span>
+                        </p>
+
+                        <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
+                            href="../destinos.html#dubai" target="_self" aria-label="Añadir al carrito plan dubai">
+                            <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Recomendaciones -->
+        <section id="udaipur" class="container-fluid my-element offset">
+            <div class="container-fluid">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Viaje a Golden Triangle
+                                & Udaipur</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">India es uno de esos <span
+                        class="text-primary"><strong>lugares mágicos</strong></span> donde todo el mundo debería ir
+                    <span class="text-primary"><strong>una vez en la vida</strong></span>.
+                </p>
+
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">Diseñamos los viajes a India totalmente
+                    <span class="text-primary"><strong>personalizados</strong></span>, planificando los itinerarios con
+                    las excursiones, experiencias y
+                </p>
+                <p class="fs-6 mb-5 mx-2 text-center text-black">hoteles que quieras incluir. Además, todos nuestros
+                    tours en India son <span class="text-primary"><strong>privados y a medida</strong></span>.</p>
+            </div>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
+                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-around">
+                    <div
+                        class="container-fluid d-flex justify-content-center align-items-center flex-column w-100 w-lg-50 mb-4 mb-lg-0">
+                        <header class="d-flex align-items-center justify-content-between py-3 w-100">
+                            <h2 class="fs-4 my-0 mx-2 text-center text-black w-100"><span
+                                    class="text-primary"><strong>Viajes a medida</strong></span></h2>
+                        </header>
+                        <div class="position-relative w-75 d-flex align-items-center justify-content-center mx-5 mb-4">
+                            <!-- Línea horizontal -->
+                            <div class="border-top border-primary w-100"></div>
+                            <!-- Rombo en el centro -->
+                            <div class="rombo position-absolute bg-primary"></div>
+                        </div>
+                        <p class="fs-6 my-0 mx-3 text-center text-black">India es un país fascinante situado en el <span
+                                class="text-primary"><strong>subcontinente asiático</strong></span>, conocido<br /> por
+                            su
+                            rica historia y diversidad cultural.</p>
+                        <p class="fs-6 mt-3 d-none d-lg-block mb-0 mx-3 text-center text-black">Es famosa por su <span
+                                class="text-primary"><strong>arquitectura antigua</strong></span>, sus <span
+                                class="text-primary"><strong>festivales vibrantes</strong></span> y su </p>
+                        <p class="fs-6 my-0 d-none d-lg-block mx-3 mb-0 text-center text-black"><span
+                                class="text-primary"><strong>gastronomía única</strong></span>. Además de sus <span
+                                class="text-primary"><strong>templos sagrados</strong></span><br /> y <span
+                                class="text-primary"><strong>monumentos emblemáticos</strong></span>.</p>
+                        <p class="fs-6 mb-3 mt-3 text-center text-black">
+                            <span class="text-primary"><strong> Precio : 2.560€ </strong></span>
+                        </p>
+
+
+                        <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
+                            href="../destinos.html#udaipur" target="_self" aria-label="Añadir al carrito plan udaiput">
+                            <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                        </a>
+                    </div>
+
+                    <!-- Estilo de la imagen -->
+                    <div class="img-destinos shadow p-2 bg-body w-sm-50 rounded-5 mx-lg-3 h-100" style="width: 100%; ">
+                        <img src="../../../resources/img/viaje-india-visita-akshardham-temple.png"
+                            class="img-fluid rounded-5 h-100 w-100 object-fit-cover"
+                            alt="Vista panorámica del Templo akshardham de la India">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección en Construcción -->
+        <section id="construccion" class="container-fluid my-5 offset-construccion">
+            <div class="container">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center"><strong>Próximos Destinos</strong></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <div class="d-flex flex-column align-items-center mt-5 text-center">
+                    <div class="spinner-border text-primary mb-4" role="status" style="width: 3rem; height: 3rem;">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                    <h3 class="text-secondary">Estamos trabajando en ello</h3>
+                    <p class="text-muted fs-5">
+                        Estamos preparando nuevos destinos increíbles para ti. <br />
+                        ¡Pronto estarán disponibles!
+                    </p>
+                    <a href="../#header" aria-label="Sube al header" class="btn btn-outline-primary mt-4 px-4 py-2">
+                        Explorar otros destinos
+                    </a>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center mt-5">
+                    <div class="alert alert-primary w-75 text-center shadow-sm">
+                        <strong>¡No te lo pierdas!</strong> Actualizaremos nuestro catalogo en breves.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- FOOTER -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <footer class="container-fluid mt-5 text-white py-4">
+        <div class="container">
+            <h4 class="text-light mb-4">NUESTRAS OFICINAS</h4>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="row text-center text-md-start my-3">
+                <!-- España -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>España</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
+                </div>
+                <!-- Reino Unido -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Reino Unido</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
+                </div>
+                <!-- Portugal -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Portugal</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
+                    </p>
+                </div>
+                <!-- Italia -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Italia</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Viale Monza, 347,<br>20126, Milano.</p>
+                </div>
+                <!-- Francia -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Francia</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
+                </div>
+                <!-- Maldivas -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Maldivas</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <!-- Menú legal -->
+                <div class="row">
+                    <div class="col-8">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
+                                    legal</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Condiciones
+                                    Generales</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Política de
+                                    Privacidad</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
+                                    Cookies</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
+                                    Kit</a></li>
+                        </ul>
+                    </div>
+                    <!-- Redes sociales -->
+                    <div class="col-4">
+                        <span class="text-white">Síguenos:</span>
+                        <a href="../../https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="../../https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="../../https://www.tiktok.com/" class="text-white ms-2" target="_blank"
+                            aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="../../https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="../../https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="../../https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <!-- Nombre -->
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/custom.js"></script>
+</body>
+
+</html>

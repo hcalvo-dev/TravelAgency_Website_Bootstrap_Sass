@@ -13,11 +13,16 @@
 
 <body>
 
+    <!-- Botón fijo con icono hacia arriba -->
+    <a href="#header" class="btn btn-primary position-fixed bottom-0 end-0 m-3 z-1" role="button">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- ENCABEZADO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <header class="px-4" role="banner">
+    <header id="header" class="px-4" role="banner">
         <div class="container-fluid">
     
             <!-- Navigation bar -->
@@ -48,13 +53,13 @@
                     <div class="offcanvas-body d-flex align-items-center">
                         <nav class="navbar-nav me-auto mb-2 mb-lg-0">
                             <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="index_en.html" class="nav-link active px-2 text-black" aria-label="Go to the homepage">Home</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="en/destinations.html" class="nav-link px-2 text-black" aria-label="View destinations">Destinations</a>
                                 </li>
-                                <li class="li-dropdown nav-item dropdown d-flex flex-column">
+                                <li class="li-dropdown me-1 nav-item dropdown d-flex flex-column">
                                     <a class="link-dropdown dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open the collections menu">
                                         Collections
@@ -65,10 +70,10 @@
                                         <li><a class="dropdown-item" href="en/collections/stopovers.html" aria-label="View stopover collections">Stopovers</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="en/inspireme.html" class="nav-link px-2 text-black" aria-label="View inspirations">Inspire Me</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item me-1">
                                     <a href="en/contact.html" class="nav-link px-2 text-black" aria-label="Go to the contact page">Contact</a>
                                 </li>
                             </ul>
@@ -114,23 +119,13 @@
             </nav>
         </div>
     </header>
-    
-
 
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main>
-        <div class="container-fluid p-0 position-relative">
+        <div class="container-fluid p-0 position-relative z-2">
             <div class="content-center text-center">
-                <!-- <svg viewBox="0 0 130 130" class="d-inline-block rotating-circle">
-                <path d="M 65,15 A 50,50 0 1,1 64.99,15" id="circle"></path>
-                <text fill="white" font-size="8" font-family="Helvetica" textLength="300px">
-                    <textPath xlink:href="#circle" startOffset="50%" text-anchor="middle" dominant-baseline="middle">
-                        "18°ANIVERSARIO - 18°ANIVERSARIO - "
-                    </textPath>
-                </text>
-            </svg> -->
                 <header>
                     <h1 class="styled-title">VIAJES EXÓTICOS</h1>
                     <p class="styled-paragraph">Encuentra las vacaciones perfectas.<br />Viajes a medida y en
@@ -193,7 +188,7 @@
                                     especialmente diseñado...</p>
                                 <p class="styled-paragraph text-center text-shadow ">Desde 2.280€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#lanka" target="_self" aria-label="Ver más sobre Vacaciones de Lujo en Sri Lanka">
+                                    href="es/destinos.html#sri_lanka" target="_self" aria-label="Ver más sobre Vacaciones de Lujo en Sri Lanka">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -251,7 +246,7 @@
                                     quien busca...</p>
                                 <p class="styled-paragraph text-center text-shadow-kenia">Desde 4.040€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#kenia" target="_self"  aria-label="Ver más sobre Kenia Luxury Safari">
+                                    href="es/destinos.html#construccion" target="_self"  aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -269,7 +264,7 @@
                                 </p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 4.830€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#tanzania" target="_self" aria-label="Ver más sobre Grandes Parques de Tanzania">
+                                    href="es/destinos.html#construccion" target="_self" aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -288,7 +283,7 @@
                                     a...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 2.730€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#ephelia" target="_self" aria-label="Ver más sobre Constancia Ephelia Seychelles">
+                                    href="es/destinos.html#construccion" target="_self" aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -307,7 +302,7 @@
                                     Polinesia...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 6.595€</p>
                                 <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="es/destinos.html#tahiti" target="_self" aria-label="Ver más sobre Tahiti, Moore & Bora Bora">
+                                    href="es/destinos.html#construccion" target="_self" aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
                                 </a>
                             </div>
@@ -517,19 +512,19 @@
                 <div class="row">
                     <div class="col-8">
                         <ul class="list-inline mb-0">
-                            <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
+                            <li class="list-inline-item link-footer"><a href="en/legal_notice.html"
                                     class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
                                     legal</a></li>
-                            <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none aria-label="Aviso legal"">Condiciones
+                            <li class="list-inline-item link-footer"><a href="en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Condiciones
                                     Generales</a></li>
-                            <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none aria-label="Aviso legal"">Política de
+                            <li class="list-inline-item link-footer"><a href="en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
                                     Privacidad</a></li>
-                            <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
+                            <li class="list-inline-item link-footer"><a href="en/legal_notice.html"
                                     class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
                                     Cookies</a></li>
-                            <li class="list-inline-item link-footer"><a href="es/aviso_lega.html"
+                            <li class="list-inline-item link-footer"><a href="en/legal_notice.html"
                                     class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
                                     Kit</a></li>
                         </ul>

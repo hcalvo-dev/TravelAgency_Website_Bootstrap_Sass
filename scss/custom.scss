@@ -3,6 +3,16 @@ body {
     font-family: 'Helvetica' !important;
 }
 
+/* Ajuste de Scroll en anclas */
+.offset {
+    scroll-margin-top: 85px;
+}
+
+.offset-construccion {
+    scroll-margin-top: 61px;
+}
+
+
 /* ESTILOS DEL CONTAINER-FLUID (Modif Boostrap)*/
 .container-fluid {
     margin: 0 !important;
@@ -414,5 +424,44 @@ footer {
         margin-right: auto;
     }
 }
+
+/* Estilos del carrito */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* Estilos del login */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* Estilos Destinos */
+.rombo {
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+}
+
+
 
 @import '../bootstrap/scss/bootstrap.scss';

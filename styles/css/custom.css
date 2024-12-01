@@ -4,6 +4,15 @@ body {
   font-family: "Helvetica" !important;
 }
 
+/* Ajuste de Scroll en anclas */
+.offset {
+  scroll-margin-top: 85px;
+}
+
+.offset-construccion {
+  scroll-margin-top: 61px;
+}
+
 /* ESTILOS DEL CONTAINER-FLUID (Modif Boostrap)*/
 .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
   margin: 0 !important;
@@ -348,6 +357,41 @@ footer {
     margin-right: auto;
   }
 }
+/* Estilos del carrito */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+/* Estilos del login */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+/* Estilos Destinos */
+.rombo {
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -6549,7 +6593,7 @@ textarea.form-control-lg {
   --bs-spinner-height: 2rem;
   --bs-spinner-vertical-align: -0.125em;
   --bs-spinner-border-width: 0.25em;
-  --bs-spinner-animation-speed: 0.75s;
+  --bs-spinner-animation-speed: 2s;
   --bs-spinner-animation-name: spinner-border;
   border: var(--bs-spinner-border-width) solid currentcolor;
   border-right-color: transparent;
@@ -6574,7 +6618,7 @@ textarea.form-control-lg {
   --bs-spinner-width: 2rem;
   --bs-spinner-height: 2rem;
   --bs-spinner-vertical-align: -0.125em;
-  --bs-spinner-animation-speed: 0.75s;
+  --bs-spinner-animation-speed: 2s;
   --bs-spinner-animation-name: spinner-grow;
   background-color: currentcolor;
   opacity: 0;
@@ -6588,7 +6632,7 @@ textarea.form-control-lg {
 @media (prefers-reduced-motion: reduce) {
   .spinner-border,
   .spinner-grow {
-    --bs-spinner-animation-speed: 1.5s;
+    --bs-spinner-animation-speed: 4s;
   }
 }
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
