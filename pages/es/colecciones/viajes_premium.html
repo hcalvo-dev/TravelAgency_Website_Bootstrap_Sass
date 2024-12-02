@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTravel</title>
+    <link rel="stylesheet" href="../../../styles/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../../../resources/logos/logo_web.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Botón fijo con icono hacia arriba -->
+    <a href="../#header" aria-label="Sube al header" class="btn btn-primary position-fixed z-1 bottom-0 end-0 m-3"
+        role="button">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- ENCABEZADO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <header id="header" class="px-4" role="banner">
+        <div class="container-fluid">
+
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
+
+                <!-- Logo -->
+                <div class="col-2 text-center">
+                    <a href="../../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                        tabindex="0" aria-label="Ir a la página principal">
+                        <img src="../../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
+                            class="me-2" />
+                        <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
+                    </a>
+                </div>
+
+                <!-- Botón del menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                    aria-controls="offcanvasNavbar" aria-label="Abrir el menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navegación principal -->
+                <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar menú"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex align-items-center">
+                        <nav class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
+                                <li class="nav-item me-1">
+                                    <a href="../../index_es.html" class="nav-link px-2 text-black"
+                                        aria-label="Ir a la página de inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../../es/destinos.html" class="nav-link px-2 text-black"
+                                        aria-label="Ver destinos">Destinos</a>
+                                </li>
+                                <li class="li-dropdown active me-1 nav-item dropdown d-flex flex-column">
+                                    <a class="link-dropdown dropdown-toggle" href="../#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false"
+                                        aria-label="Abrir el menú de colecciones">
+                                        Colecciones
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="coleccionesMenu">
+                                        <li><a class="dropdown-item " href="../../es/colecciones/luna_de_miel.html"
+                                                aria-label="Ver colecciones de luna de miel">Luna de
+                                                miel</a></li>
+                                        <li><a class="dropdown-item active"
+                                                href="../../es/colecciones/viajes_premium.html"
+                                                aria-label="Ver colecciones de viajes premium">Viajes
+                                                premium</a></li>
+                                        <li><a class="dropdown-item" href="../../es/colecciones/escalas.html"
+                                                aria-label="Ver colecciones de escalas">Escalas</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../../es/inspirame.html" class="nav-link px-2 text-black"
+                                        aria-label="Ver inspiraciones">Inspirame</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../../es/contacto.html" class="nav-link px-2 text-black"
+                                        aria-label="Ir a la página de contacto">Contacto</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Barra de separación -->
+                        <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
+
+                        <!-- Buscador -->
+                        <form class="d-flex search-form" role="search">
+                            <input type="search" class="form-control search-input" placeholder="Buscar..."
+                                aria-label="Buscar en el sitio">
+                            <button class="btn search-btn" type="submit" aria-label="Buscar">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+
+                        <!-- Selector de idiomas -->
+                        <div class="idioma dropdown">
+                            <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
+                                id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                aria-label="Seleccionar idioma">
+                                <img src="../../../resources/img/spain.png" alt="Bandera de España" width="25px"
+                                    height="25px" class="me-2" /> Es
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">
+                                    <a class="text-decoration-none text-black"
+                                        href="../../en/collections/premium_travel.html" aria-label="Cambiar a inglés">
+                                        <img src="../../../resources/img/UK.png" alt="Bandera de Reino Unido"
+                                            width="25px" height="25px" class="me-2" /> En
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Carrito de la compra -->
+                        <button type="button" class="cesta btn me-2"
+                            aria-label="Ver los productos en el carrito de la compra"><a
+                                class="text-decoration-none text-black" href="../carrito_es.html"
+                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
+                        </button>
+
+                        <!-- Login -->
+                        <button type="button" class="login btn btn-primary btn-sm" id="login"
+                            aria-label="Iniciar sesión"><a class="text-decoration-none text-white"
+                                href="../login_es.html" aria-label="Ir a login">Login</a></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- CONTENIDO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <main>
+
+        <div class="container-fluid p-0 position-relative z-2 " style="height: 100vh;">
+            <div class="content-center text-center w-100">
+                <header>
+                    <h1 class="styled-title">Viajes Premium</h1>
+                    <p class="styled-paragraph">Vive el viaje de tus sueños</p>
+                </header>
+            </div>
+            <img src="../../../resources/img/viajes-maldivas-arena-relax-hp-slider-.png"
+                class="w-100 h-100 object-fit-cover" aria-label="Persona en una piscina con vistas al mar"></img>
+        </div>
+
+        <!-- Sección Cards -->
+        <section id="luna_miel" class="container-fluid my-element offset">
+            <div class="container-fluid">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Tu viaje
+                                Premium</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">Vive unas <span class="text-primary"><strong>vacaciones
+                            de auténtico lujo</strong></span> en uno de nuestros destinos exóticos, en Arenatours
+                    contamos con una extensa.</p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">oferta de <span class="text-primary"><strong>resorts de
+                            calidad superior</strong></span> en los destinos más bellos del planeta.</p>
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">Nuestros <span class="text-primary"><strong>viajes
+                            premium</strong></span> están pensados para los clientes más exigentes que quieran vivir
+                    unas vacaciones a todo lujo
+                </p>
+                <p class="fs-6 mb-5 mx-2 text-center text-black">con <span class="text-primary"><strong>servicios
+                            totalmente a medida</strong></span> como vuelos en clase business o jet privado.</p>
+            </div>
+            <div class="container-fluid">
+                <div
+                    class="d-flex flex-column flex-lg-row justify-content-lg-around justify-content-center align-content-center flex-wrap my-4">
+                    <!-- Tarjeta 1 -->
+                    <div class="card-dimension mb-3" style="height: max-content;">
+                        <div class="card shadow h-100">
+                            <div class="container-fluid h-50">
+                                <img src="../../../resources/img/raffles-maldives-meradhoo-resort-10.png"
+                                    class=" w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
+                            </div>
+                            <div class="card-body d-flex flex-column h-50">
+                                <h5 class="card-title text-center text-primary">Raffles Maldives Meradhoo Resort</h5>
+                                <p class="card-text text-center text-muted ">
+                                    Uno de las joyas más recientes de Maldivas, Raffles Maldives Meradhoo 5.5* nos
+                                    ofrece dos experiencias en un mismo resort. La primera la isla principal donde se
+                                    sitúan las villas y residencias con piscinas privada en la playa, el Spa y el y la
+                                    interpretación isleña del legendario Long Bar.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <!-- Valoraciones -->
+                                    <div>
+                                        <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                        <!-- Sistema de estrellas más grande -->
+                                    </div>
+                                    <!-- Íconos de acción -->
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <button class="icon-mg btn btn-link text-danger like-button"
+                                            data-bs-toggle="button" aria-pressed="false">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <button class="btn btn-link text-primary comment-button" data-bs-toggle="button"
+                                            aria-pressed="false">
+                                            <i class="bi bi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="container-fluid d-flex justify-content-center align-content-center">
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
+                                        href="luna_de_miel.html#luna_miel" target="_self"
+                                        aria-label="Añadir al carrito plan luna de miel Polinesia">
+                                        <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="card-dimension mb-3" style="height: max-content;">
+                        <div class="card shadow h-100">
+                            <div class="container-fluid h-50">
+                                <img src="../../../resources/img/viaje-premium-seychelles-francesa-hilton-labriz-resort-24.png"
+                                    class=" w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
+                            </div>
+                            <div class="card-body d-flex flex-column h-50">
+                                <h5 class="card-title text-center text-primary">Hilton Seychelles Labriz Resort</h5>
+                                <p class="card-text text-center text-muted ">
+                                    Las islas Seychelles te sorprenderán con sus playas de arena blanca y las
+                                    exuberantes selvas tropicales. En cada islas encontrarás excelentes opciones de
+                                    alojamiento con villas privadas, algunas de ellas en islas remotas sólo accesibles
+                                    en helicóptero.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <!-- Valoraciones -->
+                                    <div>
+                                        <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                        <!-- Sistema de estrellas más grande -->
+                                    </div>
+                                    <!-- Íconos de acción -->
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <button class="icon-mg btn btn-link text-danger like-button"
+                                            data-bs-toggle="button" aria-pressed="false">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <button class="btn btn-link text-primary comment-button" data-bs-toggle="button"
+                                            aria-pressed="false">
+                                            <i class="bi bi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="container-fluid d-flex justify-content-center align-content-center">
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
+                                        href="luna_de_miel.html#luna_miel" target="_self"
+                                        aria-label="Añadir al carrito plan luna de miel Polinesia">
+                                        <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="card-dimension mb-3" style="height: max-content;">
+                        <div class="card shadow h-100">
+                            <div class="container-fluid h-50">
+                                <img src="../../../resources/img/amilla-fushi-maldives-resort-5.png"
+                                    class=" w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
+                            </div>
+                            <div class="card-body d-flex flex-column h-50">
+                                <h5 class="card-title text-center text-primary">Dubái + Maldivas 5*</h5>
+                                <p class="card-text text-center text-muted ">
+                                    Viaja a Dubai y Maldivas, descubre los contrastes entre la ciudad de los rascacielos
+                                    más altos y el país más plano del mundo. Descubre nuestra propuesta para los
+                                    viajeros más exigentes con servicios exclusivos,alojamientos seleccionados y todos
+                                    los detalles para un viaje inolvidable
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <!-- Valoraciones -->
+                                    <div>
+                                        <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                        <!-- Sistema de estrellas más grande -->
+                                    </div>
+                                    <!-- Íconos de acción -->
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <button class="icon-mg btn btn-link text-danger like-button"
+                                            data-bs-toggle="button" aria-pressed="false">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <button class="btn btn-link text-primary comment-button" data-bs-toggle="button"
+                                            aria-pressed="false">
+                                            <i class="bi bi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="container-fluid d-flex justify-content-center align-content-center">
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
+                                        href="luna_de_miel.html#luna_miel" target="_self"
+                                        aria-label="Añadir al carrito plan luna de miel Polinesia">
+                                        <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Recomendaciones -->
+        <section class="container-fluid my-element mb-4">
+            <header class="d-flex align-items-center my-5 justify-content-between py-3">
+                <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                <h2 class="text-primary fs-3 text-center">Recomendado <span
+                        class="text-primary"><strong>por</strong></span>
+                </h2>
+                <div class="border-top border-primary flex-grow-1 mx-5"></div>
+            </header>
+            <div class="container-fluid d-flex justify-content-around flex-wrap">
+                <div class="container-fluid d-flex justify-content-around flex-wrap">
+                    <div class=" mx-5 ">
+                        <img src="../../../resources/logos/logo-maldives-sunny-side1.png" class="w-75 h-100"
+                            alt="Logo de Maldives Sunny Side, operador turístico de Maldivas">
+                    </div>
+                    <div class=" mx-5">
+                        <img src="../../../resources/logos/logo-certified-tahiti-specialist1.png" class="w-75 h-100"
+                            alt="Logo de Certified Tahiti Specialist, especialista en viajes a Tahití">
+                    </div>
+                    <div class=" mx-5">
+                        <img src="../../../resources/logos/logo-visit-qatar1.png" class="w-75 h-100"
+                            alt="Logo de Visit Qatar, autoridad de turismo de Qatar">
+                    </div>
+                </div>
+                <div class="container-fluid d-flex justify-content-around flex-wrap">
+
+                    <div class=" mx-5">
+                        <img src="../../../resources/logos/logo-seychelles-tourism1.png" class="w-75 h-100"
+                            alt="Logo de Seychelles Tourism, organización de turismo de Seychelles">
+                    </div>
+                    <div class=" mx-5">
+                        <img src="../../../resources/logos/logo-oficina-turismo-japon-oficial.png" class="w-75 h-100"
+                            alt="Logo de la Oficina de Turismo de Japón, entidad oficial de turismo japonés">
+                    </div>
+                    <div class=" mx-5">
+                        <img src="../../../resources/logos/logo-tripadvisor-copia1.png" class="w-75 h-100"
+                            alt="Logo de TripAdvisor, plataforma de opiniones y recomendaciones de viajes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- FOOTER -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <footer class="container-fluid mt-5 text-white py-4">
+        <div class="container">
+            <h4 class="text-light mb-4">NUESTRAS OFICINAS</h4>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="row text-center text-md-start my-3">
+                <!-- España -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>España</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
+                </div>
+                <!-- Reino Unido -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Reino Unido</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
+                </div>
+                <!-- Portugal -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Portugal</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
+                    </p>
+                </div>
+                <!-- Italia -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Italia</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Viale Monza, 347,<br>20126, Milano.</p>
+                </div>
+                <!-- Francia -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Francia</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
+                </div>
+                <!-- Maldivas -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Maldivas</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <!-- Menú legal -->
+                <div class="row">
+                    <div class="col-8">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
+                                    legal</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Condiciones
+                                    Generales</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Política de
+                                    Privacidad</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
+                                    Cookies</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
+                                    Kit</a></li>
+                        </ul>
+                    </div>
+                    <!-- Redes sociales -->
+                    <div class="col-4">
+                        <span class="text-white">Síguenos:</span>
+                        <a href="../../https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="../../https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="../../https://www.tiktok.com/" class="text-white ms-2" target="_blank"
+                            aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="../../https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="../../https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="../../https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <!-- Nombre -->
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/custom.js"></script>
+</body>
+
+</html>

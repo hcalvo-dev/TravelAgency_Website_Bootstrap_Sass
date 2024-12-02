@@ -185,50 +185,6 @@ body {
     object-fit: cover !important;
 }
 
-/* Estilo letras retando encima del eslogan */
-// .content-center {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     z-index: 1;
-// }
-
-// .rotating-circle {
-//     position: absolute;
-//     top: -50%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     animation: rotate 15s infinite linear;
-//     z-index: 0;
-// }
-
-// /* Animación de rotación */
-// @keyframes rotate {
-//     0% {
-//         transform: translateX(-50%) rotate(0deg);
-//         z-index: 0;
-//     }
-
-//     50% {
-//         transform: translateX(-50%) rotate(-180deg);
-//         z-index: -10;
-//     }
-//     100% {
-//         transform: translateX(-50%) rotate(-360deg);
-//         z-index: 0;
-//     }
-// }
-
-// /* Ocultar la mitad inferior del círculo */
-// #circle {
-//     clip-path: inset(100% 0 50% 0);
-// }
-
-// .rotating-circle {
-//     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-// }
-
 .styled-title {
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -462,6 +418,18 @@ footer {
     transform: rotate(45deg);
 }
 
+.card-dimension{
+    width: 30% ;
+}
 
+@media (max-width: 1068px) {
+    .card-dimension{
+        width: 75%;
+    }
+}
+
+.icon-mg{
+    margin-top: 3px;
+}
 
 @import '../bootstrap/scss/bootstrap.scss';

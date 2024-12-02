@@ -126,7 +126,7 @@
 
                         <!-- Login -->
                         <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Iniciar sesión"><a class="text-decoration-none text-black" href="login_es.html"
+                            aria-label="Iniciar sesión"><a class="text-decoration-none text-white" href="login_es.html"
                                 aria-label="Ir a login">Login</a></button>
                     </div>
                 </div>
@@ -138,26 +138,47 @@
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main class="form-signin container my-5 py-5 d-flex align-content-center justify-content-center">
-        <form class="w-25 d-flex align-content-center flex-column gap-2">
-            <h1 class="h3 mb-3 fw-normal">Por favor ingresa</h1>
+        <form class="w-25 d-flex align-content-center flex-column gap-2" aria-labelledby="form-title">
+            <h1 class="h3 mb-3 fw-normal" id="form-title">Inicio sesión</h1>
 
+            <!-- Campo de correo electrónico -->
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
+                    required aria-required="true" aria-label="Correo electrónico (obligatorio)" autocomplete="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Introduce una dirección de correo válida. Ejemplo: name@example.com">
                 <label for="floatingInput">Correo electrónico</label>
             </div>
+
+            <!-- Campo de contraseña -->
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                <input type="password" class="form-control" id="floatingPassword" name="password"
+                    placeholder="Contraseña" required aria-required="true" aria-label="Contraseña (obligatoria)"
+                    autocomplete="current-password" minlength="8"
+                    title="La contraseña debe tener al menos 8 caracteres.">
                 <label for="floatingPassword">Contraseña</label>
             </div>
 
+            <!-- Checkbox -->
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Recuérdame
+                    <input type="checkbox" value="remember-me" id="rememberMe"
+                        aria-label="Recuérdame para la próxima vez">
+                    Recuérdame
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
+
+            <!-- Botón de envío -->
+            <button class="w-100 btn btn-lg btn-primary" type="submit" aria-label="Iniciar sesión">Ingresar</button>
+
+            <!-- Mensajes de error para validación -->
+            <div id="error-message" class="text-danger mt-2 visually-hidden" aria-live="polite">
+                Por favor, completa todos los campos correctamente.
+            </div>
         </form>
+
     </main>
+
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- FOOTER -->
     <!-- - - - - - - - - - - - - - - - - - - - -->

@@ -177,7 +177,6 @@ body {
      object-fit: cover !important;
 }
 
-/* Estilo letras retando encima del eslogan */
 .styled-title {
   font-size: 4rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -390,6 +389,19 @@ footer {
   width: 16px;
   height: 16px;
   transform: rotate(45deg);
+}
+
+.card-dimension {
+  width: 30%;
+}
+
+@media (max-width: 1068px) {
+  .card-dimension {
+    width: 75%;
+  }
+}
+.icon-mg {
+  margin-top: 3px;
 }
 
 /*!
@@ -7982,12 +7994,56 @@ textarea.form-control-lg {
   width: 25% !important;
 }
 
+.w-30 {
+  width: 30% !important;
+}
+
+.w-35 {
+  width: 35% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-45 {
+  width: 45% !important;
+}
+
 .w-50 {
   width: 50% !important;
 }
 
+.w-55 {
+  width: 55% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-65 {
+  width: 65% !important;
+}
+
+.w-70 {
+  width: 75% !important;
+}
+
 .w-75 {
   width: 75% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.w-95 {
+  width: 95% !important;
 }
 
 .w-100 {

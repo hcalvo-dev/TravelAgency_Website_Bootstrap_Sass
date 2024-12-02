@@ -14,8 +14,7 @@
 <body>
 
     <!-- Botón fijo con icono hacia arriba -->
-    <a href="../#header" aria-label="Sube al header" class="btn btn-primary position-fixed z-1 bottom-0 end-0 m-3"
-        role="button">
+    <a href="#header" class="btn btn-primary position-fixed bottom-0 end-0 m-3" aria-label="Up to header" role="button">
         <i class="bi bi-chevron-double-up"></i>
     </a>
 
@@ -26,14 +25,14 @@
     <header id="header" class="px-4" role="banner">
         <div class="container-fluid">
 
-            <!-- Barra de navegación -->
+            <!-- Nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
-                    <a href="../../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none"
-                        tabindex="0" aria-label="Ir a la página principal">
-                        <img src="../../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
+                    <a href="../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                        tabindex="0" aria-label="Go to the homepage">
+                        <img src="../../../resources/logos/logo_web.png" alt="Website logo" width="40" height="40"
                             class="me-2" />
                         <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
                     </a>
@@ -41,83 +40,82 @@
 
                 <!-- Botón del menú -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
-                    aria-controls="offcanvasNavbar" aria-label="Abrir el menú de navegación">
+                    aria-controls="offcanvasNavbar" aria-label="Open the navigation menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Navegación principal -->
+                <!-- Menú de navegación -->
                 <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
-                            aria-label="Cerrar menú"></button>
+                            aria-label="Close menu"></button>
                     </div>
                     <div class="offcanvas-body d-flex align-items-center">
                         <nav class="navbar-nav me-auto mb-2 mb-lg-0">
                             <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
                                 <li class="nav-item me-1">
-                                    <a href="../../index_es.html" class="nav-link px-2 text-black"
-                                        aria-label="Ir a la página de inicio">Inicio</a>
+                                    <a href="../../index_en.html" class="nav-link px-2 text-black"
+                                        aria-label="Go to the homepage">Home</a>
                                 </li>
                                 <li class="nav-item me-1">
-                                    <a href="../../es/destinos.html" class="nav-link px-2 text-black"
-                                        aria-label="Ver destinos">Destinos</a>
+                                    <a href="../../en/destinations.html" class="nav-link px-2 text-black"
+                                        aria-label="View destinations">Destinations</a>
                                 </li>
-                                <li class="li-dropdown active me-1 nav-item dropdown d-flex flex-column">
-                                    <a class="link-dropdown dropdown-toggle" href="../#" role="button"
+                                <li class="li-dropdown me-1 nav-item dropdown d-flex flex-column">
+                                    <a class="link-dropdown dropdown-toggle active" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false"
-                                        aria-label="Abrir el menú de colecciones">
-                                        Colecciones
+                                        aria-label="Open the collections menu">
+                                        Collections
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="coleccionesMenu">
-                                        <li><a class="dropdown-item " href="../../es/colecciones/luna_de_miel.html"
-                                                aria-label="Ver colecciones de luna de miel">Luna de
-                                                miel</a></li>
-                                        <li><a class="dropdown-item" href="../../es/colecciones/viajes_premium.html"
-                                                aria-label="Ver colecciones de viajes premium">Viajes
-                                                premium</a></li>
-                                        <li><a class="dropdown-item active" href="../../es/colecciones/escalas.html"
-                                                aria-label="Ver colecciones de escalas">Escalas</a></li>
+                                    <ul class="dropdown-menu" aria-labelledby="collectionsMenu">
+                                        <li><a class="dropdown-item" href="../../en/collections/honeymoon.html"
+                                                aria-label="View honeymoon collections">Honeymoon</a></li>
+                                        <li><a class="dropdown-item active"
+                                                href="../../en/collections/premium_travel.html"
+                                                aria-label="View premium trip collections">Premium trips</a></li>
+                                        <li><a class="dropdown-item" href="../../en/collections/stopover.html"
+                                                aria-label="View stopover collections">Stopovers</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item me-1">
-                                    <a href="../../es/inspirame.html" class="nav-link px-2 text-black"
-                                        aria-label="Ver inspiraciones">Inspirame</a>
+                                    <a href="../../en/inspire_me.html" class="nav-link px-2 text-black"
+                                        aria-label="View inspirations">Inspire Me</a>
                                 </li>
                                 <li class="nav-item me-1">
-                                    <a href="../../es/contacto.html" class="nav-link px-2 text-black"
-                                        aria-label="Ir a la página de contacto">Contacto</a>
+                                    <a href="../../en/contact.html" class="nav-link px-2 text-black"
+                                        aria-label="Go to the contact page">Contact</a>
                                 </li>
                             </ul>
                         </nav>
 
-                        <!-- Barra de separación -->
+                        <!-- Linea de separación -->
                         <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
 
                         <!-- Buscador -->
                         <form class="d-flex search-form" role="search">
-                            <input type="search" class="form-control search-input" placeholder="Buscar..."
-                                aria-label="Buscar en el sitio">
-                            <button class="btn search-btn" type="submit" aria-label="Buscar">
+                            <input type="search" class="form-control search-input" placeholder="Search..."
+                                aria-label="Search the site">
+                            <button class="btn search-btn" type="submit" aria-label="Search">
                                 <i class="bi bi-search" aria-hidden="true"></i>
                             </button>
                         </form>
 
-                        <!-- Selector de idiomas -->
-                        <div class="idioma dropdown">
+                        <!-- Selector de idioma -->
+                        <div class="language dropdown">
                             <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
                                 id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                aria-label="Seleccionar idioma">
-                                <img src="../../../resources/img/spain.png" alt="Bandera de España" width="25px"
-                                    height="25px" class="me-2" /> Es
+                                aria-label="Select language">
+                                <img src="../../../resources/img/UK.png" alt="UK flag" width="25px" height="25px"
+                                    class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">
                                     <a class="text-decoration-none text-black"
-                                        href="../../en/collections/stopover.html" aria-label="Cambiar a inglés">
-                                        <img src="../../../resources/img/UK.png" alt="Bandera de Reino Unido"
-                                            width="25px" height="25px" class="me-2" /> En
+                                        href="../../es/colecciones/viajes_premium.html" aria-label="Switch to Spanish">
+                                        <img src="../../../resources/img/spain.png" alt="Spain flag" width="25px"
+                                            height="25px" class="me-2" /> En
                                     </a>
                                 </button>
                             </div>
@@ -125,15 +123,15 @@
 
                         <!-- Carrito de la compra -->
                         <button type="button" class="cesta btn me-2"
-                            aria-label="Ver los productos en el carrito de la compra"><a
-                                class="text-decoration-none text-black" href="../carrito_es.html"
+                            aria-label="View the products in the shopping cart"><a
+                                class="text-decoration-none text-black" href="../carrito_en.html"
                                 aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
                         </button>
 
                         <!-- Login -->
                         <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Iniciar sesión"><a class="text-decoration-none text-white"
-                                href="../login_es.html" aria-label="Ir a login">Login</a></button>
+                            aria-label="Session Start"><a class="text-decoration-none text-white"
+                                href="../login_en.html" aria-label="Ir a login">Login</a></button>
                     </div>
                 </div>
             </nav>
@@ -145,64 +143,61 @@
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main>
 
-        <div class="container-fluid p-0 position-relative z-2 " style="height: 100vh;">
+        <div class="container-fluid p-0 position-relative z-2" style="height: 100vh;">
             <div class="content-center text-center w-100">
                 <header>
-                    <h1 class="styled-title">STOPOVER</h1>
-                    <p class="styled-paragraph">Añade a tu viaje experiencias únicas </p>
+                    <h1 class="styled-title">Premium Trips</h1>
+                    <p class="styled-paragraph">Live the trip of your dreams</p>
                 </header>
             </div>
-            <img src="../../../resources/img/stopover-de-lujo.png" class="w-100 h-100 object-fit-cover"
-                aria-label="Vista de la ciudad de dubái de noche"></img>
+            <img src="../../../resources/img/viajes-maldivas-arena-relax-hp-slider-.png"
+                class="w-100 h-100 object-fit-cover" aria-label="Person in a pool with ocean views"></img>
         </div>
 
-        <!-- Sección Cards -->
-        <section id="luna_miel" class="container-fluid my-element offset">
+        <!-- Cards Section -->
+        <section id="honeymoon" class="container-fluid my-element offset">
             <div class="container-fluid">
                 <header class="d-flex align-items-center mt-5 justify-content-between py-3">
                     <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Descubre la magia de
-                                Oriente Medio</strong></span></h2>
+                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Your Premium
+                                Trip</strong></span></h2>
                     <div class="border-top border-primary flex-grow-1 mx-5"></div>
                 </header>
-                <p class="fs-6 my-0 mx-2 text-center text-black">Gracias a su situación geográfica en Oriente Medio y la
-                    alta capacidad de sus aerolíneas de bandera, Emirates, Etihad .</p>
-                <p class="fs-6 my-0 mx-2 mb-0 text-center text-black">Airways, Qatar Airways y Turkish Airlines, tanto
-                    <span class="text-primary"><strong>Dubái</strong></span> como <span class="text-primary"><strong>Abu
-                            Dabi</strong></span>, <span class="text-primary"><strong>Doha</strong></span> y <span
-                        class="text-primary"><strong>Estambul</strong></span> se han convertido <br /> en lugar de paso
-                    habitual y casi parada obligatoria para millones de viajeros cada año.
-
-                </p>
-                <p class="fs-6 mt-3 mb-5 mx-2 text-center text-black">Si vas a volar con alguna de estas aerolíneas,
-                    añadir un <span class="text-primary"><strong>stopover</strong></span> a tu viaje es un must, que
-                    deberías aprovechar.</p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">Enjoy <span class="text-primary"><strong>true luxury
+                            vacations</strong></span> in one of our exotic destinations. At Arenatours, we offer a vast
+                    selection.</p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">of <span class="text-primary"><strong>high-quality
+                            resorts</strong></span> in the most beautiful places on Earth.</p>
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">Our <span class="text-primary"><strong>premium
+                            trips</strong></span> are designed for the most demanding clients who want to experience
+                    luxurious vacations</p>
+                <p class="fs-6 mb-5 mx-2 text-center text-black">with <span class="text-primary"><strong>fully
+                            customized services</strong></span>, including business class flights or private jets.</p>
             </div>
             <div class="container-fluid">
                 <div
                     class="d-flex flex-column flex-lg-row justify-content-lg-around justify-content-center align-content-center flex-wrap my-4">
-                    <!-- Tarjeta 1 -->
+                    <!-- Card 1 -->
                     <div class="card-dimension mb-3" style="height: max-content;">
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
-                                <img src="../../../resources/img/dubai-en-helicoptero-600x303.png"
-                                    class=" w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
+                                <img src="../../../resources/img/raffles-maldives-meradhoo-resort-10.png"
+                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Destination 1">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
-                                <h5 class="card-title text-center text-primary">Stopover en Dubai</h5>
-                                <p class="card-text text-center text-muted ">
-                                    Incluir en tu viaje un stopover en Dubái, aprovechando la escala de tu vuelo, es una
-                                    excelente idea tanto si viajas con niños, en pareja o con amigos. Y es que este
-                                    emirato deja huella en todos sus visitantes, que quedan impresionados con sus
-                                    rascacielos de innovadores diseños. 
+                                <h5 class="card-title text-center text-primary">Raffles Maldives Meradhoo Resort</h5>
+                                <p class="card-text text-center text-muted">
+                                    One of the newest gems of the Maldives, Raffles Maldives Meradhoo 5.5* offers two
+                                    experiences in one resort. The first is the main island, where the villas and
+                                    residences with private pools are located, along with the Spa and the island's
+                                    interpretation of the legendary Long Bar.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <!-- Valoraciones -->
+                                    <!-- Ratings -->
                                     <div>
                                         <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                                        <!-- Sistema de estrellas más grande -->
                                     </div>
-                                    <!-- Íconos de acción -->
+                                    <!-- Action icons -->
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <button class="icon-mg btn btn-link text-danger like-button"
                                             data-bs-toggle="button" aria-pressed="false">
@@ -215,37 +210,33 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                                        href="luna_de_miel.html#luna_miel" target="_self"
-                                        aria-label="Añadir al carrito plan luna de miel Polinesia">
-                                        <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                        href="honeymoon.html#honeymoon" target="_self"
+                                        aria-label="Add to cart honeymoon plan Polynesia">
+                                        <p class="mb-0 w-100 text-center">Add to cart</p>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Tarjeta 2 -->
+                    <!-- Card 2 -->
                     <div class="card-dimension mb-3" style="height: max-content;">
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
-                                <img src="../../../resources/img/viajes-qatar-katara-mosque.png"
-                                    class=" w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
+                                <img src="../../../resources/img/viaje-premium-seychelles-francesa-hilton-labriz-resort-24.png"
+                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Destination 2">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
-                                <h5 class="card-title text-center text-primary">Stopover en Estambul</h5>
-                                <p class="card-text text-center text-muted ">
-                                    Abu Dabi es la capital de los Emiratos Árabes Unidos y el emirato más grande entre
-                                    los siete. Conocida por sus lujosos hoteles, centros comerciales y una deslumbrante
-                                    arquitectura moderna, atrae a turistas de todas partes del mundo. Muchos aprovechan
-                                    la escala de su vuelo de Etihad Airways en Abu Dabi para hacer un stopover
+                                <h5 class="card-title text-center text-primary">Hilton Seychelles Labriz Resort</h5>
+                                <p class="card-text text-center text-muted">
+                                    The Seychelles islands will surprise you with their white sandy beaches and lush
+                                    tropical jungles. On each island, you'll find excellent accommodation options with
+                                    private villas, some of them on remote islands accessible only by helicopter.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <!-- Valoraciones -->
                                     <div>
                                         <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                                        <!-- Sistema de estrellas más grande -->
                                     </div>
-                                    <!-- Íconos de acción -->
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <button class="icon-mg btn btn-link text-danger like-button"
                                             data-bs-toggle="button" aria-pressed="false">
@@ -258,37 +249,34 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                                        href="luna_de_miel.html#luna_miel" target="_self"
-                                        aria-label="Añadir al carrito plan luna de miel Polinesia">
-                                        <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                        href="honeymoon.html#honeymoon" target="_self"
+                                        aria-label="Add to cart honeymoon plan Polynesia">
+                                        <p class="mb-0 w-100 text-center">Add to cart</p>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Tarjeta 3 -->
+                    <!-- Card 3 -->
                     <div class="card-dimension mb-3" style="height: max-content;">
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
-                                <img src="../../../resources/img/viajes-qatar-desert-safari-1-1.png"
-                                    class=" w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
+                                <img src="../../../resources/img/amilla-fushi-maldives-resort-5.png"
+                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Destination 3">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
-                                <h5 class="card-title text-center text-primary">Stopover en Qatar</h5>
-                                <p class="card-text text-center text-muted ">
-                                    La excursión en 4×4 al desierto al atardecer es una experiencia que no te puedes
-                                    perder si no has experimentado nunca la adrenalina al ripear por las dunas. Quedarás
-                                    fascinado cuando el sol anaranjado se oculte entre la arena. También podrás montar
-                                    en camello o deslizarte en una tabla por las dunas.
+                                <h5 class="card-title text-center text-primary">Dubai + Maldives 5*</h5>
+                                <p class="card-text text-center text-muted">
+                                    Travel to Dubai and the Maldives, discovering the contrasts between the city of the
+                                    tallest skyscrapers and the flattest country in the world. Discover our proposal for
+                                    the most demanding travelers with exclusive services, selected accommodations, and
+                                    every detail for an unforgettable trip.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <!-- Valoraciones -->
                                     <div>
                                         <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                                        <!-- Sistema de estrellas más grande -->
                                     </div>
-                                    <!-- Íconos de acción -->
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <button class="icon-mg btn btn-link text-danger like-button"
                                             data-bs-toggle="button" aria-pressed="false">
@@ -301,10 +289,10 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                                        href="luna_de_miel.html#luna_miel" target="_self"
-                                        aria-label="Añadir al carrito plan luna de miel Polinesia">
-                                        <p class="mb-0 w-100 text-center">Añadir al carrito</p>
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                        href="honeymoon.html#honeymoon" target="_self"
+                                        aria-label="Add to cart honeymoon plan Polynesia">
+                                        <p class="mb-0 w-100 text-center">Add to cart</p>
                                     </a>
                                 </div>
                             </div>
@@ -313,6 +301,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Sección Recomendaciones -->
         <section class="container-fluid my-element mb-4">
@@ -364,18 +353,18 @@
 
     <footer class="container-fluid mt-5 text-white py-4">
         <div class="container">
-            <h4 class="text-light mb-4">NUESTRAS OFICINAS</h4>
+            <h4 class="text-light mb-4">OUR OFFICES</h4>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
             <div class="row text-center text-md-start my-3">
-                <!-- España -->
+                <!-- Spain -->
                 <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>España</h5>
+                    <h5>Spain</h5>
                     <hr class="separador-footer border-white w-75" />
-                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
+                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Floor 18,<br>28046, Madrid.</p>
                 </div>
-                <!-- Reino Unido -->
+                <!-- United Kingdom -->
                 <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Reino Unido</h5>
+                    <h5>United Kingdom</h5>
                     <hr class="separador-footer border-white w-75" />
                     <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
                 </div>
@@ -383,80 +372,79 @@
                 <div class="col-12 col-md-4 col-lg-2 mb-4">
                     <h5>Portugal</h5>
                     <hr class="separador-footer border-white w-75" />
-                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
+                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Building D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
                     </p>
                 </div>
-                <!-- Italia -->
+                <!-- Italy -->
                 <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Italia</h5>
+                    <h5>Italy</h5>
                     <hr class="separador-footer border-white w-75" />
-                    <p>Viale Monza, 347,<br>20126, Milano.</p>
+                    <p>Viale Monza, 347,<br>20126, Milan.</p>
                 </div>
-                <!-- Francia -->
+                <!-- France -->
                 <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Francia</h5>
+                    <h5>France</h5>
                     <hr class="separador-footer border-white w-75" />
-                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
+                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Building F,<br>31100, Toulouse.</p>
                 </div>
-                <!-- Maldivas -->
+                <!-- Maldives -->
                 <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Maldivas</h5>
+                    <h5>Maldives</h5>
                     <hr class="separador-footer border-white w-75" />
-                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
+                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Male.</p>
                 </div>
             </div>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
             <div class="container">
-                <!-- Menú legal -->
+                <!-- Legal menu -->
                 <div class="row">
                     <div class="col-8">
                         <ul class="list-inline mb-0">
-                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
-                                    legal</a></li>
-                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Condiciones
-                                    Generales</a></li>
-                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Política de
-                                    Privacidad</a></li>
-                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
-                                    Cookies</a></li>
-                            <li class="list-inline-item link-footer"><a href="../../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
-                                    Kit</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Legal notice">Legal
+                                    notice</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Terms and Conditions">Terms
+                                    and Conditions</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Privacy Policy">Privacy
+                                    Policy</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Cookies Policy">Cookies
+                                    Policy</a></li>
+                            <li class="list-inline-item link-footer"><a href="../../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Media Kit">Media Kit</a>
+                            </li>
                         </ul>
                     </div>
-                    <!-- Redes sociales -->
+                    <!-- Social media -->
                     <div class="col-4">
-                        <span class="text-white">Síguenos:</span>
-                        <a href="../../https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                        <span class="text-white">Follow us:</span>
+                        <a href="../https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
                                 class="bi bi-facebook"></i></a>
-                        <a href="../../https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                        <a href="../https://www.instagram.com/" class="text-white ms-2" target="_blank"
                             aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="../../https://www.tiktok.com/" class="text-white ms-2" target="_blank"
+                        <a href="../https://www.tiktok.com/" class="text-white ms-2" target="_blank"
                             aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-                        <a href="../../https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                        <a href="../https://www.linkedin.com/" class="text-white ms-2" target="_blank"
                             aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="../../https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                        <a href="../https://www.pinterest.com/" class="text-white ms-2" target="_blank"
                             aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-                        <a href="../../https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                        <a href="../https://www.youtube.com/" class="text-white ms-2" target="_blank"
                             aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-
                     </div>
                 </div>
             </div>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
             <div class="container">
                 <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
-                <!-- Nombre -->
+                <!-- Name -->
             </div>
-        </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+
+    <script src="../../https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../../js/custom.js"></script>
