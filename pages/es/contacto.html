@@ -143,23 +143,41 @@
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
-    <main>
-        <div class="container mt-4">
-            <div class="row">
+    <main class="container-fluid my-3 py-4">
+        <div class="container-fluid">
+            <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>¿Tienes
+                            Dudas?</strong></span></h2>
+                <div class="border-top border-primary flex-grow-1 mx-5"></div>
+            </header>
+            <p class="fs-6 my-0 mx-2 text-center text-black">Estamos a tu disposición para solucionar cualquier duda las
+                24 horas del día.</p>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="d-flex flex-wrap justify-content-around">
                 <!-- Mapa -->
-                <div class="col-md-6">
-                    <h3 class="mb-3">Nuestra Ubicación</h3>
-                    <div class="ratio ratio-16x9">
+                <div class="w-40 mt-lg-3">
+                    <h3 class="mb-3 text-primary">
+                        <i class="bi bi-geo-alt-fill"></i> Nuestra Ubicación
+                    </h3>
+                    <div class="ratio ratio-16x9 rounded shadow">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.8316711848616!2d-122.08424948468546!3d37.42206597982673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7494fbb1d65%3A0x8c2db93c7339bcad!2sGoogleplex!5e0!3m2!1sen!2sus!4v1636344860431!5m2!1sen!2sus"
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3143.67755537552!2d-6.58911395331662!3d38.007980884931285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1733331355898!5m2!1ses!2ses"
+                        class="text-primary rounded border border-primary"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                     </div>
                 </div>
 
                 <!-- Formulario -->
-                <div class="col-md-6">
-                    <h3 class="mb-3">Contáctanos</h3>
-                    <form>
+                <div class="w-40  mt-md-3">
+                    <h3 class="mb-3 text-primary">
+                        <i class="bi bi-envelope-fill "></i> Contáctanos
+                    </h3>
+                    <form class="p-3 border border-primary rounded shadow">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
@@ -173,17 +191,19 @@
                             <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje"
                                 required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
                     </form>
                 </div>
             </div>
 
             <!-- Tabla -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h3 class="mb-3">Información de Contacto</h3>
-                    <table class="table table-bordered">
-                        <thead class="table-dark">
+            <div class=" d-flex flex-column align-items-center w-80 mt-5">
+                <div class=" w-90">
+                    <h3 class="mb-3 text-info">
+                        <i class="bi bi-info-circle-fill"></i> Información de Contacto
+                    </h3>
+                    <table class="table table-hover table-striped shadow rounded">
+                        <thead class="table-info">
                             <tr>
                                 <th>Medio</th>
                                 <th>Detalle</th>
@@ -191,27 +211,34 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Teléfono</td>
-                                <td>+34 123 456 789</td>
+                                <td>
+                                    <i class="bi bi-telephone-fill text-primary"></i> Teléfono
+                                </td>
+                                <td>+34 645 456 789</td>
                             </tr>
                             <tr>
-                                <td>Correo Electrónico</td>
-                                <td>info@agenciadeviajes.com</td>
+                                <td>
+                                    <i class="bi bi-envelope-fill text-success"></i> Correo Electrónico
+                                </td>
+                                <td>WorldTravel@agenciadeviajes.com</td>
                             </tr>
                             <tr>
-                                <td>Horario de Atención</td>
+                                <td>
+                                    <i class="bi bi-clock-fill text-warning"></i> Horario de Atención
+                                </td>
                                 <td>Lunes a Viernes, 9:00 AM - 6:00 PM</td>
                             </tr>
                             <tr>
-                                <td>Dirección</td>
-                                <td>Calle Principal 123, Ciudad de Viajes, España</td>
+                                <td>
+                                    <i class="bi bi-geo-alt-fill text-danger"></i> Dirección
+                                </td>
+                                <td>Calle el Patrás, nº12, C.P. 21388, Hinojales (Huelva), España</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
 
     </main>
 
