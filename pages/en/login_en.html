@@ -111,7 +111,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">
-                                    <a class="text-decoration-none text-black" href="../es/destinos.html"
+                                    <a class="text-decoration-none text-black" href="../es/login_es.html"
                                         aria-label="Switch to Spanish">
                                         <img src="../../resources/img/spain.png" alt="Spain flag" width="25px"
                                             height="25px" class="me-2" /> En
@@ -129,8 +129,8 @@
 
                         <!-- Login -->
                         <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Session Start"><a class="text-decoration-none active text-white" href="login_en.html"
-                                aria-label="Ir a login">Login</a></button>
+                            aria-label="Session Start"><a class="text-decoration-none active text-white"
+                                href="login_en.html" aria-label="Ir a login">Login</a></button>
                     </div>
                 </div>
             </nav>
@@ -140,247 +140,43 @@
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
-    <main>
+    <main class="form-signin container my-5 py-5 d-flex align-content-center justify-content-center">
+        <form class="w-25 d-flex align-content-center flex-column gap-2" aria-labelledby="form-title">
+            <h1 class="h3 mb-3 fw-normal" id="form-title">Sign in</h1>
 
-        <div class="container-fluid p-0 position-relative">
-            <div class="content-center text-center">
-                <header>
-                    <h1 class="styled-title">Explore the World</h1>
-                </header>
+            <!-- Email field -->
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
+                    required aria-required="true" aria-label="Email (required)" autocomplete="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Enter a valid email address. Example: name@example.com">
+                <label for="floatingInput">Email</label>
             </div>
-            <video src="../../resources/video/Destinos.mp4" class="w-100 full-height-video" muted autoplay loop
-                aria-label="Exotic travel video showing luxury destinations"></video>
-        </div>
 
-        <!-- Sri Lanka Section -->
-        <section id="sri_lanka" class="container-fluid my-element offset">
-            <div class="container-fluid">
-                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Trip to Sri
-                                Lanka</strong></span></h2>
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                </header>
-                <p class="fs-6 my-0 mx-2 text-center text-black">Add the <span
-                        class="text-primary"><strong>excursions</strong></span> and <span
-                        class="text-primary"><strong>experiences</strong></span> you want, and choose the <span
-                        class="text-primary"><strong>hotels</strong></span> in each area you visit.</p>
-
-                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">That’s why we organize all our tours with <span
-                        class="text-primary"><strong>air-conditioned vehicles and a private driver</strong></span>,
-                </p>
-                <p class="fs-6 mb-5 mx-2 text-center text-black">for your utmost comfort.</p>
+            <!-- Password field -->
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password"
+                    required aria-required="true" aria-label="Password (required)" autocomplete="current-password"
+                    minlength="8" title="The password must be at least 8 characters long.">
+                <label for="floatingPassword">Password</label>
             </div>
-            <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
-                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-around">
-                    <div
-                        class="container-fluid d-flex justify-content-center align-items-center flex-column w-100 w-lg-50 mb-4 mb-lg-0">
-                        <header class="d-flex align-items-center justify-content-between py-3 w-100">
-                            <h2 class="fs-4 my-0 mx-2 text-center text-black w-100"><span
-                                    class="text-primary"><strong>Customized Trips</strong></span></h2>
-                        </header>
-                        <div class="position-relative w-75 d-flex align-items-center justify-content-center mx-5 mb-4">
-                            <!-- Linea Horizontal -->
-                            <div class="border-top border-primary w-100"></div>
-                            <!-- Rombo centrado -->
-                            <div class="rombo position-absolute bg-primary"></div>
-                        </div>
-                        <p class="fs-6 my-0 mx-3 text-center text-black">Sri Lanka is an island located in the <span
-                                class="text-primary"><strong>Indian Ocean</strong></span>, southeast of India, shaped
-                            like a tear.</p>
-                        <p class="fs-6 mt-3 d-none d-lg-block mb-0 mx-3 text-center text-black">It is famous for its
-                            <span class="text-primary"><strong>tropical climate</strong></span>, its hospitality, and a
-                            rich <span class="text-primary"><strong>cultural heritage</strong></span>,
-                        </p>
-                        <p class="fs-6 my-0 d-none d-lg-block mx-3 mb-0 text-center text-black>, its <span class="
-                            text-primary"><strong>beaches</strong></span> with palm trees and warm waters, and
-                            especially for its <span class="text-primary"><strong>lush nature</strong></span>.</p>
-                        <p class="fs-6 mb-3 mt-3 text-center text-black">
-                            <span class="text-primary"><strong> Price: 2.280$ </strong></span>
-                        </p>
 
-                        <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                            href="destinations.html#sri_lanka" target="_self" aria-label="Add to cart Sri Lanka plan">
-                            <p class="mb-0 w-100 text-center">Add to Cart</p>
-                        </a>
-                    </div>
-
-                    <!-- Estilo imagen -->
-                    <div class="img-destinos shadow p-2 bg-body w-sm-50 rounded-5 mx-lg-3 h-100" style="width: 100%; ">
-                        <img src="../../resources/img/elephants-uduwalale-sri-lanka.png"
-                            class="img-fluid rounded-5 h-100 w-100 object-fit-cover"
-                            alt="Elephants crossing a river in Sri Lanka">
-                    </div>
-
-                </div>
+            <!-- Checkbox -->
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me" id="rememberMe" aria-label="Remember me for next time">
+                    Remember me
+                </label>
             </div>
-        </section>
 
-        <!-- Dubai Section -->
-        <section id="dubai" class="container-fluid my-element offset">
-            <div class="container-fluid">
-                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Trip to
-                                Dubai</strong></span></h2>
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                </header>
-                <p class="fs-6 my-0 mx-2 text-center text-black">Stay at the wonderful <span
-                        class="text-primary"><strong>Pullman Dubai Downtown 5*</strong></span> with an excellent
-                    location in <span class="text-primary"><strong>Business Bay in Dubai, very close to the iconic Burj
-                            Khalifa.</strong></span></p>
+            <!-- Submit button -->
+            <button class="w-100 btn btn-lg btn-primary" type="submit" aria-label="Sign in">Sign in</button>
 
-                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">Enjoy thrilling <span
-                        class="text-primary"><strong>4x4 excursions in the Dubai desert dunes</strong></span></p>
-                <p class="fs-6 mb-5 mx-2 text-center text-black">or dive into the water for some <span
-                        class="text-primary"><strong>snorkeling</strong></span>.</p>
+            <!-- Validation error messages -->
+            <div id="error-message" class="text-danger mt-2 visually-hidden" aria-live="polite">
+                Please fill out all fields correctly.
             </div>
-            <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
-                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-around">
-                    <!-- Estilo imagen -->
-                    <div class="img-destinos shadow p-2 order-1 order-lg-0 bg-body w-sm-50 rounded-5 mx-lg-3 h-100"
-                        style="width: 100%; ">
-                        <img src="../../resources/img/viaje-a-emiratos-arabes-unidos-1.png"
-                            class="img-fluid rounded-5 h-100 w-100 object-fit-cover"
-                            alt="The city of Dubai illuminated at night">
-                    </div>
-                    <div
-                        class="container-fluid d-flex order-0 order-lg-1 justify-content-center align-items-center flex-column w-100 w-lg-50 mb-4 mb-lg-0">
-                        <header class="d-flex align-items-center justify-content-between py-3 w-100">
-                            <h2 class="fs-4 my-0 mx-2 text-center text-black w-100"><span
-                                    class="text-primary"><strong>Visit Incredible Places</strong></span></h2>
-                        </header>
-                        <div class="position-relative w-75 d-flex align-items-center justify-content-center mx-5 mb-4">
-                            <!-- Linea Horizontal -->
-                            <div class="border-top border-primary w-100"></div>
-                            <!-- Rombo centrado -->
-                            <div class="rombo position-absolute bg-primary"></div>
-                        </div>
-                        <p class="fs-6 my-0 mx-3 text-center text-black">Dubai is an iconic city in the <span
-                                class="text-primary"><strong>United Arab Emirates</strong></span>, known for its
-                            modernity and luxury.</p>
-                        <p class="fs-6 mt-3 d-none d-lg-block mb-0 mx-3 text-center text-black">It is famous for its
-                            <span class="text-primary"><strong>avant-garde architecture</strong></span>, its dazzling
-                            <span class="text-primary"><strong>nightlife</strong></span>,
-                        </p>
-                        <p class="fs-6 my-0 d-none d-lg-block mx-3 mb-0 text-center text-black">its <span
-                                class="text-primary"><strong>white sand beaches</strong></span> and its impressive <span
-                                class="text-primary"><strong>desert</strong></span> offering unique experiences like
-                            camel rides and safaris.</p>
-                        <p class="fs-6 mb-3 mt-3 text-center text-black">
-                            <span class="text-primary"><strong> Price: 3.460$ </strong></span>
-                        </p>
-
-                        <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
-                            href="destinations.html#dubai" target="_self" aria-label="Add Dubai plan to cart">
-                            <p class="mb-0 w-100 text-center">Add to cart</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Udaipur section -->
-        <section id="udaipur" class="container-fluid my-element offset">
-            <div class="container-fluid">
-                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                    <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Trip to Golden Triangle
-                                & Udaipur</strong></span></h2>
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                </header>
-                <p class="fs-6 my-0 mx-2 text-center text-black">India is one of those <span
-                        class="text-primary"><strong>magical places</strong></span> that everyone should visit
-                    <span class="text-primary"><strong>once in a lifetime</strong></span>.
-                </p>
-
-                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">We design trips to India completely
-                    <span class="text-primary"><strong>customized</strong></span>, planning itineraries with
-                    excursions, experiences, and
-                </p>
-                <p class="fs-6 mb-5 mx-2 text-center text-black">hotels you want to include. Additionally, all our
-                    tours in India are <span class="text-primary"><strong>private and tailored</strong></span>.</p>
-            </div>
-            <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
-                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-around">
-                    <div
-                        class="container-fluid d-flex justify-content-center align-items-center flex-column w-100 w-lg-50 mb-4 mb-lg-0">
-                        <header class="d-flex align-items-center justify-content-between py-3 w-100">
-                            <h2 class="fs-4 my-0 mx-2 text-center text-black w-100"><span
-                                    class="text-primary"><strong>Tailor-made trips</strong></span></h2>
-                        </header>
-                        <div class="position-relative w-75 d-flex align-items-center justify-content-center mx-5 mb-4">
-                            <!-- Linea Horizontal -->
-                            <div class="border-top border-primary w-100"></div>
-                            <!-- Rombo centrado -->
-                            <div class="rombo position-absolute bg-primary"></div>
-                        </div>
-                        <p class="fs-6 my-0 mx-3 text-center text-black">India is a fascinating country located in the
-                            <span class="text-primary"><strong>Asian subcontinent</strong></span>, known<br /> for
-                            its rich history and cultural diversity.
-                        </p>
-                        <p class="fs-6 mt-3 d-none d-lg-block mb-0 mx-3 text-center text-black">It is famous for its
-                            <span class="text-primary"><strong>ancient architecture</strong></span>, its <span
-                                class="text-primary"><strong>vibrant festivals</strong></span> and its
-                        </p>
-                        <p class="fs-6 my-0 d-none d-lg-block mx-3 mb-0 text-center text-black"><span
-                                class="text-primary"><strong>unique cuisine</strong></span>. In addition to its <span
-                                class="text-primary"><strong>sacred temples</strong></span><br /> and <span
-                                class="text-primary"><strong>iconic monuments</strong></span>.</p>
-                        <p class="fs-6 mb-3 mt-3 text-center text-black">
-                            <span class="text-primary"><strong> Price: 2.560$ </strong></span>
-                        </p>
-
-                        <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                            href="destinations.html#udaipur" target="_self" aria-label="Add Udaipur plan to cart">
-                            <p class="mb-0 w-100 text-center">Add to cart</p>
-                        </a>
-                    </div>
-
-                    <!-- Estilo imagen -->
-                    <div class="img-destinos shadow p-2 bg-body w-sm-50 rounded-5 mx-lg-3 h-100" style="width: 100%; ">
-                        <img src="../../resources/img/viaje-india-visita-akshardham-temple.png"
-                            class="img-fluid rounded-5 h-100 w-100 object-fit-cover"
-                            alt="Panoramic view of the Akshardham Temple in India">
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Under Construction Section -->
-        <section id="construccion" class="container-fluid my-5 offset-construccion">
-            <div class="container">
-                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                    <h2 class="text-primary fs-3 text-center"><strong>Upcoming Destinations</strong></h2>
-                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                </header>
-                <div class="d-flex flex-column align-items-center mt-5 text-center">
-                    <div class="spinner-border text-primary mb-4" role="status" style="width: 3rem; height: 3rem;">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                    <h3 class="text-secondary">We are working on it</h3>
-                    <p class="text-muted fs-5">
-                        We are preparing amazing new destinations for you. <br />
-                        They will be available soon!
-                    </p>
-                    <a href="#header" aria-label="Up to header" class="btn btn-outline-primary mt-4 px-4 py-2">
-                        Explore other destinations
-                    </a>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center mt-5">
-                    <div class="alert alert-primary w-75 text-center shadow-sm">
-                        <strong>Don't miss it!</strong> We will update our catalog soon.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
+        </form>
     </main>
 
     <!-- - - - - - - - - - - - - - - - - - - - -->
