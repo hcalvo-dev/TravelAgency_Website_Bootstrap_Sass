@@ -78,3 +78,27 @@
     }
   }
 }
+
+.form-control {
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 25%;
+
+  &.show {
+    width: 100% !important;
+  }
+}
+.form-control-sm {
+  height: 33px;
+}
+

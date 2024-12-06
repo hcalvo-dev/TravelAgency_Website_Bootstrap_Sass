@@ -2,448 +2,434 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorldTravel</title>
-    <link rel="stylesheet" href="../../styles/css/custom.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="../../resources/logos/logo_web.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorldTravel</title>
+  <link rel="stylesheet" href="../../styles/css/custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" href="../../resources/logos/logo_web.png" type="image/x-icon">
 
 </head>
 
 <body>
 
-    <!-- - - - - - - - - - - - - - - - - - - - -->
-    <!-- ENCABEZADO -->
-    <!-- - - - - - - - - - - - - - - - - - - - -->
-    <header class="px-4" role="banner">
-      <div class="container-fluid">
+  <!-- - - - - - - - - - - - - - - - - - - - -->
+  <!-- ENCABEZADO -->
+  <!-- - - - - - - - - - - - - - - - - - - - -->
+  <header class="px-4" role="banner">
+    <div class="container-fluid">
 
-          <!-- Barra de navegación -->
-          <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
 
-              <!-- Logo -->
-              <div class="col-2 text-center">
-                  <a href="../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none"
-                      tabindex="0" aria-label="Ir a la página principal">
-                      <img src="../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
-                          class="me-2" />
-                      <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
+        <!-- Logo -->
+        <div class="col-2 text-center">
+          <a href="../../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none" tabindex="0"
+            aria-label="Ir a la página principal">
+            <img src="../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40" class="me-2" />
+            <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
+          </a>
+        </div>
+
+        <!-- Botón del menú -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+          aria-controls="offcanvasNavbar" aria-label="Abrir el menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navegación principal -->
+        <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+              aria-label="Cerrar menú"></button>
+          </div>
+          <div class="offcanvas-body d-flex align-items-center">
+            <nav class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
+                <li class="nav-item">
+                  <a href="../../index_es.html" class="nav-link px-2 text-black"
+                    aria-label="Ir a la página de inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../es/destinos.html" class="nav-link px-2  text-black" aria-label="Ver destinos">Destinos</a>
+                </li>
+                <li class="li-dropdown nav-item dropdown d-flex flex-column">
+                  <a class="link-dropdown dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" aria-label="Abrir el menú de colecciones">
+                    Colecciones
                   </a>
-              </div>
+                  <ul class="dropdown-menu" aria-labelledby="coleccionesMenu">
+                    <li><a class="dropdown-item" href="../es/colecciones/luna_de_miel.html"
+                        aria-label="Ver colecciones de luna de miel">Luna de
+                        miel</a></li>
+                    <li><a class="dropdown-item" href="../es/colecciones/viajes_premium.html"
+                        aria-label="Ver colecciones de viajes premium">Viajes
+                        premium</a></li>
+                    <li><a class="dropdown-item" href="../es/colecciones/escalas.html"
+                        aria-label="Ver colecciones de escalas">Escalas</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="../es/inspirame.html" class="nav-link px-2 text-black"
+                    aria-label="Ver inspiraciones">Inspirame</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../es/contacto.html" class="nav-link px-2 text-black"
+                    aria-label="Ir a la página de contacto">Contacto</a>
+                </li>
+              </ul>
+            </nav>
 
-              <!-- Botón del menú -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
-                  aria-controls="offcanvasNavbar" aria-label="Abrir el menú de navegación">
-                  <span class="navbar-toggler-icon"></span>
+            <!-- Barra de separación -->
+            <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
+
+            <!-- Buscador -->
+            <form class="d-flex search-form" role="search">
+              <input type="search" class="form-control search-input" placeholder="Buscar..."
+                aria-label="Buscar en el sitio">
+              <button class="btn search-btn" type="submit" aria-label="Buscar">
+                <i class="bi bi-search" aria-hidden="true"></i>
               </button>
+            </form>
 
-              <!-- Navegación principal -->
-              <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
-                  aria-labelledby="offcanvasDarkNavbarLabel">
-                  <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
-                      <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
-                          aria-label="Cerrar menú"></button>
-                  </div>
-                  <div class="offcanvas-body d-flex align-items-center">
-                      <nav class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
-                              <li class="nav-item">
-                                  <a href="../index_es.html" class="nav-link px-2 text-black"
-                                      aria-label="Ir a la página de inicio">Inicio</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="../es/destinos.html" class="nav-link px-2  text-black"
-                                      aria-label="Ver destinos">Destinos</a>
-                              </li>
-                              <li class="li-dropdown nav-item dropdown d-flex flex-column">
-                                  <a class="link-dropdown dropdown-toggle" href="#" role="button"
-                                      data-bs-toggle="dropdown" aria-expanded="false"
-                                      aria-label="Abrir el menú de colecciones">
-                                      Colecciones
-                                  </a>
-                                  <ul class="dropdown-menu" aria-labelledby="coleccionesMenu">
-                                      <li><a class="dropdown-item" href="../es/colecciones/luna_de_miel.html"
-                                              aria-label="Ver colecciones de luna de miel">Luna de
-                                              miel</a></li>
-                                      <li><a class="dropdown-item" href="../es/colecciones/viajes_premium.html"
-                                              aria-label="Ver colecciones de viajes premium">Viajes
-                                              premium</a></li>
-                                      <li><a class="dropdown-item" href="../es/colecciones/escalas.html"
-                                              aria-label="Ver colecciones de escalas">Escalas</a></li>
-                                  </ul>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="../es/inspirame.html" class="nav-link px-2 text-black"
-                                      aria-label="Ver inspiraciones">Inspirame</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="../es/contacto.html" class="nav-link px-2 text-black"
-                                      aria-label="Ir a la página de contacto">Contacto</a>
-                              </li>
-                          </ul>
-                      </nav>
-
-                      <!-- Barra de separación -->
-                      <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
-
-                      <!-- Buscador -->
-                      <form class="d-flex search-form" role="search">
-                          <input type="search" class="form-control search-input" placeholder="Buscar..."
-                              aria-label="Buscar en el sitio">
-                          <button class="btn search-btn" type="submit" aria-label="Buscar">
-                              <i class="bi bi-search" aria-hidden="true"></i>
-                          </button>
-                      </form>
-
-                      <!-- Selector de idiomas -->
-                      <div class="idioma dropdown">
-                          <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
-                              id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                              aria-label="Seleccionar idioma">
-                              <img src="../../resources/img/spain.png" alt="Bandera de España" width="25px"
-                                  height="25px" class="me-2" /> Es
-                          </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                              <button class="dropdown-item" type="button">
-                                  <a class="text-decoration-none text-black" href="../en/carrito_en.html"
-                                      aria-label="Cambiar a inglés">
-                                      <img src="../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
-                                          height="25px" class="me-2" /> En
-                                  </a>
-                              </button>
-                          </div>
-                      </div>
-
-                      <!-- Carrito de la compra -->
-                      <button type="button" class="cesta btn me-2"
-                          aria-label="Ver los productos en el carrito de la compra"><a
-                              class="text-decoration-none active text-black" href="carrito_es.html"
-                              aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
-                      </button>
-
-                      <!-- Login -->
-                      <button type="button" class="login btn btn-primary btn-sm" id="login"
-                          aria-label="Iniciar sesión"><a class="text-decoration-none text-white" href="login_es.html"
-                              aria-label="Ir a login">Login</a></button>
-                  </div>
+            <!-- Selector de idiomas -->
+            <div class="idioma dropdown">
+              <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                <img src="../../resources/img/spain.png" alt="Bandera de España" width="25px" height="25px"
+                  class="me-2" /> Es
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">
+                  <a class="text-decoration-none text-black" href="../en/carrito_en.html" aria-label="Cambiar a inglés">
+                    <img src="../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px" height="25px"
+                      class="me-2" /> En
+                  </a>
+                </button>
               </div>
-          </nav>
-      </div>
+            </div>
+
+            <!-- Carrito de la compra -->
+            <button type="button" class="cesta btn me-2" aria-label="Ver los productos en el carrito de la compra"><a
+                class="text-decoration-none active text-black" href="carrito_es.html" aria-label="Ir al carrito"><i
+                  class="bi bi-cart2" aria-hidden="true"></i></a>
+            </button>
+
+            <!-- Login -->
+            <button type="button" class="login btn btn-primary btn-sm" id="login" aria-label="Iniciar sesión"><a
+                class="text-decoration-none text-white" href="login_es.html" aria-label="Ir a login">Login</a></button>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
-    <!-- - - - - - - - - - - - - - - - - - - - -->
-    <!-- CONTENIDO -->
-    <!-- - - - - - - - - - - - - - - - - - - - -->
-    <main class="container my-5 py-5">
-        <div class="row g-5">
-          <div class="col-md-5 col-lg-4 order-md-last">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-primary">Tu carro</span>
-              <span class="badge bg-primary rounded-pill">3</span>
-            </h4>
-            <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-sm">
-                <div>
-                  <h6 class="my-0">Nombre del producto</h6>
-                  <small class="text-muted">Breve descripción</small>
+  <!-- - - - - - - - - - - - - - - - - - - - -->
+  <!-- CONTENIDO -->
+  <!-- - - - - - - - - - - - - - - - - - - - -->
+  <main class="container my-5 py-5">
+    <div class="row g-5">
+
+      <!-- Carrito -->
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Tu carro</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Vacaciones de Lujo en Sri Lanka</h6>
+              <small class="text-muted">8 noches - 9 días</small>
+            </div>
+            <span class="text-muted">2.280€</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Dubái & Seychelles</h6>
+              <small class="text-muted">10 noches - 11 días</small>
+            </div>
+            <span class="text-muted">3.460€</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Golden Triangle & Udaipur</h6>
+              <small class="text-muted">8 noches - 9 días</small>
+            </div>
+            <span class="text-muted">2.560€</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Código promocional</h6>
+              <small>VIAJE2024</small>
+            </div>
+            <span class="text-success">−200€</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (EUR)</span>
+            <strong>8.100€</strong>
+          </li>
+        </ul>
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Código Promo">
+            <button type="submit" class="btn btn-secondary">Aplicar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Dirección envio -->
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3 text-primary">Dirección de envio</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Se requiere un nombre válido.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Se requiere apellido válido.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Nombre de usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required="">
+                <div class="invalid-feedback">
+                  Tu nombre de usuario es requerido.
                 </div>
-                <span class="text-muted">$12</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-sm">
-                <div>
-                  <h6 class="my-0">Segundo producto</h6>
-                  <small class="text-muted">Breve descripción</small>
-                </div>
-                <span class="text-muted">$8</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-sm">
-                <div>
-                  <h6 class="my-0">Tercer elemento</h6>
-                  <small class="text-muted">Breve descripción</small>
-                </div>
-                <span class="text-muted">$5</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between bg-light">
-                <div class="text-success">
-                  <h6 class="my-0">Código promocional</h6>
-                  <small>EXAMPLECODE</small>
-                </div>
-                <span class="text-success">−$5</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Total (USD)</span>
-                <strong>$20</strong>
-              </li>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com">
+              <div class="invalid-feedback">
+                Ingresa una dirección de correo electrónico válida para actualizaciones de envío.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="Calle ... / nº 123" required="">
+              <div class="invalid-feedback">
+                Por favor introduce tu direccion de envio.
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">País</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Elige...</option>
+                <option>España</option>
+                <option>Reino Unido</option>
+                <option>Portugal</option>
+                <option>Italia</option>
+                <option>Francia</option>
+                <option>Maldivas</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un país válido.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Código postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                Código postal requerido.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">La dirección de envío es la misma que mi dirección de
+              facturación</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Guardar esta información para la próxima vez</label>
+          </div>
+
+          <hr class="my-4">
+          
+          <!-- Pago -->
+          <h4 class="mb-3 text-primary">Pago</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <label class="form-check-label" for="credit">Tarjeta de crédito</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="debit">Tarjeta de débito</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nombre en la tarjeta</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+              <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
+              <div class="invalid-feedback">
+                Se requiere el nombre en la tarjeta
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+              <div class="invalid-feedback">
+                Se requiere número de tarjeta de crédito
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+              <div class="invalid-feedback">
+                Fecha de vencimiento requerida
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              <div class="invalid-feedback">
+                Código de seguridad requerido
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar con el pago</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <!-- - - - - - - - - - - - - - - - - - - - -->
+  <!-- FOOTER -->
+  <!-- - - - - - - - - - - - - - - - - - - - -->
+
+  <footer class="container-fluid mt-5 text-white py-4">
+    <div class="container">
+      <h4 class="text-light mb-4">NUESTRAS OFICINAS</h4>
+      <hr class="separador-title-oficinas mb-4 border-white w-100" />
+      <div class="row text-center text-md-start my-3">
+        <!-- España -->
+        <div class="col-12 col-md-4 col-lg-2 mb-4">
+          <h5>España</h5>
+          <hr class="separador-footer border-white w-75" />
+          <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
+        </div>
+        <!-- Reino Unido -->
+        <div class="col-12 col-md-4 col-lg-2 mb-4">
+          <h5>Reino Unido</h5>
+          <hr class="separador-footer border-white w-75" />
+          <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
+        </div>
+        <!-- Portugal -->
+        <div class="col-12 col-md-4 col-lg-2 mb-4">
+          <h5>Portugal</h5>
+          <hr class="separador-footer border-white w-75" />
+          <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
+          </p>
+        </div>
+        <!-- Italia -->
+        <div class="col-12 col-md-4 col-lg-2 mb-4">
+          <h5>Italia</h5>
+          <hr class="separador-footer border-white w-75" />
+          <p>Viale Monza, 347,<br>20126, Milano.</p>
+        </div>
+        <!-- Francia -->
+        <div class="col-12 col-md-4 col-lg-2 mb-4">
+          <h5>Francia</h5>
+          <hr class="separador-footer border-white w-75" />
+          <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
+        </div>
+        <!-- Maldivas -->
+        <div class="col-12 col-md-4 col-lg-2 mb-4">
+          <h5>Maldivas</h5>
+          <hr class="separador-footer border-white w-75" />
+          <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
+        </div>
+      </div>
+      <hr class="separador-title-oficinas mb-4 border-white w-100" />
+      <div class="container">
+        <!-- Menú legal -->
+        <div class="row">
+          <div class="col-8">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
+                  class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
+                  legal</a></li>
+              <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
+                  class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Condiciones
+                  Generales</a></li>
+              <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
+                  class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Política de
+                  Privacidad</a></li>
+              <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
+                  class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
+                  Cookies</a></li>
+              <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
+                  class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
+                  Kit</a></li>
             </ul>
-    
-            <form class="card p-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Código Promo">
-                <button type="submit" class="btn btn-secondary">Aplicar</button>
-              </div>
-            </form>
           </div>
-          <div class="col-md-7 col-lg-8">
-            <h4 class="mb-3">Dirección de envio</h4>
-            <form class="needs-validation" novalidate="">
-              <div class="row g-3">
-                <div class="col-sm-6">
-                  <label for="firstName" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-                  <div class="invalid-feedback">
-                    Se requiere un nombre válido.
-                  </div>
-                </div>
-    
-                <div class="col-sm-6">
-                  <label for="lastName" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-                  <div class="invalid-feedback">
-                    Se requiere apellido válido.
-                  </div>
-                </div>
-    
-                <div class="col-12">
-                  <label for="username" class="form-label">Nombre de usuario</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required="">
-                  <div class="invalid-feedback">
-                      Tu nombre de usuario es requerido.
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="col-12">
-                  <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                  <input type="email" class="form-control" id="email" placeholder="tu@example.com">
-                  <div class="invalid-feedback">
-                    Ingresa una dirección de correo electrónico válida para actualizaciones de envío.
-                  </div>
-                </div>
-    
-                <div class="col-12">
-                  <label for="address" class="form-label">Dirección</label>
-                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
-                  <div class="invalid-feedback">
-                    Por favor introduce tu direccion de envio.
-                    Please enter your shipping address.
-                  </div>
-                </div>
-    
-                <div class="col-12">
-                  <label for="address2" class="form-label">Dirección 2 <span class="text-muted">(Opcional)</span></label>
-                  <input type="text" class="form-control" id="address2" placeholder="Apartamento o suite">
-                </div>
-    
-                <div class="col-md-5">
-                  <label for="country" class="form-label">País</label>
-                  <select class="form-select" id="country" required="">
-                    <option value="">Elige...</option>
-                    <option>United States</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Selecciona un país válido.
-                  </div>
-                </div>
-    
-                <div class="col-md-4">
-                  <label for="state" class="form-label">Estado</label>
-                  <select class="form-select" id="state" required="">
-                    <option value="">Elige...</option>
-                    <option>California</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Proporciona un estado válido.
-                  </div>
-                </div>
-    
-                <div class="col-md-3">
-                  <label for="zip" class="form-label">Código postal</label>
-                  <input type="text" class="form-control" id="zip" placeholder="" required="">
-                  <div class="invalid-feedback">
-                    Código postal requerido.
-                  </div>
-                </div>
-              </div>
-    
-              <hr class="my-4">
-    
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="same-address">
-                <label class="form-check-label" for="same-address">La dirección de envío es la misma que mi dirección de facturación</label>
-              </div>
-    
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="save-info">
-                <label class="form-check-label" for="save-info">Guardar esta información para la próxima vez</label>
-              </div>
-    
-              <hr class="my-4">
-    
-              <h4 class="mb-3">Pago</h4>
-    
-              <div class="my-3">
-                <div class="form-check">
-                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
-                  <label class="form-check-label" for="credit">Tarjeta de crédito</label>
-                </div>
-                <div class="form-check">
-                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
-                  <label class="form-check-label" for="debit">Tarjeta de débito</label>
-                </div>
-                <div class="form-check">
-                  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
-                  <label class="form-check-label" for="paypal">PayPal</label>
-                </div>
-              </div>
-    
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <label for="cc-name" class="form-label">Nombre en la tarjeta</label>
-                  <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                  <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
-                  <div class="invalid-feedback">
-                    Se requiere el nombre en la tarjeta
-                  </div>
-                </div>
-    
-                <div class="col-md-6">
-                  <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
-                  <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                  <div class="invalid-feedback">
-                    Se requiere número de tarjeta de crédito
-                  </div>
-                </div>
-    
-                <div class="col-md-3">
-                  <label for="cc-expiration" class="form-label">Vencimiento</label>
-                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                  <div class="invalid-feedback">
-                    Fecha de vencimiento requerida
-                  </div>
-                </div>
-    
-                <div class="col-md-3">
-                  <label for="cc-cvv" class="form-label">CVV</label>
-                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                  <div class="invalid-feedback">
-                    Código de seguridad requerido
-                  </div>
-                </div>
-              </div>
-    
-              <hr class="my-4">
-    
-              <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar con el pago</button>
-            </form>
+          <!-- Redes sociales -->
+          <div class="col-4">
+            <span class="text-white">Síguenos:</span>
+            <a href="../https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="../https://www.instagram.com/" class="text-white ms-2" target="_blank" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="../https://www.tiktok.com/" class="text-white ms-2" target="_blank" aria-label="TikTok"><i
+                class="bi bi-tiktok"></i></a>
+            <a href="../https://www.linkedin.com/" class="text-white ms-2" target="_blank" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="../https://www.pinterest.com/" class="text-white ms-2" target="_blank" aria-label="Pinterest"><i
+                class="bi bi-pinterest"></i></a>
+            <a href="../https://www.youtube.com/" class="text-white ms-2" target="_blank" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+
           </div>
         </div>
-      </main>
-    <!-- - - - - - - - - - - - - - - - - - - - -->
-    <!-- FOOTER -->
-    <!-- - - - - - - - - - - - - - - - - - - - -->
+      </div>
+      <hr class="separador-title-oficinas mb-4 border-white w-100" />
+      <div class="container">
+        <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+        <!-- Nombre -->
+      </div>
+    </div>
+    </div>
+  </footer>
 
-    <footer class="container-fluid mt-5 text-white py-4">
-        <div class="container">
-            <h4 class="text-light mb-4">NUESTRAS OFICINAS</h4>
-            <hr class="separador-title-oficinas mb-4 border-white w-100" />
-            <div class="row text-center text-md-start my-3">
-                <!-- España -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>España</h5>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
-                </div>
-                <!-- Reino Unido -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Reino Unido</h5>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
-                </div>
-                <!-- Portugal -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Portugal</h5>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
-                    </p>
-                </div>
-                <!-- Italia -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Italia</h5>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Viale Monza, 347,<br>20126, Milano.</p>
-                </div>
-                <!-- Francia -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Francia</h5>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
-                </div>
-                <!-- Maldivas -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h5>Maldivas</h5>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
-                </div>
-            </div>
-            <hr class="separador-title-oficinas mb-4 border-white w-100" />
-            <div class="container">
-                <!-- Menú legal -->
-                <div class="row">
-                    <div class="col-8">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
-                                    legal</a></li>
-                            <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Condiciones
-                                    Generales</a></li>
-                            <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label=" Aviso legal">Política de
-                                    Privacidad</a></li>
-                            <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
-                                    Cookies</a></li>
-                            <li class="list-inline-item link-footer"><a href="../es/aviso_lega.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
-                                    Kit</a></li>
-                        </ul>
-                    </div>
-                    <!-- Redes sociales -->
-                    <div class="col-4">
-                        <span class="text-white">Síguenos:</span>
-                        <a href="../https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="../https://www.instagram.com/" class="text-white ms-2" target="_blank"
-                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="../https://www.tiktok.com/" class="text-white ms-2" target="_blank"
-                            aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-                        <a href="../https://www.linkedin.com/" class="text-white ms-2" target="_blank"
-                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="../https://www.pinterest.com/" class="text-white ms-2" target="_blank"
-                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-                        <a href="../https://www.youtube.com/" class="text-white ms-2" target="_blank"
-                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-
-                    </div>
-                </div>
-            </div>
-            <hr class="separador-title-oficinas mb-4 border-white w-100" />
-            <div class="container">
-                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
-                <!-- Nombre -->
-            </div>
-        </div>
-        </div>
-    </footer>
-
-    <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/custom.js"></script>
+  <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/scroll.js"></script>
 </body>
 
 </html>

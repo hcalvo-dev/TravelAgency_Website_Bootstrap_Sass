@@ -68,3 +68,14 @@
   --#{$prefix}btn-border-radius: #{$border-radius};
 }
 // scss-docs-end btn-size-mixin
+
+.logo:focus,
+.btn:focus,
+.dropdown-item:focus {
+  outline: 2px solid rgba(0, 123, 255, 0.5) !important;
+}
+
+.btn i {
+  font-size: 1.3rem;
+}
+

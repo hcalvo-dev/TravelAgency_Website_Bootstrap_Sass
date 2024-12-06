@@ -31,7 +31,7 @@
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
-                    <a href="../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                    <a href="../../index_es.html" class="logo d-flex align-items-center text-black text-decoration-none"
                         tabindex="0" aria-label="Ir a la página principal">
                         <img src="../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
                             class="me-2" />
@@ -57,7 +57,7 @@
                         <nav class="navbar-nav me-auto mb-2 mb-lg-0">
                             <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
                                 <li class="nav-item me-1">
-                                    <a href="../index_es.html" class="nav-link px-2 text-black"
+                                    <a href="../../index_es.html" class="nav-link px-2 text-black"
                                         aria-label="Ir a la página de inicio">Inicio</a>
                                 </li>
                                 <li class="nav-item me-1">
@@ -154,89 +154,116 @@
             <p class="fs-6 my-0 mx-2 text-center text-black">Estamos a tu disposición para solucionar cualquier duda las
                 24 horas del día.</p>
         </div>
-        <div class="container-fluid mt-5">
-            <div class="d-flex flex-wrap justify-content-around">
-                <!-- Mapa -->
-                <div class="w-40 mt-lg-3">
-                    <h3 class="mb-3 text-primary">
-                        <i class="bi bi-geo-alt-fill"></i> Nuestra Ubicación
-                    </h3>
-                    <div class="ratio ratio-16x9 rounded shadow">
-                        <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3143.67755537552!2d-6.58911395331662!3d38.007980884931285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1733331355898!5m2!1ses!2ses"
-                        class="text-primary rounded border border-primary"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="w-40  mt-md-3">
+        <div class="container-fluid mt-5 d-flex flex-column flex-lg-row justify-content-around">
+            <!-- Estilo de la imagen -->
+            <div class="d-flex d-none d-lg-block align-self-center img-destinos shadow p-2 bg-body w-sm-50 rounded-5 mx-lg-auto h-100"
+                style="width: 40%; ">
+                <img src="../../resources/img/sultan-suites-6-768x388.png"
+                    class="img-fluid rounded-5 h-100 w-100 object-fit-cover"
+                    alt="Elefantes cruzando por un rio de Sri Lanka">
+            </div>
+            <!-- Formulario -->
+            <div class="contacto mx-auto">
+                <div class="container">
                     <h3 class="mb-3 text-primary">
                         <i class="bi bi-envelope-fill "></i> Contáctanos
                     </h3>
-                    <form class="p-3 border border-primary rounded shadow">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                    </form>
                 </div>
+                <form class="p-3 border border-primary rounded shadow">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </form>
             </div>
+        </div>
 
-            <!-- Tabla -->
-            <div class=" d-flex flex-column align-items-center w-80 mt-5">
-                <div class=" w-90">
-                    <h3 class="mb-3 text-info">
-                        <i class="bi bi-info-circle-fill"></i> Información de Contacto
+        <!-- Mapa -->
+        <div class="w-80 my-5">
+            <div class="container">
+                <h3 class="mb-3 text-primary w-90">
+                    <i class="bi bi-geo-alt-fill"></i> Nuestra Ubicación
+                </h3>
+            </div>
+            <div class="mb-3 " style="text-align: center;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3143.67755537552!2d-6.58911395331662!3d38.007980884931285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1733331355898!5m2!1ses!2ses"
+                    width="90%" height="400"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Tabla -->
+        <div class=" d-flex flex-column align-items-center w-80 mt-5">
+            <div class=" w-90">
+                <div class="container">
+                    <h3 class="mb-3 text-primary">
+                        <i class="bi bi-patch-question"></i> Preguntas frecuentes
                     </h3>
-                    <table class="table table-hover table-striped shadow rounded">
-                        <thead class="table-info">
-                            <tr>
-                                <th>Medio</th>
-                                <th>Detalle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <i class="bi bi-telephone-fill text-primary"></i> Teléfono
-                                </td>
-                                <td>+34 645 456 789</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="bi bi-envelope-fill text-success"></i> Correo Electrónico
-                                </td>
-                                <td>WorldTravel@agenciadeviajes.com</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="bi bi-clock-fill text-warning"></i> Horario de Atención
-                                </td>
-                                <td>Lunes a Viernes, 9:00 AM - 6:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="bi bi-geo-alt-fill text-danger"></i> Dirección
-                                </td>
-                                <td>Calle el Patrás, nº12, C.P. 21388, Hinojales (Huelva), España</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
+                <table class="table table-hover table-striped shadow rounded">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Pregunta</th>
+                            <th  class="border-start">Respuesta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td >
+                                ¿Qué servicios ofrece la agencia?
+                            </td>
+                            <td  class="border-start">
+                                Organizamos viajes personalizados, tours en grupo, paquetes de luna de miel y viajes de
+                                aventura.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ¿Se pueden modificar los itinerarios?
+                            </td>
+                            <td  class="border-start">
+                                Sí, nuestros paquetes son flexibles y podemos adaptarlos a tus necesidades y
+                                preferencias.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ¿Ofrecen asistencia durante el viaje?
+                            </td>
+                            <td  class="border-start">
+                                Contamos con asistencia 24/7 a través de nuestro servicio de atención al cliente.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ¿Cómo puedo realizar una reserva?
+                            </td>
+                            <td  class="border-start">
+                                Puedes reservar a través de nuestra web, llamando al teléfono de atención o visitándonos
+                                en nuestras oficinas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ¿Qué métodos de pago aceptan?
+                            </td>
+                            <td  class="border-start">
+                                Aceptamos pagos con tarjeta de crédito/débito, transferencias bancarias y PayPal.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
         </div>
 
@@ -343,7 +370,7 @@
     <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/custom.js"></script>
+    <script src="../../js/scroll.js"></script>
 </body>
 
 </html>

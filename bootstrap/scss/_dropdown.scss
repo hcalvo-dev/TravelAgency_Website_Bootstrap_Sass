@@ -248,3 +248,32 @@
   --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
   // scss-docs-end dropdown-dark-css-vars
 }
+
+.li-dropdown {
+  display: flex;
+  align-items: center !important;
+  align-self: center !important;
+}
+
+.link-dropdown {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+
+.dropdown-item {
+  &:active {
+    background-color: #f8f9fa !important;
+  }
+
+  &:hover {
+    background-color: #e2e6ea !important;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #e2e6ea !important;
+  }
+}

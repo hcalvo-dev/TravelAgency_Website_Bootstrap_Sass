@@ -9,6 +9,11 @@
   .container-fluid {
     @include make-container();
   }
+    .container-fluid {
+      margin: 0;
+      padding: 0;
+
+    }
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {

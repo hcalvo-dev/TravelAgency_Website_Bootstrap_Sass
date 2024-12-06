@@ -19,6 +19,11 @@
   margin-left: auto;
 }
 
+.container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -1125,6 +1130,21 @@
     --bs-gutter-y: 3rem;
   }
 }
+.bi-cart2::before {
+  width: 20px;
+  height: 20px;
+}
+
+#menu.show .cesta {
+  margin: 0 0 8px;
+}
+
+.full-height-video {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .d-inline {
   display: inline !important;
 }

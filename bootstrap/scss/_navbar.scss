@@ -287,3 +287,47 @@
     }
   }
 }
+
+.nav-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 95%;
+    background-color: rgb(69, 109, 143);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &.active::after {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  transition: background-color 0.5s ease !important;
+
+  &.scrolled {
+    background-color: #f8f9fa !important;
+  }
+
+  &-toggler {
+    border: none !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
+
+.bg-semitransparent {
+  background-color: rgba(255, 255, 255, 0.5);
+}

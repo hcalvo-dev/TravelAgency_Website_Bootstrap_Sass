@@ -141,3 +141,26 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
 }
+
+#menu {
+  &.show {
+    .nav-link::after {
+      content: "";
+      width: 100% !important;
+    }
+
+    .offcanvas-body {
+      flex-direction: column !important;
+    }
+
+    hr {
+      display: block !important;
+      width: 100%;
+    }
+
+    .idioma {
+      margin: 8px 0 0 !important;
+    }
+  }
+}
+
