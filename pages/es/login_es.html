@@ -43,7 +43,7 @@
                 <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">WordlTravel</h5>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
                             aria-label="Cerrar menú"></button>
                     </div>
@@ -126,8 +126,8 @@
 
                         <!-- Login -->
                         <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Iniciar sesión"><a class="text-decoration-none active text-white" href="login_es.html"
-                                aria-label="Ir a login">Login</a></button>
+                            aria-label="Iniciar sesión"><a class="text-decoration-none active text-white"
+                                href="login_es.html" aria-label="Ir a login">Login</a></button>
                     </div>
                 </div>
             </nav>
@@ -138,45 +138,68 @@
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main class="form-signin container my-5 py-5 d-flex align-content-center justify-content-center">
-        <form class="w-25 d-flex align-content-center flex-column gap-2" aria-labelledby="form-title">
-            <h1 class="h3 mb-3 fw-normal" id="form-title">Inicio sesión</h1>
-
+        <form class="d-flex flex-column w-50 needs-validation" novalidate>
             <!-- Campo de correo electrónico -->
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
-                    required aria-required="true" aria-label="Correo electrónico (obligatorio)" autocomplete="email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="Introduce una dirección de correo válida. Ejemplo: name@example.com">
-                <label for="floatingInput">Correo electrónico</label>
+            <div class="w-100 mb-2">
+              <label for="validationCustomEmail" class="form-label">Correo electrónico</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="validationCustomEmail" 
+                placeholder="name@example.com" 
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Introduce una dirección de correo válida. Ejemplo: name@example.com">
+              <div class="valid-feedback">
+                Correo válido.
+              </div>
+              <div class="invalid-feedback">
+                Introduce un correo electrónico válido.
+              </div>
             </div>
-
+          
             <!-- Campo de contraseña -->
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" name="password"
-                    placeholder="Contraseña" required aria-required="true" aria-label="Contraseña (obligatoria)"
-                    autocomplete="current-password" minlength="8"
-                    title="La contraseña debe tener al menos 8 caracteres.">
-                <label for="floatingPassword">Contraseña</label>
+            <div class="w-100 my-2">
+              <label for="validationCustomPassword" class="form-label">Contraseña</label>
+              <input 
+                type="password" 
+                class="form-control" 
+                id="validationCustomPassword" 
+                placeholder="Contraseña" 
+                required
+                minlength="8" 
+                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^*_=:;,.?])[A-Za-z\d!@#$%^*_=:;,.?]{8,}" 
+                title="La contraseña debe contener una mayúscula, una minúscula, un número, un carácter especial y al menos 8 caracteres.">
+              <div class="valid-feedback">
+                Contraseña válida.
+              </div>
+              <div class="invalid-feedback">
+                La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y un carácter especial.
+              </div>
             </div>
-
-            <!-- Checkbox -->
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me" id="rememberMe"
-                        aria-label="Recuérdame para la próxima vez">
-                    Recuérdame
+          
+            <!-- Checkbox "Recuérdame" -->
+            <div class="w-100 mt-2">
+              <div class="form-check">
+                <input 
+                  class="form-check-input" 
+                  type="checkbox" 
+                  value="remember-me" 
+                  id="rememberMe" 
+                  aria-label="Recuérdame para la próxima vez">
+                <label class="form-check-label" for="rememberMe">
+                  Recuérdame
                 </label>
+              </div>
             </div>
-
+          
             <!-- Botón de envío -->
-            <button class="w-100 btn btn-lg btn-primary" type="submit" aria-label="Iniciar sesión">Ingresar</button>
-
-            <!-- Mensajes de error para validación -->
-            <div id="error-message" class="text-danger mt-2 visually-hidden" aria-live="polite">
-                Por favor, completa todos los campos correctamente.
+            <div class="w-100 mt-3">
+              <button class="btn btn-primary" type="submit">Iniciar sesión</button>
             </div>
-        </form>
-
+          </form>
+          
+        
     </main>
 
     <!-- - - - - - - - - - - - - - - - - - - - -->
@@ -280,6 +303,27 @@
     <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
     <script src="../../js/scroll.js"></script>
 </body>
 

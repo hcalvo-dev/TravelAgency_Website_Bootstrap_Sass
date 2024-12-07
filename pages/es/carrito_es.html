@@ -41,7 +41,7 @@
         <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
           aria-labelledby="offcanvasDarkNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">WordlTravel</h5>
             <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
               aria-label="Cerrar menú"></button>
           </div>
@@ -132,62 +132,79 @@
   <main class="container my-5 py-5">
     <div class="row g-5">
 
-      <!-- Carrito -->
+      <!-- Carrito Accesible -->
       <div class="col-md-5 col-lg-4 order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Tu carro</span>
-          <span class="badge bg-primary rounded-pill">3</span>
+        <h4 class="d-flex justify-content-between align-items-center mb-3" id="cart-title">
+          <span class="text-primary">Tu carrito</span>
+          <span class="badge bg-primary rounded-pill" aria-label="3 artículos en el carrito">3</span>
         </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
+        <ul class="list-group mb-3" role="list" aria-labelledby="cart-title">
+          <!-- Item 1 -->
+          <li class="list-group-item d-flex justify-content-between lh-sm" role="listitem">
             <div>
-              <h6 class="my-0">Vacaciones de Lujo en Sri Lanka</h6>
-              <small class="text-muted">8 noches - 9 días</small>
+              <h6 class="my-0" id="item1-name">Vacaciones de Lujo en Sri Lanka</h6>
+              <small class="text-muted" id="item1-details">8 noches - 9 días</small>
             </div>
-            <span class="text-muted">2.280€</span>
+            <span class="text-muted" aria-labelledby="item1-name item1-details">2.280€</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
+          <!-- Item 2 -->
+          <li class="list-group-item d-flex justify-content-between lh-sm" role="listitem">
             <div>
-              <h6 class="my-0">Dubái & Seychelles</h6>
-              <small class="text-muted">10 noches - 11 días</small>
+              <h6 class="my-0" id="item2-name">Dubái & Seychelles</h6>
+              <small class="text-muted" id="item2-details">10 noches - 11 días</small>
             </div>
-            <span class="text-muted">3.460€</span>
+            <span class="text-muted" aria-labelledby="item2-name item2-details">3.460€</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
+          <!-- Item 3 -->
+          <li class="list-group-item d-flex justify-content-between lh-sm" role="listitem">
             <div>
-              <h6 class="my-0">Golden Triangle & Udaipur</h6>
-              <small class="text-muted">8 noches - 9 días</small>
+              <h6 class="my-0" id="item3-name">Golden Triangle & Udaipur</h6>
+              <small class="text-muted" id="item3-details">8 noches - 9 días</small>
             </div>
-            <span class="text-muted">2.560€</span>
+            <span class="text-muted" aria-labelledby="item3-name item3-details">2.560€</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between bg-light">
+          <!-- Descuento -->
+          <li class="list-group-item d-flex justify-content-between bg-light" role="listitem">
             <div class="text-success">
-              <h6 class="my-0">Código promocional</h6>
-              <small>VIAJE2024</small>
+              <h6 class="my-0" id="promo-code-title">Código promocional</h6>
+              <small id="promo-code">VIAJE2024</small>
             </div>
-            <span class="text-success">−200€</span>
+            <span class="text-success" aria-labelledby="promo-code-title promo-code">−200€</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between">
+          <!-- Total -->
+          <li class="list-group-item d-flex justify-content-between" role="listitem">
             <span>Total (EUR)</span>
-            <strong>8.100€</strong>
+            <strong aria-label="Total del carrito">8.100€</strong>
           </li>
         </ul>
-        <form class="card p-2">
+        <!-- Código promocional -->
+        <form class="card p-2 needs-validation" novalidate aria-labelledby="promo-title">
+          <h5 class="visually-hidden" id="promo-title">Aplicar código promocional</h5>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Código Promo">
-            <button type="submit" class="btn btn-secondary">Aplicar</button>
+            <label for="promo-input" class="visually-hidden">Introduce tu código promocional</label>
+            <input type="text" id="promo-input" class="form-control" placeholder="Código Promo" pattern="VIAJE2024"
+              aria-label="Campo para ingresar código promocional" required>
+            <button type="submit" class="btn btn-secondary" aria-label="Aplicar el código promocional">
+              Aplicar
+            </button>
+            <div class="invalid-feedback">
+              El código promocional no es válido.
+            </div>
           </div>
         </form>
+
       </div>
 
       <!-- Dirección envio -->
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3 text-primary">Dirección de envio</h4>
-        <form class="needs-validation" novalidate="">
+        <h4 class="mb-3 text-primary">Dirección de envío</h4>
+        <form class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="firstName" placeholder="Tu nombre" required
+                pattern="[A-Za-zÀ-ÿ\s]+" title="Por favor, introduce un nombre válido (solo letras y espacios)"
+                aria-label="Nombre" autocomplete="given-name">
               <div class="invalid-feedback">
                 Se requiere un nombre válido.
               </div>
@@ -195,9 +212,11 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="lastName" placeholder="Tu apellido" required
+                pattern="[A-Za-zÀ-ÿ\s]+" title="Por favor, introduce un apellido válido (solo letras y espacios)"
+                aria-label="Apellido" autocomplete="family-name">
               <div class="invalid-feedback">
-                Se requiere apellido válido.
+                Se requiere un apellido válido.
               </div>
             </div>
 
@@ -205,7 +224,10 @@
               <label for="username" class="form-label">Nombre de usuario</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required="">
+                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required
+                  pattern="^[a-zA-Z0-9_.-]+$"
+                  title="Tu nombre de usuario solo puede contener letras, números, guiones bajos, guiones y puntos."
+                  aria-label="Nombre de usuario" autocomplete="username">
                 <div class="invalid-feedback">
                   Tu nombre de usuario es requerido.
                 </div>
@@ -214,7 +236,9 @@
 
             <div class="col-12">
               <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com">
+              <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com"
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Por favor, introduce un correo electrónico válido."
+                aria-label="Correo electrónico" autocomplete="email">
               <div class="invalid-feedback">
                 Ingresa una dirección de correo electrónico válida para actualizaciones de envío.
               </div>
@@ -222,16 +246,16 @@
 
             <div class="col-12">
               <label for="address" class="form-label">Dirección</label>
-              <input type="text" class="form-control" id="address" placeholder="Calle ... / nº 123" required="">
+              <input type="text" class="form-control" id="address" placeholder="Calle ... / nº 123" required
+                aria-label="Dirección" autocomplete="street-address">
               <div class="invalid-feedback">
-                Por favor introduce tu direccion de envio.
-                Please enter your shipping address.
+                Por favor, introduce tu dirección de envío.
               </div>
             </div>
 
             <div class="col-md-5">
               <label for="country" class="form-label">País</label>
-              <select class="form-select" id="country" required="">
+              <select class="form-select" id="country" required aria-label="País" autocomplete="country">
                 <option value="">Elige...</option>
                 <option>España</option>
                 <option>Reino Unido</option>
@@ -244,9 +268,12 @@
                 Selecciona un país válido.
               </div>
             </div>
+
             <div class="col-md-3">
               <label for="zip" class="form-label">Código postal</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <input type="text" class="form-control" id="zip" placeholder="12345" required pattern="^\d{5}$"
+                title="Introduce un código postal válido (5 dígitos)." aria-label="Código postal"
+                autocomplete="postal-code">
               <div class="invalid-feedback">
                 Código postal requerido.
               </div>
@@ -256,32 +283,36 @@
           <hr class="my-4">
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
+            <input type="checkbox" class="form-check-input" id="same-address"
+              aria-label="La dirección de envío es la misma que mi dirección de facturación">
             <label class="form-check-label" for="same-address">La dirección de envío es la misma que mi dirección de
               facturación</label>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
+            <input type="checkbox" class="form-check-input" id="save-info"
+              aria-label="Guardar esta información para la próxima vez">
             <label class="form-check-label" for="save-info">Guardar esta información para la próxima vez</label>
           </div>
 
           <hr class="my-4">
-          
-          <!-- Pago -->
+
           <h4 class="mb-3 text-primary">Pago</h4>
 
           <div class="my-3">
             <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required
+                aria-label="Pago con tarjeta de crédito">
               <label class="form-check-label" for="credit">Tarjeta de crédito</label>
             </div>
             <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required
+                aria-label="Pago con tarjeta de débito">
               <label class="form-check-label" for="debit">Tarjeta de débito</label>
             </div>
             <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required
+                aria-label="Pago con PayPal">
               <label class="form-check-label" for="paypal">PayPal</label>
             </div>
           </div>
@@ -289,34 +320,40 @@
           <div class="row gy-3">
             <div class="col-md-6">
               <label for="cc-name" class="form-label">Nombre en la tarjeta</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-name" placeholder="Nombre completo" required
+                aria-label="Nombre en la tarjeta" autocomplete="cc-name">
               <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
               <div class="invalid-feedback">
-                Se requiere el nombre en la tarjeta
+                Se requiere el nombre en la tarjeta.
               </div>
             </div>
 
             <div class="col-md-6">
               <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-number" placeholder="1234 5678 9012 3456" required
+                pattern="\d{16}" title="Introduce un número de tarjeta válido (16 dígitos)."
+                aria-label="Número de tarjeta de crédito" autocomplete="cc-number">
               <div class="invalid-feedback">
-                Se requiere número de tarjeta de crédito
+                Se requiere un número de tarjeta de crédito válido.
               </div>
             </div>
 
             <div class="col-md-3">
               <label for="cc-expiration" class="form-label">Vencimiento</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-expiration" placeholder="MM/AA" required
+                pattern="^(0[1-9]|1[0-2])\/\d{2}$" title="Introduce una fecha de vencimiento válida en formato MM/AA."
+                aria-label="Fecha de vencimiento" autocomplete="cc-exp">
               <div class="invalid-feedback">
-                Fecha de vencimiento requerida
+                Fecha de vencimiento requerida.
               </div>
             </div>
 
             <div class="col-md-3">
               <label for="cc-cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              <input type="text" class="form-control" id="cc-cvv" placeholder="123" required pattern="\d{3}"
+                title="Introduce un CVV válido (3 dígitos)." aria-label="Código de seguridad" autocomplete="cc-csc">
               <div class="invalid-feedback">
-                Código de seguridad requerido
+                Código de seguridad requerido.
               </div>
             </div>
           </div>
@@ -429,6 +466,27 @@
   <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
   <script src="../../js/scroll.js"></script>
 </body>
 

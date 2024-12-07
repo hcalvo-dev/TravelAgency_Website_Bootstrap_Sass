@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTravel</title>
+    <link rel="stylesheet" href="../../styles/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../../resources/logos/logo_web.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Botón fijo con icono hacia arriba -->
+    <a href="#header" class="btn btn-primary position-fixed bottom-0 end-0 m-3" aria-label="Up to header" role="button">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- ENCABEZADO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <header id="header" class="px-4" role="banner">
+        <div class="container-fluid">
+
+            <!-- Nav -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
+
+                <!-- Logo -->
+                <div class="col-2 text-center">
+                    <a href="../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                        tabindex="0" aria-label="Go to the homepage">
+                        <img src="../../resources/logos/logo_web.png" alt="Website logo" width="40" height="40"
+                            class="me-2" />
+                        <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
+                    </a>
+                </div>
+
+                <!-- Botón del menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                    aria-controls="offcanvasNavbar" aria-label="Open the navigation menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">WordlTravel</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                            aria-label="Close menu"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex align-items-center">
+                        <nav class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
+                                <li class="nav-item me-1">
+                                    <a href="../index_en.html" class="nav-link px-2 text-black"
+                                        aria-label="Go to the homepage">Home</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../en/destinations.html" class="nav-link  px-2 text-black"
+                                        aria-label="View destinations">Destinations</a>
+                                </li>
+                                <li class="li-dropdown me-1 nav-item dropdown d-flex flex-column">
+                                    <a class="link-dropdown dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false"
+                                        aria-label="Open the collections menu">
+                                        Collections
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="collectionsMenu">
+                                        <li><a class="dropdown-item" href="../en/collections/honeymoon.html"
+                                                aria-label="View honeymoon collections">Honeymoon</a></li>
+                                        <li><a class="dropdown-item" href="../en/collections/premium_travel.html"
+                                                aria-label="View premium trip collections">Premium trips</a></li>
+                                        <li><a class="dropdown-item" href="../en/collections/stopover.html"
+                                                aria-label="View stopover collections">Stopovers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../en/inspire_me.html" class="nav-link px-2 text-black"
+                                        aria-label="View inspirations">Inspire Me</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../en/contact.html" class="nav-link active px-2 text-black"
+                                        aria-label="Go to the contact page">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Linea de separación -->
+                        <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
+
+                        <!-- Buscador -->
+                        <form class="d-flex search-form" role="search">
+                            <input type="search" class="form-control search-input" placeholder="Search..."
+                                aria-label="Search the site">
+                            <button class="btn search-btn" type="submit" aria-label="Search">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+
+                        <!-- Selector de idioma -->
+                        <div class="language dropdown">
+                            <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
+                                id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                aria-label="Select language">
+                                <img src="../../resources/img/UK.png" alt="UK flag" width="25px" height="25px"
+                                    class="me-2" /> Es
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">
+                                    <a class="text-decoration-none text-black" href="../es/contacto.html"
+                                        aria-label="Switch to Spanish">
+                                        <img src="../../resources/img/spain.png" alt="Spain flag" width="25px"
+                                            height="25px" class="me-2" /> En
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Carrito de la compra -->
+                        <button type="button" class="cesta btn me-2"
+                            aria-label="View the products in the shopping cart"><a
+                                class="text-decoration-none text-black" href="carrito_en.html"
+                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
+                        </button>
+
+                        <!-- Login -->
+                        <button type="button" class="login btn btn-primary btn-sm" id="login"
+                            aria-label="Session Start"><a class="text-decoration-none text-white" href="login_en.html"
+                                aria-label="Ir a login">Login</a></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- CONTENIDO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <main class="container-fluid my-3 py-4">
+        <div class="container-fluid">
+            <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                <h2 class="text-primary fs-3 text-center"><span class="text-primary"><strong>Do you have
+                            Doubts?</strong></span></h2>
+                <div class="border-top border-primary flex-grow-1 mx-5"></div>
+            </header>
+            <p class="fs-6 my-0 mx-2 text-center text-black">We are at your disposal to answer any questions 24 hours a
+                day.</p>
+        </div>
+        <div class="container-fluid mt-5 d-flex flex-column flex-lg-row justify-content-around">
+            <!-- Image style -->
+            <div class="d-flex d-none d-lg-block align-self-center img-destinos shadow p- 2 bg-body w-sm-50 rounded-5 mx-lg-auto h-100"
+                style="width: 40%; ">
+                <img src="../../resources/img/sultan-suites-6-768x388.png"
+                    class="img-fluid rounded-5 h-100 w-100 object-fit-cover"
+                    alt="Elephants crossing a river in Sri Lanka">
+            </div>
+            <!-- Form -->
+            <div class="mx-auto contacto">
+                <div class="container">
+                    <h3 class="mb-3 text-primary">
+                        <i class="bi bi-envelope-fill "></i> Contact us
+                    </h3>
+                </div>
+                <form class="p-3 border border-primary rounded shadow needs-validation" novalidate>
+                    <h2 id="contact-form-title" class="mb-4">Contact Form</h2>
+                    <!-- Field Name -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your name" required
+                            aria-required="true" aria-describedby="name-help">
+                        <div id="name-help" class="form-text">Enter your full name.</div>
+                        <div class="invalid-feedback">The name is required.</div>
+                    </div>
+                    <!-- Email Field -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="your@email.com" required
+                            aria-required="true" aria-describedby="email-help">
+                        <div id="email-help" class="form-text">Please enter a valid email address.</div>
+                        <div class="invalid-feedback">Email is required and must be valid.</div>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Type your message" required
+                            aria-required="true" aria-describedby="message-help"></textarea>
+                        <div id="message-help" class="form-text">Include the details of your query or message.</div>
+                        <div class="invalid-feedback">The message cannot be empty.</div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary w-100" aria-label="Submit contact form">
+                        Submit
+                    </button>
+                </form>
+
+            </div>
+        </div>
+        <!-- Map -->
+        <div class="w-80 my-5">
+            <div class="container">
+                <h3 class="mb-3 text-primary w-90">
+                    <i class="bi bi-geo-alt-fill"></i> Our Location
+                </h3>
+            </div>
+            <div class="mb-3 " style="text-align: center;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3143.67755537552!2d-6.58911395331662!3d38.007980884931285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1733331355898!5m2!1ses!2ses"
+                    width="90%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class=" d-flex flex-column align-items-center w-80 mt-5">
+            <div class="w-90">
+                <div class="container">
+                    <h3 class="mb-3 text-primary">
+                        <i class="bi bi-patch-question"></i> Frequently Asked Questions
+                    </h3>
+                </div>
+                <table class="table table-hover table-striped shadow rounded">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Question</th>
+                            <th class="border-start">Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                What services does the agency offer?
+                            </td>
+                            <td class="border-start">
+                                We organize customized trips, group tours, honeymoon packages and adventure trips.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Can changes be made? the itineraries?
+                            </td>
+                            <td class="border-start">
+                                Yes, our packages are flexible and we can adapt them to your needs and
+                                preferences.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Do you offer assistance during the trip?
+                            </td>
+                            <td class="border-start">
+                                We have 24/7 assistance through our customer service.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                How can I make a reservation?
+                            </td>
+                            <td class="border-start">
+                                You can book through our website, by calling our customer service number or by visiting
+                                us
+                                at our offices.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                What payment methods do you accept?
+                            </td>
+                            <td class="border-start">
+                                We accept payments by credit/debit card, bank transfers and PayPal.
+                                < /td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- FOOTER -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <footer class="container-fluid mt-5 text-white py-4">
+        <div class="container">
+            <h4 class="text-light mb-4">OUR OFFICES</h4>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="row text-center text-md-start my-3">
+                <!-- Spain -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Spain</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Floor 18,<br>28046, Madrid.</p>
+                </div>
+                <!-- United Kingdom -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>United Kingdom</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
+                </div>
+                <!-- Portugal -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Portugal</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Building D,<br>2nd floor, 4400-617, Vila Nova de
+                        Gaia.
+                    </p>
+                </div>
+                <!-- Italy -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Italy</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Viale Monza, 347,<br>20126, Milan.</p>
+                </div>
+                <!-- France -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>France</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Building F,<br>31100, Toulouse.</p>
+                </div>
+                <!-- Maldives -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Maldives</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Male.</p>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <!-- Legal menu -->
+                <div class="row">
+                    <div class="col-8">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item link-footer"><a href="../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Legal notice">Legal
+                                    notice</a></li>
+                            <li class="list-inline-item link-footer"><a href="../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Terms and Conditions">Terms
+                                    and Conditions</a></li>
+                            <li class="list-inline-item link-footer"><a href="../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Privacy Policy">Privacy
+                                    Policy</a></li>
+                            <li class="list-inline-item link-footer"><a href="../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Cookies Policy">Cookies
+                                    Policy</a></li>
+                            <li class="list-inline-item link-footer"><a href="../en/legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Media Kit">Media
+                                    Kit</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Social media -->
+                    <div class="col-4">
+                        <span class="text-white">Follow us:</span>
+                        <a href="https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/" class="text-white ms-2" target="_blank" aria-label="TikTok"><i
+                                class="bi bi-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <!-- Name -->
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <script src="../../js/scroll.js"></script>
+</body>
+
+</html>

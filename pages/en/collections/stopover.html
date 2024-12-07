@@ -14,7 +14,8 @@
 <body>
 
     <!-- Botón fijo con icono hacia arriba -->
-    <a href="#header" class="btn btn-primary position-fixed bottom-0 end-0 m-3" aria-label="Up to header" role="button">
+    <a href="../#header" aria-label="Sube al header" class="btn btn-primary position-fixed z-1 bottom-0 end-0 m-3"
+        role="button">
         <i class="bi bi-chevron-double-up"></i>
     </a>
 
@@ -30,7 +31,7 @@
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
-                    <a href="../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                    <a href="../../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
                         tabindex="0" aria-label="Go to the homepage">
                         <img src="../../../resources/logos/logo_web.png" alt="Website logo" width="40" height="40"
                             class="me-2" />
@@ -48,7 +49,7 @@
                 <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">WordlTravel</h5>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
                             aria-label="Close menu"></button>
                     </div>
@@ -129,8 +130,8 @@
 
                         <!-- Login -->
                         <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Session Start"><a class="text-decoration-none text-white" href="../login_en.html"
-                                aria-label="Ir a login">Login</a></button>
+                            aria-label="Session Start"><a class="text-decoration-none text-white"
+                                href="../login_en.html" aria-label="Ir a login">Login</a></button>
                     </div>
                 </div>
             </nav>
@@ -145,7 +146,7 @@
         <div class="container-fluid p-0 position-relative z-2 " style="height: 100vh;">
             <div class="content-center text-center w-100">
                 <header>
-                    <h1 class="styled-title">STOPOVER</h1>
+                    <h1 class="miFuente">STOPOVER</h1>
                     <p class="styled-paragraph">Add unique experiences to your trip</p>
                 </header>
             </div>
@@ -182,7 +183,7 @@
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
                                 <img src="../../../resources/img/dubai-en-helicoptero-600x303.png"
-                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Dubai destination">
+                                    class="w-100 h-100 object-fit-cover rounded-top" alt="View of Dubai city from a helicopter">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
                                 <h5 class="card-title text-center text-primary">Stopover in Dubai</h5>
@@ -211,9 +212,10 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                                        href="luna_de_miel.html#luna_miel" target="_self"
-                                        aria-label="Add to cart honeymoon plan Polynesia">
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                        data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
+                                        target="_self" aria-label="Add plan to cart">
                                         <p class="mb-0 w-100 text-center">Add to cart</p>
                                     </a>
                                 </div>
@@ -225,7 +227,7 @@
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
                                 <img src="../../../resources/img/viajes-qatar-katara-mosque.png"
-                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Istanbul destination">
+                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Qatar temple with a small tower next to it">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
                                 <h5 class="card-title text-center text-primary">Stopover in Istanbul</h5>
@@ -254,9 +256,10 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                                        href="luna_de_miel.html#luna_miel" target="_self"
-                                        aria-label="Add to cart honeymoon plan Polynesia">
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                        data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
+                                        target="_self" aria-label="Add plan to cart">
                                         <p class="mb-0 w-100 text-center">Add to cart</p>
                                     </a>
                                 </div>
@@ -268,7 +271,7 @@
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
                                 <img src="../../../resources/img/viajes-qatar-desert-safari-1-1.png"
-                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Qatar destination">
+                                    class="w-100 h-100 object-fit-cover rounded-top" alt="Car driving down the side of a desert dune">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
                                 <h5 class="card-title text-center text-primary">Stopover in Qatar</h5>
@@ -297,9 +300,10 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50  d-flex align-self-center"
-                                        href="luna_de_miel.html#luna_miel" target="_self"
-                                        aria-label="Add to cart honeymoon plan Polynesia">
+                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                        data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
+                                        target="_self" aria-label="Add plan to cart">
                                         <p class="mb-0 w-100 text-center">Add to cart</p>
                                     </a>
                                 </div>
@@ -314,8 +318,8 @@
         <section class="container-fluid my-element mb-4">
             <header class="d-flex align-items-center my-5 justify-content-between py-3">
                 <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                <h2 class="text-primary fs-3 text-center">Recomendado <span
-                        class="text-primary"><strong>por</strong></span>
+                <h2 class="text-primary fs-3 text-center">Recomended <span
+                        class="text-primary"><strong>by</strong></span>
                 </h2>
                 <div class="border-top border-primary flex-grow-1 mx-5"></div>
             </header>
@@ -323,30 +327,30 @@
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
                     <div class=" mx-5 d-flex justify-content-center ">
                         <img src="../../../resources/logos/logo-maldives-sunny-side1.png" class="w-75 h-100"
-                            alt="Logo de Maldives Sunny Side, operador turístico de Maldivas">
+                            alt="Logo of Maldives Sunny Side, Maldives tour operator">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
                         <img src="../../../resources/logos/logo-certified-tahiti-specialist1.png" class="w-75 h-100"
-                            alt="Logo de Certified Tahiti Specialist, especialista en viajes a Tahití">
+                            alt="Certified Tahiti Specialist logo, specialist in travel to Tahiti">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
                         <img src="../../../resources/logos/logo-visit-qatar1.png" class="w-75 h-100"
-                            alt="Logo de Visit Qatar, autoridad de turismo de Qatar">
+                            alt="Logo of Visit Qatar, Qatar Tourism Authority">
                     </div>
                 </div>
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
 
                     <div class=" mx-5 d-flex justify-content-center ">
                         <img src="../../../resources/logos/logo-seychelles-tourism1.png" class="w-75 h-100"
-                            alt="Logo de Seychelles Tourism, organización de turismo de Seychelles">
+                            alt="Logo of Seychelles Tourism, the tourism organisation of Seychelles">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
                         <img src="../../../resources/logos/logo-oficina-turismo-japon-oficial.png" class="w-75 h-100"
-                            alt="Logo de la Oficina de Turismo de Japón, entidad oficial de turismo japonés">
+                            alt="Logo of the Japan Tourism Office, the official Japanese tourism agency">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
                         <img src="../../../resources/logos/logo-tripadvisor-copia1.png" class="w-75 h-100"
-                            alt="Logo de TripAdvisor, plataforma de opiniones y recomendaciones de viajes">
+                            alt="TripAdvisor logo, travel advice and reviews platform">
                     </div>
                 </div>
             </div>
@@ -451,9 +455,29 @@
     </footer>
 
 
-    <script src="../../https://code.jquery.com/jquery-3.7.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa todos los popovers
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+            popoverTriggerList.forEach(popoverTriggerEl => {
+                const popover = new bootstrap.Popover(popoverTriggerEl);
+
+                // Escucha el clic en el elemento para mostrar y cerrar automáticamente
+                popoverTriggerEl.addEventListener('click', () => {
+                    popover.show();
+
+                    // Cierra el popover automáticamente después de 3 segundos
+                    setTimeout(() => {
+                        popover.hide();
+                    }, 3000);
+                });
+            });
+        });
+    </script>
     <script src="../../../js/scroll.js"></script>
 </body>
 

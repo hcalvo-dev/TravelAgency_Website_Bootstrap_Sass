@@ -49,7 +49,7 @@
                 <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Travel</h5>
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">WordlTravel</h5>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
                             aria-label="Cerrar menú"></button>
                     </div>
@@ -114,7 +114,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">
-                                    <a class="text-decoration-none text-black" href="../en/destinations.html"
+                                    <a class="text-decoration-none text-black" href="../en/contact.html"
                                         aria-label="Cambiar a inglés">
                                         <img src="../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
                                             height="25px" class="me-2" /> En
@@ -169,22 +169,41 @@
                         <i class="bi bi-envelope-fill "></i> Contáctanos
                     </h3>
                 </div>
-                <form class="p-3 border border-primary rounded shadow">
+                <form class="p-3 border border-primary rounded shadow needs-validation" novalidate>
+                    <h2 id="contact-form-title" class="mb-4">Formulario de Contacto</h2>
+                    <!-- Campo Nombre -->
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required
+                            aria-required="true" aria-describedby="name-help">
+                        <div id="name-help" class="form-text">Introduce tu nombre completo.</div>
+                        <div class="invalid-feedback">El nombre es obligatorio.</div>
                     </div>
+
+                    <!-- Campo Correo Electrónico -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required
+                            aria-required="true" aria-describedby="email-help">
+                        <div id="email-help" class="form-text">Introduce una dirección de correo válida.</div>
+                        <div class="invalid-feedback">El correo electrónico es obligatorio y debe ser válido.</div>
                     </div>
+
+                    <!-- Campo Mensaje -->
                     <div class="mb-3">
                         <label for="message" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje"
-                            required></textarea>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje" required
+                            aria-required="true" aria-describedby="message-help"></textarea>
+                        <div id="message-help" class="form-text">Incluye los detalles de tu consulta o mensaje.</div>
+                        <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+
+                    <!-- Botón Enviar -->
+                    <button type="submit" class="btn btn-primary w-100" aria-label="Enviar el formulario de contacto">
+                        Enviar
+                    </button>
                 </form>
+
             </div>
         </div>
 
@@ -198,7 +217,7 @@
             <div class="mb-3 " style="text-align: center;">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3143.67755537552!2d-6.58911395331662!3d38.007980884931285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1733331355898!5m2!1ses!2ses"
-                    width="90%" height="400"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    width="90%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
@@ -214,15 +233,15 @@
                     <thead class="table-primary">
                         <tr>
                             <th>Pregunta</th>
-                            <th  class="border-start">Respuesta</th>
+                            <th class="border-start">Respuesta</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td >
+                            <td>
                                 ¿Qué servicios ofrece la agencia?
                             </td>
-                            <td  class="border-start">
+                            <td class="border-start">
                                 Organizamos viajes personalizados, tours en grupo, paquetes de luna de miel y viajes de
                                 aventura.
                             </td>
@@ -231,7 +250,7 @@
                             <td>
                                 ¿Se pueden modificar los itinerarios?
                             </td>
-                            <td  class="border-start">
+                            <td class="border-start">
                                 Sí, nuestros paquetes son flexibles y podemos adaptarlos a tus necesidades y
                                 preferencias.
                             </td>
@@ -240,7 +259,7 @@
                             <td>
                                 ¿Ofrecen asistencia durante el viaje?
                             </td>
-                            <td  class="border-start">
+                            <td class="border-start">
                                 Contamos con asistencia 24/7 a través de nuestro servicio de atención al cliente.
                             </td>
                         </tr>
@@ -248,7 +267,7 @@
                             <td>
                                 ¿Cómo puedo realizar una reserva?
                             </td>
-                            <td  class="border-start">
+                            <td class="border-start">
                                 Puedes reservar a través de nuestra web, llamando al teléfono de atención o visitándonos
                                 en nuestras oficinas.
                             </td>
@@ -257,7 +276,7 @@
                             <td>
                                 ¿Qué métodos de pago aceptan?
                             </td>
-                            <td  class="border-start">
+                            <td class="border-start">
                                 Aceptamos pagos con tarjeta de crédito/débito, transferencias bancarias y PayPal.
                             </td>
                         </tr>
@@ -370,6 +389,27 @@
     <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
     <script src="../../js/scroll.js"></script>
 </body>
 
