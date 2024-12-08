@@ -110,27 +110,21 @@
                                     class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">
-                                    <a class="text-decoration-none text-black" href="../es/login_es.html"
-                                        aria-label="Switch to Spanish">
-                                        <img src="../../resources/img/spain.png" alt="Spain flag" width="25px"
-                                            height="25px" class="me-2" /> En
-                                    </a>
-                                </button>
+                                <a class="dropdown-item text-decoration-none text-black" href="../es/login_es.html"
+                                    aria-label="Switch to Spanish">
+                                    <img src="../../resources/img/spain.png" alt="Spain flag" width="25px" height="25px"
+                                        class="me-2" /> En
+                                </a>
                             </div>
                         </div>
 
                         <!-- Carrito de la compra -->
-                        <button type="button" class="cesta btn me-2"
-                            aria-label="View the products in the shopping cart"><a
-                                class="text-decoration-none text-black" href="carrito_en.html"
-                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
-                        </button>
+                        <a class="text-decoration-none cesta btn me-2 text-black" href="carrito_en.html"
+                            aria-label="Go to cart"><i class="bi bi-cart2" aria-hidden="true"></i></a>
 
                         <!-- Login -->
-                        <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Session Start"><a class="text-decoration-none active text-white" href="login_en.html"
-                                aria-label="Ir a login">Login</a></button>
+                        <a class="text-decoration-none text-whitelogin btn btn-primary btn-sm" id="login"
+                            href="login_en.html" aria-label="Go to login">Login</a>
                     </div>
                 </div>
             </nav>
@@ -141,40 +135,54 @@
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main class="form-signin container my-5 py-5 d-flex align-content-center justify-content-center">
-        <form class="w-25 d-flex align-content-center flex-column gap-2" aria-labelledby="form-title">
+
+        <form class="d-flex flex-column w-50 needs-validation p-4 shadow rounded" novalidate>
             <h1 class="h3 mb-3 fw-normal" id="form-title">Sign in</h1>
 
-            <!-- Email field -->
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
-                    required aria-required="true" aria-label="Email (required)" autocomplete="email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="Enter a valid email address. Example: name@example.com">
-                <label for="floatingInput">Email</label>
+            <!-- Campo de correo electrónico -->
+            <div class="w-100 mb-3">
+                <label for="validationCustomEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="validationCustomEmail" placeholder="name@example.com"
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Introduce una dirección de correo válida. Ejemplo: name@example.com">
+                <div class="valid-feedback">
+                    Correo válido.
+                </div>
+                <div class="invalid-feedback">
+                    Introduce un correo electrónico válido.
+                </div>
             </div>
 
-            <!-- Password field -->
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password"
-                    required aria-required="true" aria-label="Password (required)" autocomplete="current-password"
-                    minlength="8" title="The password must be at least 8 characters long.">
-                <label for="floatingPassword">Password</label>
+            <!-- Campo de contraseña -->
+            <div class="w-100 my-3">
+                <label for="validationCustomPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="validationCustomPassword" placeholder="Contraseña"
+                    required minlength="8"
+                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^*_=:;,.?])[A-Za-z\d!@#$%^*_=:;,.?]{8,}"
+                    title="La contraseña debe contener una mayúscula, una minúscula, un número, un carácter especial y al menos 8 caracteres.">
+                <div class="valid-feedback">
+                    Contraseña válida.
+                </div>
+                <div class="invalid-feedback">
+                    La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y
+                    un carácter especial.
+                </div>
             </div>
 
-            <!-- Checkbox -->
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me" id="rememberMe" aria-label="Remember me for next time">
-                    Remember me
-                </label>
+            <!-- Checkbox "Recuérdame" -->
+            <div class="w-100 mt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="remember-me" id="rememberMe"
+                        aria-label="Recuérdame para la próxima vez">
+                    <label class="form-check-label" for="rememberMe">
+                        Recuérdame
+                    </label>
+                </div>
             </div>
 
-            <!-- Submit button -->
-            <button class="w-100 btn btn-lg btn-primary" type="submit" aria-label="Sign in">Sign in</button>
-
-            <!-- Validation error messages -->
-            <div id="error-message" class="text-danger mt-2 visually-hidden" aria-live="polite">
-                Please fill out all fields correctly.
+            <!-- Botón de envío -->
+            <div class="w-100 mt-4">
+                <button class="btn btn-primary w-100" type="submit">Iniciar sesión</button>
             </div>
         </form>
     </main>
@@ -276,10 +284,31 @@
     </footer>
 
 
-    <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../js/scroll.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>

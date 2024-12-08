@@ -107,27 +107,21 @@
                                     height="25px" class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">
-                                    <a class="text-decoration-none text-black" href="../en/login_en.html"
-                                        aria-label="Cambiar a inglés">
-                                        <img src="../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
-                                            height="25px" class="me-2" /> En
-                                    </a>
-                                </button>
+                                <a class="dropdown-item text-decoration-none text-black" href="../en/login_en.html"
+                                    aria-label="Cambiar a inglés">
+                                    <img src="../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
+                                        height="25px" class="me-2" /> En
+                                </a>
                             </div>
                         </div>
 
                         <!-- Carrito de la compra -->
-                        <button type="button" class="cesta btn me-2"
-                            aria-label="Ver los productos en el carrito de la compra"><a
-                                class="text-decoration-none text-black" href="carrito_es.html"
-                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
-                        </button>
+                        <a class="text-decoration-none cesta btn me-2 text-black" href="carrito_es.html"
+                            aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
 
                         <!-- Login -->
-                        <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Iniciar sesión"><a class="text-decoration-none active text-white"
-                                href="login_es.html" aria-label="Ir a login">Login</a></button>
+                        <a id="login" class="text-decoration-none login btn btn-primary btn-sm text-white"
+                            href="login_es.html" aria-label="Ir a login">Login</a>
                     </div>
                 </div>
             </nav>
@@ -138,68 +132,56 @@
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
     <main class="form-signin container my-5 py-5 d-flex align-content-center justify-content-center">
-        <form class="d-flex flex-column w-50 needs-validation" novalidate>
-            <!-- Campo de correo electrónico -->
-            <div class="w-100 mb-2">
-              <label for="validationCustomEmail" class="form-label">Correo electrónico</label>
-              <input 
-                type="email" 
-                class="form-control" 
-                id="validationCustomEmail" 
-                placeholder="name@example.com" 
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                title="Introduce una dirección de correo válida. Ejemplo: name@example.com">
-              <div class="valid-feedback">
-                Correo válido.
-              </div>
-              <div class="invalid-feedback">
-                Introduce un correo electrónico válido.
-              </div>
+        <form class="d-flex flex-column w-50 needs-validation p-4 shadow rounded" novalidate>
+            <h1 class="h3 mb-3 fw-normal" id="form-title">Sign in</h1>
+
+            <!-- Email field -->
+            <div class="w-100 mb-3">
+                <label for="validationCustomEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="validationCustomEmail" placeholder="name@example.com"
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Enter a valid email address. Example: name@example.com">
+                <div class="valid-feedback">
+                    Valid email.
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
             </div>
-          
-            <!-- Campo de contraseña -->
-            <div class="w-100 my-2">
-              <label for="validationCustomPassword" class="form-label">Contraseña</label>
-              <input 
-                type="password" 
-                class="form-control" 
-                id="validationCustomPassword" 
-                placeholder="Contraseña" 
-                required
-                minlength="8" 
-                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^*_=:;,.?])[A-Za-z\d!@#$%^*_=:;,.?]{8,}" 
-                title="La contraseña debe contener una mayúscula, una minúscula, un número, un carácter especial y al menos 8 caracteres.">
-              <div class="valid-feedback">
-                Contraseña válida.
-              </div>
-              <div class="invalid-feedback">
-                La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y un carácter especial.
-              </div>
+
+            <!-- Password field -->
+            <div class="w-100 my-3">
+                <label for="validationCustomPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="validationCustomPassword" placeholder="Password"
+                    required minlength="8"
+                    pattern="(?=.*[A-Z])(?=.*[a-z ])(?=.*\d)(?=.*[!@#$%^*_=:;,.?])[A-Za-z\d!@#$%^*_=: ;,.?]{8,}"
+                    title="Password must contain one uppercase letter, one lowercase letter, one number, one special character and at least 8 characters.">
+                <div class="valid-feedback">
+                    Valid password.</div>
+                <div class="invalid-feedback">
+                    Password must be at least 8 characters long, including one uppercase, one lowercase, one number, and
+                    one special character.
+                </div>
             </div>
-          
-            <!-- Checkbox "Recuérdame" -->
-            <div class="w-100 mt-2">
-              <div class="form-check">
-                <input 
-                  class="form-check-input" 
-                  type="checkbox" 
-                  value="remember-me" 
-                  id="rememberMe" 
-                  aria-label="Recuérdame para la próxima vez">
-                <label class="form-check-label" for="rememberMe">
-                  Recuérdame
-                </label>
-              </div>
-            </div>
-          
-            <!-- Botón de envío -->
+
+            <!-- Checkbox "Remember me" -->
             <div class="w-100 mt-3">
-              <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="remember-me" id="rememberMe"
+                        aria-label="Remember me for next time">
+                    <label class="form-check-label" for="rememberMe">
+                        remember me
+                    </label>
+                </div>
             </div>
-          </form>
-          
-        
+
+            <!-- Submit button -->
+            <div class="w-100 mt-4">
+                <button class="btn btn-primary w-100" type="submit">Login</button>
+            </div>
+        </form>
+
+
     </main>
 
     <!-- - - - - - - - - - - - - - - - - - - - -->
@@ -300,8 +282,8 @@
         </div>
     </footer>
 
-    <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields

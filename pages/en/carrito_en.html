@@ -60,7 +60,7 @@
                                         aria-label="Go to the homepage">Home</a>
                                 </li>
                                 <li class="nav-item me-1">
-                                    <a href="../en/destinations.html" class="nav-link active px-2 text-black"
+                                    <a href="../en/destinations.html" class="nav-link  px-2 text-black"
                                         aria-label="View destinations">Destinations</a>
                                 </li>
                                 <li class="li-dropdown me-1 nav-item dropdown d-flex flex-column">
@@ -110,27 +110,21 @@
                                     class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">
-                                    <a class="text-decoration-none text-black" href="../es/carrito_es.html"
-                                        aria-label="Switch to Spanish">
-                                        <img src="../../resources/img/spain.png" alt="Spain flag" width="25px"
-                                            height="25px" class="me-2" /> En
-                                    </a>
-                                </button>
+                                <a class="dropdown-item text-decoration-none text-black" href="../es/carrito_es.html"
+                                    aria-label="Switch to Spanish">
+                                    <img src="../../resources/img/spain.png" alt="Spain flag" width="25px" height="25px"
+                                        class="me-2" /> En
+                                </a>
                             </div>
                         </div>
 
                         <!-- Carrito de la compra -->
-                        <button type="button" class="cesta btn me-2"
-                            aria-label="View the products in the shopping cart"><a
-                                class="text-decoration-none active text-black" href="carrito_en.html"
-                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
-                        </button>
+                        <a class="text-decoration-none cesta btn me-2 text-black" href="carrito_en.html"
+                            aria-label="Go to cart"><i class="bi bi-cart2" aria-hidden="true"></i></a>
 
                         <!-- Login -->
-                        <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Session Start"><a class="text-decoration-none text-white" href="login_en.html"
-                                aria-label="Ir a login">Login</a></button>
+                        <a class="text-decoration-none text-whitelogin btn btn-primary btn-sm" id="login"
+                            href="login_en.html" aria-label="Go to login">Login</a>
                     </div>
                 </div>
             </nav>
@@ -480,8 +474,8 @@
     </footer>
 
 
-    <script src="../https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields

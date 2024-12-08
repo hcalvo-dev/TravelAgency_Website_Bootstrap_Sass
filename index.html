@@ -14,7 +14,8 @@
 <body>
 
     <!-- Botón fijo con icono hacia arriba -->
-    <a href="#header" aria-label="Subir hasta la cabecera de la página" class="btn btn-primary position-fixed bottom-0 end-0 m-3 z-1" role="button">
+    <a href="#header" aria-label="Subir hasta la cabecera de la página"
+        class="btn btn-primary position-fixed bottom-0 end-0 m-3 z-1" role="button">
         <i class="bi bi-chevron-double-up"></i>
     </a>
 
@@ -112,27 +113,21 @@
                                     class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">
-                                    <a class="text-decoration-none text-black" href="pages/index_en.html"
-                                        aria-label="Cambiar a inglés">
-                                        <img src="resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
-                                            height="25px" class="me-2" /> En
-                                    </a>
-                                </button>
+                                <a class="dropdown-item text-decoration-none text-black" href="pages/index_en.html"
+                                    aria-label="Cambiar a inglés">
+                                    <img src="resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
+                                        height="25px" class="me-2" /> En
+                                </a>
                             </div>
                         </div>
 
                         <!-- Carrito de la compra -->
-                        <button type="button" class="cesta btn me-2"
-                            aria-label="Ver los productos en el carrito de la compra"><a
-                                class="text-decoration-none text-black" href="pages/es/carrito_es.html"
-                                aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
-                        </button>
+                        <a class="text-decoration-none cesta btn me-2 text-black" href="pages/es/carrito_es.html"
+                            aria-label="Ir al carrito"><i class="bi bi-cart2" aria-hidden="true"></i></a>
 
                         <!-- Login -->
-                        <button type="button" class="login btn btn-primary btn-sm" id="login"
-                            aria-label="Iniciar sesión"><a class="text-decoration-none text-white"
-                                href="pages/es/login_es.html" aria-label="Ir a login">Login</a></button>
+                        <a id="login" class="text-decoration-none login btn btn-primary btn-sm text-white"
+                            href="pages/es/login_es.html" aria-label="Ir a login">Login</a>
                     </div>
                 </div>
             </nav>
@@ -382,13 +377,13 @@
             <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
                 <div class="card card-hotel">
                     <div class="img-wrapper">
-                        <img src="resources/img/img_contact.png" class="carousel-img"
-                            alt="Desierto con grandes dunas">
+                        <img src="resources/img/img_contact.png" class="carousel-img" alt="Desierto con grandes dunas">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h5 class="card-title text-white fs-2 text-shadow text-center">Contáctanos</h5>
                         <a class="enlaces-hotel btn btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
-                            href="pages/es/contacto.html" target="_self" aria-label="Desplazarse a la página de contacto">
+                            href="pages/es/contacto.html" target="_self"
+                            aria-label="Desplazarse a la página de contacto">
                             <p class="mb-0 w-100 text-center">Contacto</p>
                         </a>
                     </div>
@@ -401,7 +396,8 @@
                         <h5 class="card-title text-white fs-2 text-shadow text-center">¿Quieres un<br />Presupuesto?
                         </h5>
                         <a class="enlaces-hotel btn btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
-                            href="pages/es/destinos.html" target="_self" aria-label="Desplazarse a la página de destinos">
+                            href="pages/es/destinos.html" target="_self"
+                            aria-label="Desplazarse a la página de destinos">
                             <p class="mb-0 w-100 text-center">Quiero mi plan</p>
                         </a>
                     </div>
@@ -414,7 +410,8 @@
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h5 class="card-title fs-2 text-white text-shadow text-center ">¿Hablamos?</h5>
                         <a class="enlaces-hotel btn btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
-                            href="pages/es/contacto.html" target="_self" aria-label="Desplazarse a la página de contacto">
+                            href="pages/es/contacto.html" target="_self"
+                            aria-label="Desplazarse a la página de contacto">
                             <p class="mb-0 w-100 text-center">Te llamamos</p>
                         </a>
                     </div>
@@ -577,8 +574,8 @@
                                 class="bi bi-facebook"></i></a>
                         <a href="pages/https://www.instagram.com/" class="text-white ms-2" target="_blank"
                             aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="pages/https://www.tiktok.com/" class="text-white ms-2" target="_blank" aria-label="TikTok"><i
-                                class="bi bi-tiktok"></i></a>
+                        <a href="pages/https://www.tiktok.com/" class="text-white ms-2" target="_blank"
+                            aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                         <a href="pages/https://www.linkedin.com/" class="text-white ms-2" target="_blank"
                             aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="pages/https://www.pinterest.com/" class="text-white ms-2" target="_blank"
@@ -598,8 +595,8 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         window.addEventListener("scroll", function () {
