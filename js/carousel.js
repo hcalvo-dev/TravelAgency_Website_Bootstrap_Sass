@@ -1,3 +1,4 @@
+// Está función se ha extraído de ChatGpt
 
 let resizeTimeout;
 
@@ -14,7 +15,7 @@ $(window).resize(function () {
       hasReloaded = true;
       localStorage.setItem("hasReloaded", JSON.stringify(hasReloaded)); // Guardar estado en localStorage
       location.reload();
-    } else if (windowWidth < 760) {
+    } else if (windowWidth < 760 && hasReloaded) {
       hasReloaded = false;
       localStorage.setItem("hasReloaded", JSON.stringify(hasReloaded)); // Guardar estado en localStorage
       location.reload();
