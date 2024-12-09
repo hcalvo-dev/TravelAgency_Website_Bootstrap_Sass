@@ -1,10 +1,18 @@
 
 /* Estilo de letra de mi fuente*/
 .miFuente {
-    font-family: 'MiFuente', sans-serif;
+    font-family: 'Woodland', sans-serif;
     font-size: 125px;
     color: #FFFFFF;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-form{
+    width: 100%;
+}
+
+.search-input{
+    width: 100%;
 }
 
 /* Ajuste de Scroll en anclas */

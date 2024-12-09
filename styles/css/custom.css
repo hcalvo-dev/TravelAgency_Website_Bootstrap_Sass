@@ -1,10 +1,18 @@
 @charset "UTF-8";
 /* Estilo de letra de mi fuente*/
 .miFuente {
-  font-family: "MiFuente", sans-serif;
+  font-family: "Woodland", sans-serif;
   font-size: 125px;
   color: #FFFFFF;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
 }
 
 /* Ajuste de Scroll en anclas */
@@ -161,7 +169,7 @@ footer {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @font-face {
-  font-family: "MiFuente";
+  font-family: "Woodland";
   src: url("../../resources/fonts/Woodland.ttf") format("truetype"), url("../../resources/fonts/Knockout-HTF73-FullHeviweight.386a901fd564bd4a47c7.woff2") format("woff"), url("../../resources/fonts/Sergio Trendy.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -2540,6 +2548,11 @@ textarea.form-control-lg {
   height: 33px;
 }
 
+@media (max-width: 991px) {
+  .search-form {
+    width: 100%;
+  }
+}
 .form-check {
   display: block;
   min-height: 1.5rem;
@@ -3901,13 +3914,13 @@ textarea.form-control-lg {
 }
 
 .dropdown-item:active {
-  background-color: #f8f9fa !important;
+  background-color: #f8f9fa;
 }
 .dropdown-item:hover {
-  background-color: #e2e6ea !important;
+  background-color: #e2e6ea;
 }
 .dropdown-item:focus, .dropdown-item:active {
-  background-color: #e2e6ea !important;
+  background-color: #e2e6ea;
 }
 
 .btn-group,

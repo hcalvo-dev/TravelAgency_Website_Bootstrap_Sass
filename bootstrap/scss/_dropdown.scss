@@ -265,15 +265,15 @@
 
 .dropdown-item {
   &:active {
-    background-color: #f8f9fa !important;
+    background-color: #f8f9fa;
   }
 
   &:hover {
-    background-color: #e2e6ea !important;
+    background-color: #e2e6ea;
   }
 
   &:focus,
   &:active {
-    background-color: #e2e6ea !important;
+    background-color: #e2e6ea;
   }
 }

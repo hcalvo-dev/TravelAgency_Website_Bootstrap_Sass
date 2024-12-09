@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTravel</title>
+    <link rel="stylesheet" href="../../styles/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../../resources/logos/logo_web.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Botón fijo con icono hacia arriba -->
+    <a href="#header" class="btn btn-primary position-fixed bottom-0 end-0 m-3" aria-label="Up to header" role="button">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- ENCABEZADO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <header id="header" class="px-4" role="banner">
+        <div class="container-fluid">
+
+            <!-- Nav -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" role="navigation">
+
+                <!-- Logo -->
+                <div class="col-2 text-center">
+                    <a href="../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
+                        tabindex="0" aria-label="Go to the homepage">
+                        <img src="../../resources/logos/logo_web.png" alt="Website logo" width="40" height="40"
+                            class="me-2" />
+                        <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
+                    </a>
+                </div>
+
+                <!-- Botón del menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                    aria-controls="offcanvasNavbar" aria-label="Open the navigation menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="offcanvas offcanvas-end bg-light" id="menu" tabindex="-1"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fw-bold" id="offcanvasDarkNavbarLabel">WorldTravel</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                            aria-label="Close menu"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex align-items-center">
+                        <nav class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start">
+                                <li class="nav-item me-1">
+                                    <a href="../index_en.html" class="nav-link px-2 text-black"
+                                        aria-label="Go to the homepage">Home</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../en/destinations.html" class="nav-link px-2 text-black"
+                                        aria-label="View destinations">Destinations</a>
+                                </li>
+                                <li class="li-dropdown me-1 nav-item dropdown d-flex flex-column">
+                                    <a class="link-dropdown dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false"
+                                        aria-label="Open the collections menu">
+                                        Collections
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="collectionsMenu">
+                                        <li><a class="dropdown-item" href="../en/collections/honeymoon.html"
+                                                aria-label="View honeymoon collections">Honeymoon</a></li>
+                                        <li><a class="dropdown-item" href="../en/collections/premium_travel.html"
+                                                aria-label="View premium trip collections">Premium trips</a></li>
+                                        <li><a class="dropdown-item" href="../en/collections/stopover.html"
+                                                aria-label="View stopover collections">Stopovers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../en/inspire_me.html" class="nav-link px-2 text-black"
+                                        aria-label="View inspirations">Inspire Me</a>
+                                </li>
+                                <li class="nav-item me-1">
+                                    <a href="../en/contact.html" class="nav-link px-2 text-black"
+                                        aria-label="Go to the contact page">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Linea de separación -->
+                        <hr class="border-1 bg-black my-2 mt-2 mb-4 display d-none" />
+
+                        <!-- Buscador -->
+                        <form class="d-flex search-form" role="search">
+                            <input type="search" class="form-control search-input" placeholder="Search..."
+                                aria-label="Search the site">
+                            <button class="btn search-btn" type="submit" aria-label="Search">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+
+                        <!-- Selector de idioma -->
+                        <div class="language dropdown">
+                            <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
+                                id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                aria-label="Select language">
+                                <img src="../../resources/img/UK.png" alt="UK flag" width="25px" height="25px"
+                                    class="me-2" /> Es
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <a class="dropdown-item text-decoration-none text-black" href="../es/login_es.html"
+                                    aria-label="Switch to Spanish">
+                                    <img src="../../resources/img/spain.png" alt="Spain flag" width="25px" height="25px"
+                                        class="me-2" /> En
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Carrito de la compra -->
+                        <a class="text-decoration-none cesta btn me-2 text-black" href="carrito_en.html"
+                            aria-label="Go to cart"><i class="bi bi-cart2" aria-hidden="true"></i></a>
+
+                        <!-- Login -->
+                        <a class="text-decoration-none text-whitelogin btn btn-primary btn-sm" id="login"
+                            href="login_en.html" aria-label="Go to login">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- CONTENIDO -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <main class="form-signin container my-5 py-5 d-flex align-content-center justify-content-center">
+
+        <div class="container my-5 d-flex flex-column justify-content-center align-items-center text-center">
+            <!-- Icon -->
+            <div class="mb-4">
+                <div class="spinner-border text-primary" role="status" style="width: 5rem; height: 5rem;">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Central text -->
+            <h1 class="display-4 fw-bold text-primary">We are working on it!</h1>
+            <p class="fs-5 text-muted mb-4">
+                We are preparing something incredible for you. Please come back soon.
+            </p>
+
+            <!-- Button -->
+            <a href="/" class="btn btn-primary btn-lg px-5" aria-label="Back to top">
+                Back to top
+            </a>
+        </div>
+
+    </main>
+
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- FOOTER -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+
+    <footer class="container-fluid mt-5 text-white py-4">
+        <div class="container">
+            <h4 class="text-light mb-4">OUR OFFICES</h4>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="row text-center text-md-start my-3">
+                <!-- Spain -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Spain</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Floor 18,<br>28046, Madrid.</p>
+                </div>
+                <!-- United Kingdom -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>United Kingdom</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
+                </div>
+                <!-- Portugal -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Portugal</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Building D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
+                    </p>
+                </div>
+                <!-- Italy -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Italy</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Viale Monza, 347,<br>20126, Milan.</p>
+                </div>
+                <!-- France -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>France</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Building F,<br>31100, Toulouse.</p>
+                </div>
+                <!-- Maldives -->
+                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                    <h5>Maldives</h5>
+                    <hr class="separador-footer border-white w-75" />
+                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Male.</p>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <!-- Legal menu -->
+                <div class="row">
+                    <div class="col-8">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item link-footer"><a href="legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Legal notice">Legal
+                                    notice</a></li>
+                            <li class="list-inline-item link-footer"><a href="legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Terms and Conditions">Terms
+                                    and Conditions</a></li>
+                            <li class="list-inline-item link-footer"><a href="legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Privacy Policy">Privacy
+                                    Policy</a></li>
+                            <li class="list-inline-item link-footer"><a href="legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Cookies Policy">Cookies
+                                    Policy</a></li>
+                            <li class="list-inline-item link-footer"><a href="legal_notice.html"
+                                    class="py-2 text-light text-decoration-none" aria-label="Media Kit">Media Kit</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Social media -->
+                    <div class="col-4">
+                        <span class="text-white">Follow us:</span>
+                        <a href="https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/" class="text-white ms-2" target="_blank" aria-label="TikTok"><i
+                                class="bi bi-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="separador-title-oficinas mb-4 border-white w-100" />
+            <div class="container">
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <!-- Name -->
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scroll.js"></script>
+</body>
+
+</html>
