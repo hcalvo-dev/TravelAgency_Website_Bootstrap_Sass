@@ -1772,4 +1772,12 @@ $nested-kbd-font-weight: null !default; // Deprecated in v5.2.0, removing in v6
 
 $pre-color: null !default;
 
+/* Estilo de letra de mi fuente*/
+.miFuente {
+  font-family: 'Woodland', sans-serif;
+  font-size: 125px;
+  color: #FFFFFF;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
 @import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3
