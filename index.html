@@ -7,7 +7,9 @@
     <title>WorldTravel</title>
     <link rel="stylesheet" href="styles/css/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="resources/logos/logo_web.png" type="image/x-icon">
+    <link rel="icon" href="resources/logos/fav_icon_web.svg" type="image/x-icon">
+    <!-- AOS CSS para animaciones en scroll -->
+    <link rel="stylesheet" href="styles/css/aos.css" />
 
 </head>
 
@@ -27,13 +29,14 @@
         <div class="container-fluid">
 
             <!-- Barra de navegación -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" aria-label="Menú de navegación" role="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3"
+                aria-label="Menú de navegación" role="navigation">
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
                     <a href="index.html" class="logo d-flex align-items-center text-black text-decoration-none"
                         tabindex="0" aria-label="Ir a la página principal">
-                        <img src="resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
+                        <img src="resources/logos/logo_web.svg" alt="Logo de la web" width="50" height="50"
                             class="me-2" />
                         <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
                     </a>
@@ -109,13 +112,13 @@
                             <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
                                 id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 aria-label="Seleccionar idioma">
-                                <img src="resources/img/spain.png" alt="Bandera de España" width="25px" height="25px"
+                                <img src="resources/img/spain.webp" alt="Bandera de España" width="25px" height="25px"
                                     class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <a class="dropdown-item text-decoration-none text-black" href="pages/index_en.html"
                                     aria-label="Cambiar a inglés">
-                                    <img src="resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
+                                    <img src="resources/img/UK.webp" alt="Bandera de Reino Unido" width="25px"
                                         height="25px" class="me-2" /> En
                                 </a>
                             </div>
@@ -141,10 +144,34 @@
         <div class="container-fluid p-0 position-relative z-2">
             <div class="content-center text-center">
                 <header>
-                    <h1 class=" miFuente">VIAJES EXÓTICOS</h1>
-                    <p class="styled-paragraph">Encuentra las vacaciones perfectas.<br />Viajes a medida y en
-                        privado.<br />Experiencias inolvidables.</p>
-                    <a class="btn btn-primary fw-semibold" href="pages/es/destinos.html" target="_self"
+                    <!-- Contenedor del SVG animado con mayor tamaño -->
+                    <div class="boxRing">
+                        <div class="main-1">
+                            <svg viewBox="0 0 160 160">
+                                <!-- Círculo -->
+                                <path d="M 80,15 A 65,65 0 1,1 79.99,15" id="circle" fill="none" stroke="transparent"
+                                    stroke-width="1"></path>
+                                <!-- Texto -->
+                                <text fill="white" font-size="14" font-weight="bold" font-family="Arial, sans-serif"
+                                    textLength="395px" transform="rotate(-90, 80, 80)">
+                                    <textPath xlink:href="#circle" startOffset="47%" text-anchor="middle"
+                                        dominant-baseline="middle"
+                                        style="text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);">
+                                        21° ANIVERSARIO - 21° ANIVERSARIO -
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Título principal -->
+                    <h1 class="miFuente ">VIAJES EXÓTICOS</h1>
+                    <p class="styled-paragraph entrada">
+                        Encuentra las vacaciones perfectas.<br />
+                        Viajes a medida y en privado.<br />
+                        Experiencias inolvidables.
+                    </p>
+                    <a class="btn entrada btn-primary fw-semibold" href="pages/es/destinos.html" target="_self"
                         aria-label="Ver destinos personalizados">Quiero mi plan</a>
                 </header>
             </div>
@@ -154,24 +181,29 @@
 
         <!-- Sección Viajes -->
         <section class="container-fluid my-element">
-            <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                <h2 class="text-primary fs-3 text-center">Agencia especializada en viajes exóticos</h2>
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-            </header>
-            <p class="fs-6 my-0 mx-2 text-center text-black">Nuestro equipo de expertos en viajes exóticos trabaja
-                contigo
-                para crear <span class="text-primary"><strong>itinerarios personalizados</strong></span></p>
-            <p class="fs-6 my-0 mx-2 text-center text-black">asegurándose de que cada detalle de tu viaje sea perfecto.
-            </p>
-            <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">En Travel creamos experiencias que despiertan tus
-                sentidos.</p>
-            <!-- Nombre -->
-            <p class="fs-6 mb-5 mx-2 text-center text-black">Porque cada uno de tus viajes es <span
-                    class="text-primary"><strong>una historia que está esperando a ser vivida.</strong></span></p>
+            <div data-aos="fade-up">
+
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center">Agencia especializada en viajes exóticos</h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">Nuestro equipo de expertos en viajes exóticos trabaja
+                    contigo
+                    para crear <span class="text-primary"><strong>itinerarios personalizados</strong></span></p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">asegurándose de que cada detalle de tu viaje sea
+                    perfecto.
+                </p>
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">En Travel creamos experiencias que despiertan tus
+                    sentidos.</p>
+                <!-- Nombre -->
+                <p class="fs-6 mb-5 mx-2 text-center text-black">Porque cada uno de tus viajes es <span
+                        class="text-primary"><strong>una historia que está esperando a ser vivida.</strong></span></p>
+            </div>
 
             <!-- CAROUSEL -->
-            <div id="carouselExampleCaptions" class="carousel">
+            <div id="carouselExampleCaptions" class="carousel" data-aos="fade-right" data-aos-offset="100"
+                data-aos-easing="ease-in-sine">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1" title="Vacaciones de Lujo en Sri Lanka"></button>
@@ -193,7 +225,7 @@
                     <div class="carousel-item active">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/sri_lanka.png" class="carousel-img"
+                                <img src="resources/img/sri_lanka.webp" class="carousel-img"
                                     alt="Sri Lanka, paisaje tropical con playas y montañas">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
@@ -202,7 +234,7 @@
                                 <p class="styled-paragraph fs-5 text-shadow">El tour Vacaciones de Lujo en Sri ha sido
                                     especialmente diseñado...</p>
                                 <p class="styled-paragraph text-center text-shadow ">Desde 2.280€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
+                                <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
                                     href="pages/es/destinos.html#sri_lanka" target="_self"
                                     aria-label="Ver más sobre Vacaciones de Lujo en Sri Lanka">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
@@ -213,7 +245,7 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/arab-dubai.png" class="carousel-img"
+                                <img src="resources/img/arab-dubai.webp" class="carousel-img"
                                     alt="Vista del atardecer de Dubai con un rascacielos">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
@@ -223,7 +255,7 @@
                                     podrás
                                     explorar...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 3.460€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
+                                <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
                                     href="pages/es/destinos.html#dubai" target="_self"
                                     aria-label="Ver más sobre Dubái & Seuchelles">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
@@ -234,7 +266,7 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/viaje-india.png" class="carousel-img"
+                                <img src="resources/img/viaje-india.webp" class="carousel-img"
                                     alt="Monje de una tribu India">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
@@ -243,7 +275,7 @@
                                 <p class="styled-paragraph fs-5 text-shadow">Con el tour Descubre India 8 noches, podrás
                                     conocer...</p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 2.560€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
+                                <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
                                     href="pages/es/destinos.html#udaipur" target="_self"
                                     aria-label="Ver más sobre Golden Triangle & Udaipur">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
@@ -254,7 +286,7 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/mara-safari.png" class="carousel-img"
+                                <img src="resources/img/mara-safari.webp" class="carousel-img"
                                     alt="Kenia, habitación de Hotel con vistas a la montaña">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
@@ -265,7 +297,7 @@
                                     para
                                     quien busca...</p>
                                 <p class="styled-paragraph text-center text-shadow-kenia">Desde 4.040€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
+                                <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
                                     href="pages/es/destinos.html#construccion" target="_self"
                                     aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
@@ -276,7 +308,7 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/tanzania.png" class="carousel-img"
+                                <img src="resources/img/tanzania.webp" class="carousel-img"
                                     alt="Tanzania, grandes parques naturales y fauna africana">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
@@ -285,7 +317,7 @@
                                 <p class="styled-paragraph fs-5 text-shadow">¿Quieres ver de cerca a los Big Five en...
                                 </p>
                                 <p class="styled-paragraph text-center text-shadow">Desde 4.830€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
+                                <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
                                     href="pages/es/destinos.html#construccion" target="_self"
                                     aria-label="Este destino esta en proceso de creación">
                                     <p class="mb-0 w-100 text-center">Ver más</p>
@@ -296,42 +328,43 @@
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/ephelia.png" class="carousel-img"
+                                <img src="resources/img/ephelia.webp" class="carousel-img"
                                     alt="Seychelles, playa tropical en el resort Constance Ephelia"">
                             </div>
                             <div class=" card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>6 noches - 7 días</small></p>
                                 <h2 class="card-title text-shadow">Constancia Ephelia Seychelles</h5>
-                                <p class="styled-paragraph fs-5 text-shadow">Vive todo lo mejor que puede ofrecerte un
-                                    viaje
-                                    a...</p>
-                                <p class="styled-paragraph text-center text-shadow">Desde 2.730€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="pages/es/destinos.html#construccion" target="_self"
-                                    aria-label="Este destino esta en proceso de creación">
-                                    <p class="mb-0 w-100 text-center">Ver más</p>
-                                </a>
+                                    <p class="styled-paragraph fs-5 text-shadow">Vive todo lo mejor que puede ofrecerte
+                                        un
+                                        viaje
+                                        a...</p>
+                                    <p class="styled-paragraph text-center text-shadow">Desde 2.730€</p>
+                                    <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
+                                        href="pages/es/destinos.html#construccion" target="_self"
+                                        aria-label="Este destino esta en proceso de creación">
+                                        <p class="mb-0 w-100 text-center">Ver más</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="card card-carousel text-bg-dark">
                             <div class="img-wrapper">
-                                <img src="resources/img/viaje-polinesia.png" class="carousel-img"
+                                <img src="resources/img/viaje-polinesia.webp" class="carousel-img"
                                     alt="Polinesia Francesa, Tahiti, Moorea y Bora Bora, vistas de playas paradisíacas">
                             </div>
                             <div class="card-img-overlay d-flex flex-column justify-content-end mx-4 mb-4">
                                 <p class="card-text mb-0 fs-5 text-shadow"><small>9 noches - 10 días</small></p>
                                 <h2 class="card-title text-shadow">Tahiti, Moore & Bora Bora</h5>
-                                <p class="styled-paragraph fs-5 text-shadow">Descubre la joya del pacifico con este
-                                    viaje a
-                                    Polinesia...</p>
-                                <p class="styled-paragraph text-center text-shadow">Desde 6.595€</p>
-                                <a class="btn btn-primary fw-semibold w-50 d-flex align-self-center"
-                                    href="pages/es/destinos.html#construccion" target="_self"
-                                    aria-label="Este destino esta en proceso de creación">
-                                    <p class="mb-0 w-100 text-center">Ver más</p>
-                                </a>
+                                    <p class="styled-paragraph fs-5 text-shadow">Descubre la joya del pacifico con este
+                                        viaje a
+                                        Polinesia...</p>
+                                    <p class="styled-paragraph text-center text-shadow">Desde 6.595€</p>
+                                    <a class="btn rebote btn-primary fw-semibold w-50 d-flex align-self-center"
+                                        href="pages/es/destinos.html#construccion" target="_self"
+                                        aria-label="Este destino esta en proceso de creación">
+                                        <p class="mb-0 w-100 text-center">Ver más</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -353,62 +386,64 @@
 
         <!-- Sección Contacto -->
         <section class="container-fluid my-element">
-            <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                <h2 class="text-primary fs-3 text-center">Hoteles de <span
-                        class="text-primary"><strong>ensueño</strong></span></h2>
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-            </header>
-            <p class="fs-6 my-0 mx-2 text-center text-black">Románticas villas con piscina privada sobre las turquesas
-                aguas
-                de <span class="text-primary"><strong>Maldivas</strong></span>,</p>
-            <p class="fs-6 my-0 mx-2 text-center text-black">exclusivos resorts de ensueño en el desierto de <span
-                    class="text-primary"><strong>Dubai</strong></span>,</p>
-            <p class="fs-6 my-0 mx-2 text-center text-black">hoteles coloniales en <span
-                    class="text-primary"><strong>Sri
-                        Lanka</strong></span>... .</p>
-            <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">En nuestros viajes exóticos todos estos hoteles
-                comparten
-                la misma promesa:</p>
-            <p class="fs-6 mb-5 mx-2 text-center text-primary"><strong>¡ofrecerte una estancia única e
-                    inolvidable!</strong></span></p>
-
+            <div data-aos="fade-up">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center">Hoteles de <span
+                            class="text-primary"><strong>ensueño</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">Románticas villas con piscina privada sobre las
+                    turquesas
+                    aguas
+                    de <span class="text-primary"><strong>Maldivas</strong></span>,</p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">exclusivos resorts de ensueño en el desierto de <span
+                        class="text-primary"><strong>Dubai</strong></span>,</p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">hoteles coloniales en <span
+                        class="text-primary"><strong>Sri
+                            Lanka</strong></span>... .</p>
+                <p class="fs-6 mt-3 mx-2 mb-0 text-center text-black">En nuestros viajes exóticos todos estos hoteles
+                    comparten
+                    la misma promesa:</p>
+                <p class="fs-6 mb-5 mx-2 text-center text-primary"><strong>¡ofrecerte una estancia única e
+                        inolvidable!</strong></span></p>
+            </div>
             <div class="container-fluid d-flex flex-row flex-wrap justify-content-around">
-                <div class="card card-hotel">
+                <div class="card card-hotel" data-aos="fade-down-right">
                     <div class="img-wrapper">
-                        <img src="resources/img/img_contact.png" class="carousel-img" alt="Desierto con grandes dunas">
+                        <img src="resources/img/img_contact.webp" class="carousel-img" alt="Desierto con grandes dunas">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h3 class="card-title text-white text-shadow text-center">Contáctanos</h3>
-                        <a class="enlaces-hotel btn btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
+                        <a class="enlaces-hotel btn rebote btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
                             href="pages/es/contacto.html" target="_self"
                             aria-label="Desplazarse a la página de contacto">
                             <p class="mb-0 w-100 text-center">Contacto</p>
                         </a>
                     </div>
                 </div>
-                <div class="card card-hotel ">
+                <div class="card card-hotel" data-aos="fade-up">
                     <div class="img-wrapper">
-                        <img src="resources/img/img_plan.png" class="carousel-img" alt="Playas paradisíacas">
+                        <img src="resources/img/img_plan.webp" class="carousel-img" alt="Playas paradisíacas">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h3 class="card-title text-white text-shadow text-center">¿Quieres un<br />Presupuesto?
                         </h3>
-                        <a class="enlaces-hotel btn btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
+                        <a class="enlaces-hotel btn rebote btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
                             href="pages/es/destinos.html" target="_self"
                             aria-label="Desplazarse a la página de destinos">
                             <p class="mb-0 w-100 text-center">Quiero mi plan</p>
                         </a>
                     </div>
                 </div>
-                <div class="card card-hotel">
+                <div class="card card-hotel" data-aos="fade-down-left">
                     <div class="img-wrapper">
-                        <img src="resources/img/img_inspirate.png" class="carousel-img"
+                        <img src="resources/img/img_inspirate.webp" class="carousel-img"
                             alt="Campo de flores rojas con una persona recogiendolas">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center mx-4">
                         <h3 class="card-title text-white text-shadow text-center ">¿Hablamos?</h3>
-                        <a class="enlaces-hotel btn btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
+                        <a class="enlaces-hotel btn rebote btn-primary mt-3 fw-semibold w-50 d-flex align-self-center"
                             href="pages/es/contacto.html" target="_self"
                             aria-label="Desplazarse a la página de contacto">
                             <p class="mb-0 w-100 text-center">Te llamamos</p>
@@ -420,35 +455,40 @@
 
         <!-- Sección Inspirame -->
         <section class="container-fluid my-element">
-            <header class="d-flex align-items-center mt-5 justify-content-between py-3">
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                <h2 class="text-primary fs-3 text-center">Lo mejor de la <span class="text-primary"><strong>atención
-                            premium</strong></span></h2>
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-            </header>
-            <p class="fs-6 my-0 mx-2 text-center text-black">La calidad de nuestro servicio y atención personalizada
-                desde
-                el primer contacto nos ayuda a superar expectativas día a</p>
-            <p class="fs-6 my-0 mx-2 text-center text-black">día. Por ello, en Arenatours <span
-                    class="text-primary"><strong>tenemos en cuenta tus preferencias y necesidades</strong></span>, para
-                poder guiarte en tu viaje.</p>
-            <p class="fs-6 mt-3 mb-5 mx-2 text-center text-black">El asesoramiento especializado de nuestros Agentes es
-                clave
-                para lograr unas<span class="text-primary"><strong>vacaciones perfectas</strong></span>.</p>
-
+            <div data-aos="fade-up">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center">Lo mejor de la <span class="text-primary"><strong>atención
+                                premium</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">La calidad de nuestro servicio y atención personalizada
+                    desde
+                    el primer contacto nos ayuda a superar expectativas día a</p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">día. Por ello, en Arenatours <span
+                        class="text-primary"><strong>tenemos en cuenta tus preferencias y necesidades</strong></span>,
+                    para
+                    poder guiarte en tu viaje.</p>
+                <p class="fs-6 mt-3 mb-5 mx-2 text-center text-black">El asesoramiento especializado de nuestros Agentes
+                    es
+                    clave
+                    para lograr unas<span class="text-primary"><strong>vacaciones perfectas</strong></span>.</p>
+            </div>
             <div class="container-fluid">
                 <div class="card card-inspirame w-100">
-                    <div class="img-wrapper">
-                        <img src="resources/img/globo.png" class="carousel-img"
+                    <div class="img-wrapper" data-aos="fade-up">
+                        <img src="resources/img/globo.webp" class="carousel-img"
                             alt="Ilustración de un globo aerostático sobre un paisaje, representando la idea de viajar y explorar nuevos destinos">
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-center ">
-                        <h2 class="card-title text-white text-shadow text-center">¿Aún no sabes dónde viajar?</h5>
-                        <a class="enlaces-inspirame btn btn-primary mt-5 fw-semibold d-flex align-self-center"
-                            href="pages/es/inspirame.html" target="_self"
-                            aria-label="Ir a la página para obtener inspiración sobre destinos de viaje">
-                            <p class="mb-0 w-100 text-center">Inspirame</p>
-                        </a>
+                        <h2 class="card-title text-white text-shadow text-center" data-aos="fade-up">¿Aún no sabes dónde
+                            viajar?</h5>
+                            <a class="enlaces-inspirame btn rebote btn-primary mt-5 fw-semibold d-flex align-self-center"
+                                href="pages/es/inspirame.html" target="_self"
+                                aria-label="Ir a la página para obtener inspiración sobre destinos de viaje"
+                                data-aos="fade-up">
+                                <p class="mb-0 w-100 text-center">Inspirame</p>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -456,155 +496,224 @@
 
         <!-- Sección Recomendaciones -->
         <section class="container-fluid my-element mb-4">
-            <header class="d-flex align-items-center my-5 justify-content-between py-3">
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-                <h2 class="text-primary fs-3 text-center">Recomendado <span
-                        class="text-primary"><strong>por</strong></span>
-                </h2>
-                <div class="border-top border-primary flex-grow-1 mx-5"></div>
-            </header>
-            <div class="container-fluid d-flex justify-content-around flex-wrap">
+            <div data-aos="fade-up">
+                <header class="d-flex align-items-center my-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center">Recomendado <span
+                            class="text-primary"><strong>por</strong></span>
+                    </h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+            </div>
+            <div class="container-fluid d-flex justify-content-around flex-wrap" data-aos="fade-up">
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="resources/logos/logo-maldives-sunny-side1.png" class="w-75 h-100"
+                        <img src="resources/logos/logo-maldives-sunny-side1.webp" class="w-75 h-100"
                             alt="Logo de Maldives Sunny Side, operador turístico de Maldivas">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="resources/logos/logo-certified-tahiti-specialist1.png" class="w-75 h-100"
+                        <img src="resources/logos/logo-certified-tahiti-specialist1.webp" class="w-75 h-100"
                             alt="Logo de Certified Tahiti Specialist, especialista en viajes a Tahití">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="resources/logos/logo-visit-qatar1.png" class="w-75 h-100"
+                        <img src="resources/logos/logo-visit-qatar1.webp" class="w-75 h-100"
                             alt="Logo de Visit Qatar, autoridad de turismo de Qatar">
                     </div>
                 </div>
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
 
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="resources/logos/logo-seychelles-tourism1.png" class="w-75 h-100"
+                        <img src="resources/logos/logo-seychelles-tourism1.webp" class="w-75 h-100"
                             alt="Logo de Seychelles Tourism, organización de turismo de Seychelles">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="resources/logos/logo-oficina-turismo-japon-oficial.png" class="w-75 h-100"
+                        <img src="resources/logos/logo-oficina-turismo-japon-oficial.webp" class="w-75 h-100"
                             alt="Logo de la Oficina de Turismo de Japón, entidad oficial de turismo japonés">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="resources/logos/logo-tripadvisor-copia1.png" class="w-75 h-100"
+                        <img src="resources/logos/logo-tripadvisor-copia1.webp" class="w-75 h-100"
                             alt="Logo de TripAdvisor, plataforma de opiniones y recomendaciones de viajes">
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <!-- - - - - - - - - - - - - - - - - - - - -->
-    <!-- FOOTER -->
-    <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <footer class="container-fluid mt-5 text-white py-4">
-        <div class="container">
-            <h3 class="fs-4 text-light mb-4">NUESTRAS OFICINAS</h3>
-            <hr class="separador-title-oficinas mb-4 border-white w-100" />
-            <div class="row text-center text-md-start my-3">
-                <!-- España -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h4 class="fs-5">España</h4>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
-                </div>
-                <!-- Reino Unido -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h4 class="fs-5">Reino Unido</h4>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
-                </div>
-                <!-- Portugal -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h4 class="fs-5">Portugal</h4>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de Gaia.
-                    </p>
-                </div>
-                <!-- Italia -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h4 class="fs-5">Italia</h4>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Viale Monza, 347,<br>20126, Milano.</p>
-                </div>
-                <!-- Francia -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h4 class="fs-5">Francia</h4>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
-                </div>
-                <!-- Maldivas -->
-                <div class="col-12 col-md-4 col-lg-2 mb-4">
-                    <h4 class="fs-5">Maldivas</h4>
-                    <hr class="separador-footer border-white w-75" />
-                    <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
-                </div>
-            </div>
-            <hr class="separador-title-oficinas mb-4 border-white w-100" />
-            <div class="container">
-                <!-- Menú legal -->
-                <div class="row">
-                    <div class="col-8">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
-                                    legal</a></li>
-                            <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Condiciones
-                                    Generales</a></li>
-                            <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
-                                    Privacidad</a></li>
-                            <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política de
-                                    Cookies</a></li>
-                            <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
-                                    class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
-                                    Kit</a></li>
-                        </ul>
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <!-- MARQUEE ANIMATION -->
+    <!-- - - - - - - - - - - - - - - - - - - - -->
+    <div data-aos="fade-up">
+        <aside class="marque-section mt-5 container-fluid d-flex justify-content-center align-content-center"
+            role="complementary" aria-labelledby="marquee-title">
+            <div class="travel-marquee">
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <a href="pages/es/destinos.html" class="bubble" role="link"
+                            aria-label="Ir a la página de descubre destinos únicos">
+                            <span aria-hidden="true">🌍</span> Descubre destinos únicos
+                        </a>
+                        <a href="pages/es/colecciones/luna_de_miel.html" class="bubble" role="link"
+                            aria-label="Ir a la página de vive experiencias inolvidables en luna de miel">
+                            <span aria-hidden="true">✈️</span> Vive experiencias inolvidables
+                        </a>
+                        <a href="pages/es/inspirame.html" class="bubble" role="link"
+                            aria-label="Ir a la página de viajes personalizados">
+                            <span aria-hidden="true">🏝️</span> Viajes personalizados
+                        </a>
+                        <a href="pages/es/inspirame.html" class="bubble" role="link"
+                            aria-label="Ir a la página de aventuras sin límites">
+                            <span aria-hidden="true">🏔️</span> Aventuras sin límites
+                        </a>
+                        <a href="pages/es/colecciones/viajes_premium.html" class="bubble" role="link"
+                            aria-label="Ir a la página de viajes de lujo y exclusividad">
+                            <span aria-hidden="true">🌆</span> Lujo y exclusividad
+                        </a>
+                        <a href="pages/es/colecciones/escalas.html" class="bubble" role="link"
+                            aria-label="Ir a la página de escapadas de ensueño en crucero">
+                            <span aria-hidden="true">🚢</span> Escapadas de ensueño
+                        </a>
                     </div>
-                    <!-- Redes sociales -->
-                    <div class="col-4">
-                        <span class="text-white">Síguenos:</span>
-                        <a href="pages/https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="pages/https://www.instagram.com/" class="text-white ms-2" target="_blank"
-                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="pages/https://www.tiktok.com/" class="text-white ms-2" target="_blank"
-                            aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-                        <a href="pages/https://www.linkedin.com/" class="text-white ms-2" target="_blank"
-                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="pages/https://www.pinterest.com/" class="text-white ms-2" target="_blank"
-                            aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-                        <a href="pages/https://www.youtube.com/" class="text-white ms-2" target="_blank"
-                            aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-
+                    <div class="marquee-content">
+                        <a href="pages/es/destinos.html" class="bubble" role="link"
+                            aria-label="Ir a la página de descubre destinos únicos">
+                            <span aria-hidden="true">🌍</span> Descubre destinos únicos
+                        </a>
+                        <a href="pages/es/colecciones/luna_de_miel.html" class="bubble" role="link"
+                            aria-label="Ir a la página de vive experiencias inolvidables en luna de miel">
+                            <span aria-hidden="true">✈️</span> Vive experiencias inolvidables
+                        </a>
+                        <a href="pages/es/inspirame.html" class="bubble" role="link"
+                            aria-label="Ir a la página de viajes personalizados">
+                            <span aria-hidden="true">🏝️</span> Viajes personalizados
+                        </a>
+                        <a href="pages/es/inspirame.html" class="bubble" role="link"
+                            aria-label="Ir a la página de aventuras sin límites">
+                            <span aria-hidden="true">🏔️</span> Aventuras sin límites
+                        </a>
+                        <a href="pages/es/colecciones/viajes_premium.html" class="bubble" role="link"
+                            aria-label="Ir a la página de viajes de lujo y exclusividad">
+                            <span aria-hidden="true">🌆</span> Lujo y exclusividad
+                        </a>
+                        <a href="pages/es/colecciones/escalas.html" class="bubble" role="link"
+                            aria-label="Ir a la página de escapadas de ensueño en crucero">
+                            <span aria-hidden="true">🚢</span> Escapadas de ensueño
+                        </a>
                     </div>
                 </div>
             </div>
-            <hr class="separador-title-oficinas mb-4 border-white w-100" />
-            <div class="container">
-                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
-                <!-- Nombre -->
-            </div>
-        </div>
-        </div>
-    </footer>
+        </aside>
 
+        <!-- - - - - - - - - - - - - - - - - - - - -->
+        <!-- FOOTER -->
+        <!-- - - - - - - - - - - - - - - - - - - - -->
+        <footer class="container-fluid text-white mt-2 py-4">
+            <div class="container">
+                <h3 class="fs-4 text-light mb-4">NUESTRAS OFICINAS</h3>
+                <hr class="separador-title-oficinas mb-4 border-white w-100" />
+                <div class="row text-center text-md-start my-3">
+                    <!-- España -->
+                    <div class="col-12 col-md-4 col-lg-2 mb-4">
+                        <h4 class="fs-5">España</h4>
+                        <hr class="separador-footer border-white w-75" />
+                        <p>Paseo de la Castellana 259-C<br>Torre de Cristal Planta 18,<br>28046, Madrid.</p>
+                    </div>
+                    <!-- Reino Unido -->
+                    <div class="col-12 col-md-4 col-lg-2 mb-4">
+                        <h4 class="fs-5">Reino Unido</h4>
+                        <hr class="separador-footer border-white w-75" />
+                        <p>Brompton Park Crescent 258,<br>SW6 1SZ, Fulham,<br>London.</p>
+                    </div>
+                    <!-- Portugal -->
+                    <div class="col-12 col-md-4 col-lg-2 mb-4">
+                        <h4 class="fs-5">Portugal</h4>
+                        <hr class="separador-footer border-white w-75" />
+                        <p>Rua D. B. Marques, 245,<br>Lake Towers - Edificio D,<br>2nd floor, 4400-617, Vila Nova de
+                            Gaia.
+                        </p>
+                    </div>
+                    <!-- Italia -->
+                    <div class="col-12 col-md-4 col-lg-2 mb-4">
+                        <h4 class="fs-5">Italia</h4>
+                        <hr class="separador-footer border-white w-75" />
+                        <p>Viale Monza, 347,<br>20126, Milano.</p>
+                    </div>
+                    <!-- Francia -->
+                    <div class="col-12 col-md-4 col-lg-2 mb-4">
+                        <h4 class="fs-5">Francia</h4>
+                        <hr class="separador-footer border-white w-75" />
+                        <p>Le Pré Catelan, 78,<br>All. Jean Jaurès Bâtiment F,<br>31100, Toulouse.</p>
+                    </div>
+                    <!-- Maldivas -->
+                    <div class="col-12 col-md-4 col-lg-2 mb-4">
+                        <h4 class="fs-5">Maldivas</h4>
+                        <hr class="separador-footer border-white w-75" />
+                        <p>Ma. Funa, 2nd Floor,<br>Rah Dhebai Magu,<br>Malé.</p>
+                    </div>
+                </div>
+                <hr class="separador-title-oficinas mb-4 border-white w-100" />
+                <div class="container">
+                    <!-- Menú legal -->
+                    <div class="row">
+                        <div class="col-8">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
+                                        class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Aviso
+                                        legal</a></li>
+                                <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
+                                        class="py-2 text-light text-decoration-none"
+                                        aria-label="Aviso legal">Condiciones
+                                        Generales</a></li>
+                                <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
+                                        class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política
+                                        de
+                                        Privacidad</a></li>
+                                <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
+                                        class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Política
+                                        de
+                                        Cookies</a></li>
+                                <li class="list-inline-item link-footer"><a href="pages/es/aviso_legal.html"
+                                        class="py-2 text-light text-decoration-none" aria-label="Aviso legal">Media
+                                        Kit</a></li>
+                            </ul>
+                        </div>
+                        <!-- Redes sociales -->
+                        <div class="col-4">
+                            <span class="text-white">Síguenos:</span>
+                            <a href="pages/https://es-es.facebook.com/" class="text-white ms-2" aria-label="Facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="pages/https://www.instagram.com/" class="text-white ms-2" target="_blank"
+                                aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="pages/https://www.tiktok.com/" class="text-white ms-2" target="_blank"
+                                aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                            <a href="pages/https://www.linkedin.com/" class="text-white ms-2" target="_blank"
+                                aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="pages/https://www.pinterest.com/" class="text-white ms-2" target="_blank"
+                                aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                            <a href="pages/https://www.youtube.com/" class="text-white ms-2" target="_blank"
+                                aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="separador-title-oficinas mb-4 border-white w-100" />
+                <div class="container">
+                    <p class="mb-0 text-center w-100 text-white">Copyright ©2025 Travel.</p>
+                    <!-- Nombre -->
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Script -->
+    <script src="js/aos.js"></script>
     <script>
-        window.addEventListener("scroll", function () {
-            var navbar = document.querySelector(".navbar");
-            if (window.scrollY > 10) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: false,
+
         });
     </script>
     <script src="js/carousel.js"></script>

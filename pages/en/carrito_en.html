@@ -7,7 +7,9 @@
     <title>WorldTravel</title>
     <link rel="stylesheet" href="../../styles/css/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="../../resources/logos/logo_web.png" type="image/x-icon">
+    <link rel="icon" href="../../resources/logos/fav_icon_web.svg" type="image/x-icon">
+    <!-- AOS CSS para animaciones en scroll -->
+  <link rel="stylesheet" href="../../styles/css/aos.css" />
 
 </head>
 
@@ -26,13 +28,14 @@
         <div class="container-fluid">
 
             <!-- Nav -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" aria-label="Menú de navegación" role="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3"
+                aria-label="Menú de navegación" role="navigation">
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
                     <a href="../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
                         tabindex="0" aria-label="Go to the homepage">
-                        <img src="../../resources/logos/logo_web.png" alt="Website logo" width="40" height="40"
+                        <img src="../../resources/logos/logo_web.svg" alt="Website logo" width="50" height="50"
                             class="me-2" />
                         <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
                     </a>
@@ -106,14 +109,14 @@
                             <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
                                 id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 aria-label="Select language">
-                                <img src="../../resources/img/UK.png" alt="UK flag" width="25px" height="25px"
+                                <img src="../../resources/img/UK.webp" alt="UK flag" width="25px" height="25px"
                                     class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <a class="dropdown-item text-decoration-none text-black" href="../es/carrito_es.html"
                                     aria-label="Switch to Spanish">
-                                    <img src="../../resources/img/spain.png" alt="Spain flag" width="25px" height="25px"
-                                        class="me-2" /> En
+                                    <img src="../../resources/img/spain.webp" alt="Spain flag" width="25px"
+                                        height="25px" class="me-2" /> En
                                 </a>
                             </div>
                         </div>
@@ -135,7 +138,7 @@
     <!-- CONTENIDO -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <main class="container my-5 py-5" role="main">
+    <main class="container my-5 py-5" role="main" data-aos="fade-up">
         <div class="row g-5">
 
             <!-- Accessible Cart -->
@@ -379,7 +382,7 @@
     <!-- FOOTER -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <footer class="container-fluid mt-5 text-white py-4">
+    <footer class="container-fluid mt-5 text-white py-4" data-aos="fade-up">
         <div class="container">
             <h2 class="fs-4 text-light mb-4">OUR OFFICES</h2>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
@@ -466,7 +469,7 @@
             </div>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
             <div class="container">
-                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2025 Travel.</p>
                 <!-- Name -->
             </div>
         </div>
@@ -476,7 +479,16 @@
     <script src="../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Script -->
+    <script src="../../js/aos.js"></script>
     <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: false
+        })
+
+        document.querySelector('.needs-validation').checkValidity();
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (() => {
             'use strict'

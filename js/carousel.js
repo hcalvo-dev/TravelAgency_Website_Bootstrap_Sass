@@ -1,59 +1,61 @@
-// Está función se ha extraído de ChatGpt
-
 let resizeTimeout;
 
-// Recuperar el estado inicial de hasReloaded desde localStorage o establecerlo en `false`
-let hasReloaded = JSON.parse(localStorage.getItem("hasReloaded")) || false;
-
-$(window).resize(function () {
+function updateCarousel() {
   const windowWidth = $(window).width();
+  const multipleItemCarousel = document.querySelector('#carouselExampleCaptions');
+  const $carouselInner = $('.carousel-inner');
 
-  clearTimeout(resizeTimeout);
+  if (windowWidth >= 760) {
+    // Configuración para pantallas grandes
+    $(multipleItemCarousel).removeClass('slide');
 
-  resizeTimeout = setTimeout(function () {
-    if (windowWidth >= 760 && !hasReloaded) {
-      hasReloaded = true;
-      localStorage.setItem("hasReloaded", JSON.stringify(hasReloaded)); // Guardar estado en localStorage
-      location.reload();
-    } else if (windowWidth < 760 && hasReloaded) {
-      hasReloaded = false;
-      localStorage.setItem("hasReloaded", JSON.stringify(hasReloaded)); // Guardar estado en localStorage
-      location.reload();
-    }
-  }, 200);
-});
+    const carouselWidth = $carouselInner[0].scrollWidth;
+    const cardWidth = $('.carousel-item').outerWidth(true); // Incluye márgenes
+    let scrollPosition = 0;
 
-const multipleItemCarousel = document.querySelector("#carouselExampleCaptions");
+    // Resetear posición del scroll y eliminar eventos previos
+    $carouselInner.scrollLeft(0);
+    $('.carousel-control-next, .carousel-control-prev').off('click');
 
-if (window.matchMedia("(min-width:759px)").matches) {
-  $(multipleItemCarousel).removeClass("slide");
-  const carousel = new bootstrap.Carousel(multipleItemCarousel, {
-    interval: false,
-    wrap: false,
-  });
+    // Configurar eventos para avanzar
+    $('.carousel-control-next').on('click', function () {
+      if (scrollPosition < carouselWidth - $carouselInner.width()) {
+        scrollPosition += cardWidth;
+        $carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+      } else {
+        // Volver al principio si está al final
+        scrollPosition = 0;
+        $carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+      }
+    });
 
-  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-  var cardWidth = $(".carousel-item").width();
+    // Configurar eventos para retroceder
+    $('.carousel-control-prev').on('click', function () {
+      if (scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+        $carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+      } else {
+        // Ir al final si está al principio
+        scrollPosition = carouselWidth - $carouselInner.width();
+        $carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+      }
+    });
+  } else {
+    // Configuración para pantallas pequeñas
+    $(multipleItemCarousel).addClass('slide');
 
-  var scrollPosition = 0;
-
-  $(".carousel-control-next").on("click", function () {
-    if (scrollPosition < carouselWidth - cardWidth * 4) {
-      console.log("next");
-      scrollPosition = scrollPosition + cardWidth;
-      $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 600);
-    }
-  });
-
-  $(".carousel-control-prev").on("click", function () {
-    if (scrollPosition > 0) {
-      console.log("prev");
-      scrollPosition = scrollPosition - cardWidth;
-      $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 600);
-    }
-  });
-} else {
-  $(multipleItemCarousel).addClass("slide");
+    // Restablecer posición del scroll y eliminar eventos previos
+    $carouselInner.scrollLeft(0);
+    $('.carousel-control-next, .carousel-control-prev').off('click');
+  }
 }
 
+// Ejecutar la configuración cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', updateCarousel);
+$(document).ready(updateCarousel);
 
+// Actualizar el carrusel al redimensionar la ventana
+$(window).resize(function () {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(updateCarousel, 200);
+});

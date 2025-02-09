@@ -7,7 +7,9 @@
     <title>WorldTravel</title>
     <link rel="stylesheet" href="../../../styles/css/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="../../../resources/logos/logo_web.png" type="image/x-icon">
+    <link rel="icon" href="../../../resources/logos/fav_icon_web.svg" type="image/x-icon">
+    <!-- AOS CSS para animaciones en scroll -->
+    <link rel="stylesheet" href="../../../styles/css/aos.css" />
 
 </head>
 
@@ -27,13 +29,14 @@
         <div class="container-fluid">
 
             <!-- Nav -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" aria-label="Menú de navegación" role="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3"
+                aria-label="Menú de navegación" role="navigation">
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
                     <a href="../../index_en.html" class="logo d-flex align-items-center text-black text-decoration-none"
                         tabindex="0" aria-label="Go to the homepage">
-                        <img src="../../../resources/logos/logo_web.png" alt="Website logo" width="40" height="40"
+                        <img src="../../../resources/logos/logo_web.svg" alt="Website logo" width="50" height="50"
                             class="me-2" />
                         <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
                     </a>
@@ -108,13 +111,13 @@
                             <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
                                 id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 aria-label="Select language">
-                                <img src="../../../resources/img/UK.png" alt="UK flag" width="25px" height="25px"
+                                <img src="../../../resources/img/UK.webp" alt="UK flag" width="25px" height="25px"
                                     class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <a class="dropdown-item text-decoration-none text-black"
                                     href="../../es/colecciones/viajes_premium.html" aria-label="Switch to Spanish">
-                                    <img src="../../../resources/img/spain.png" alt="Spain flag" width="25px"
+                                    <img src="../../../resources/img/spain.webp" alt="Spain flag" width="25px"
                                         height="25px" class="me-2" /> En
                                 </a>
                             </div>
@@ -142,15 +145,15 @@
             <div class="content-center text-center w-100">
                 <header>
                     <h1 class="miFuente">Premium Trips</h1>
-                    <p class="styled-paragraph">Live the trip of your dreams</p>
+                    <p class="styled-paragraph entrada">Live the trip of your dreams</p>
                 </header>
             </div>
-            <img src="../../../resources/img/viajes-maldivas-arena-relax-hp-slider-.png"
+            <img src="../../../resources/img/viajes-maldivas-arena-relax-hp-slider-.webp"
                 class="w-100 h-100 object-fit-cover" aria-label="Person in a pool with ocean views"></img>
         </div>
 
         <!-- Cards Section -->
-        <section id="honeymoon" class="container-fluid my-element offset z-2">
+        <section id="honeymoon" class="container-fluid my-element offset z-2" data-aos="fade-up">
             <div class="container-fluid">
                 <header class="d-flex align-items-center mt-5 justify-content-between py-3">
                     <div class="border-top border-primary flex-grow-1 mx-5"></div>
@@ -176,44 +179,48 @@
                     <div class="card-dimension mb-3" style="height: max-content;">
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
-                                <img src="../../../resources/img/raffles-maldives-meradhoo-resort-10.png"
+                                <img src="../../../resources/img/raffles-maldives-meradhoo-resort-10.webp"
                                     class="w-100 h-100 object-fit-cover rounded-top"
                                     alt="Raffles Restor with many houses on the water in the Maldives">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
-                                <h3 class="fs-5 card-title text-center text-primary">Raffles Maldives Meradhoo Resort</h5>
-                                <p class="card-text text-center text-muted">
-                                    One of the newest gems of the Maldives, Raffles Maldives Meradhoo 5.5* offers two
-                                    experiences in one resort. The first is the main island, where the villas and
-                                    residences with private pools are located, along with the Spa and the island's
-                                    interpretation of the legendary Long Bar.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <!-- Ratings -->
-                                    <div>
-                                        <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                                    </div>
-                                    <!-- Action icons -->
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <button class="icon-mg btn btn-link text-danger like-button"
-                                            data-bs-toggle="button" aria-pressed="false" aria-label="Like this item">
-                                            <i class="bi bi-heart"></i>
-                                        </button>
+                                <h3 class="fs-5 card-title text-center text-primary">Raffles Maldives Meradhoo Resort
+                                    </h5>
+                                    <p class="card-text text-center text-muted">
+                                        One of the newest gems of the Maldives, Raffles Maldives Meradhoo 5.5* offers
+                                        two
+                                        experiences in one resort. The first is the main island, where the villas and
+                                        residences with private pools are located, along with the Spa and the island's
+                                        interpretation of the legendary Long Bar.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <!-- Ratings -->
+                                        <div>
+                                            <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                        </div>
+                                        <!-- Action icons -->
+                                        <div class="d-flex flex-row justify-content-center align-items-center">
+                                            <button class="icon-mg btn btn-link text-danger like-button"
+                                                data-bs-toggle="button" aria-pressed="false"
+                                                aria-label="Like this item">
+                                                <i class="bi bi-heart"></i>
+                                            </button>
 
-                                        <button class="btn btn-link text-primary comment-button" data-bs-toggle="button"
-                                            aria-pressed="false" aria-label="Coment this item">
-                                            <i class="bi bi-chat"></i>
-                                        </button>
+                                            <button class="btn btn-link text-primary comment-button"
+                                                data-bs-toggle="button" aria-pressed="false"
+                                                aria-label="Coment this item">
+                                                <i class="bi bi-chat"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
-                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
-                                        data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
-                                        target="_self" aria-label="Add plan to cart">
-                                        <p class="mb-0 w-100 text-center">Add to cart</p>
-                                    </a>
-                                </div>
+                                    <div class="container-fluid d-flex justify-content-center align-content-center">
+                                        <a class="btn rebote btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
+                                            target="_self" aria-label="Add plan to cart">
+                                            <p class="mb-0 w-100 text-center">Add to cart</p>
+                                        </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -221,41 +228,45 @@
                     <div class="card-dimension mb-3" style="height: max-content;">
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
-                                <img src="../../../resources/img/viaje-premium-seychelles-francesa-hilton-labriz-resort-24.png"
+                                <img src="../../../resources/img/viaje-premium-seychelles-francesa-hilton-labriz-resort-24.webp"
                                     class="w-100 h-100 object-fit-cover rounded-top"
                                     alt="Resort in the middle of a mountainside and at the foot of it a beautiful beach">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
-                                <h3 class="fs-5 card-title text-center text-primary">Hilton Seychelles Labriz Resort</h5>
-                                <p class="card-text text-center text-muted">
-                                    The Seychelles islands will surprise you with their white sandy beaches and lush
-                                    tropical jungles. On each island, you'll find excellent accommodation options with
-                                    private villas, some of them on remote islands accessible only by helicopter.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div>
-                                        <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <button class="icon-mg btn btn-link text-danger like-button"
-                                            data-bs-toggle="button" aria-pressed="false" aria-label="Like this item">
-                                            <i class="bi bi-heart"></i>
-                                        </button>
+                                <h3 class="fs-5 card-title text-center text-primary">Hilton Seychelles Labriz Resort
+                                    </h5>
+                                    <p class="card-text text-center text-muted">
+                                        The Seychelles islands will surprise you with their white sandy beaches and lush
+                                        tropical jungles. On each island, you'll find excellent accommodation options
+                                        with
+                                        private villas, some of them on remote islands accessible only by helicopter.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div>
+                                            <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center align-items-center">
+                                            <button class="icon-mg btn btn-link text-danger like-button"
+                                                data-bs-toggle="button" aria-pressed="false"
+                                                aria-label="Like this item">
+                                                <i class="bi bi-heart"></i>
+                                            </button>
 
-                                        <button class="btn btn-link text-primary comment-button" data-bs-toggle="button"
-                                            aria-pressed="false" aria-label="Coment this item">
-                                            <i class="bi bi-chat"></i>
-                                        </button>
+                                            <button class="btn btn-link text-primary comment-button"
+                                                data-bs-toggle="button" aria-pressed="false"
+                                                aria-label="Coment this item">
+                                                <i class="bi bi-chat"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
-                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
-                                        data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
-                                        target="_self" aria-label="Add plan to cart">
-                                        <p class="mb-0 w-100 text-center">Add to cart</p>
-                                    </a>
-                                </div>
+                                    <div class="container-fluid d-flex justify-content-center align-content-center">
+                                        <a class="btn rebote btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
+                                            target="_self" aria-label="Add plan to cart">
+                                            <p class="mb-0 w-100 text-center">Add to cart</p>
+                                        </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -263,42 +274,47 @@
                     <div class="card-dimension mb-3" style="height: max-content;">
                         <div class="card shadow h-100">
                             <div class="container-fluid h-50">
-                                <img src="../../../resources/img/amilla-fushi-maldives-resort-5.png"
+                                <img src="../../../resources/img/amilla-fushi-maldives-resort-5.webp"
                                     class="w-100 h-100 object-fit-cover rounded-top"
                                     alt="Resort is a small island in the Maldives">
                             </div>
                             <div class="card-body d-flex flex-column h-50">
                                 <h3 class="fs-5 card-title text-center text-primary">Dubai + Maldives 5*</h5>
-                                <p class="card-text text-center text-muted">
-                                    Travel to Dubai and the Maldives, discovering the contrasts between the city of the
-                                    tallest skyscrapers and the flattest country in the world. Discover our proposal for
-                                    the most demanding travelers with exclusive services, selected accommodations, and
-                                    every detail for an unforgettable trip.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div>
-                                        <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <button class="icon-mg btn btn-link text-danger like-button"
-                                            data-bs-toggle="button" aria-pressed="false" aria-label="Like this item">
-                                            <i class="bi bi-heart"></i>
-                                        </button>
+                                    <p class="card-text text-center text-muted">
+                                        Travel to Dubai and the Maldives, discovering the contrasts between the city of
+                                        the
+                                        tallest skyscrapers and the flattest country in the world. Discover our proposal
+                                        for
+                                        the most demanding travelers with exclusive services, selected accommodations,
+                                        and
+                                        every detail for an unforgettable trip.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div>
+                                            <span class="text-warning fs-4">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center align-items-center">
+                                            <button class="icon-mg btn btn-link text-danger like-button"
+                                                data-bs-toggle="button" aria-pressed="false"
+                                                aria-label="Like this item">
+                                                <i class="bi bi-heart"></i>
+                                            </button>
 
-                                        <button class="btn btn-link text-primary comment-button" data-bs-toggle="button"
-                                            aria-pressed="false" aria-label="Coment this item">
-                                            <i class="bi bi-chat"></i>
-                                        </button>
+                                            <button class="btn btn-link text-primary comment-button"
+                                                data-bs-toggle="button" aria-pressed="false"
+                                                aria-label="Coment this item">
+                                                <i class="bi bi-chat"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="container-fluid d-flex justify-content-center align-content-center">
-                                    <a class="btn btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
-                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
-                                        data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
-                                        target="_self" aria-label="Add plan to cart">
-                                        <p class="mb-0 w-100 text-center">Add to cart</p>
-                                    </a>
-                                </div>
+                                    <div class="container-fluid d-flex justify-content-center align-content-center">
+                                        <a class="btn rebote btn-primary fw-semibold my-lg-0 my-2 w-50 d-flex align-self-center"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-title="Cart updated" data-bs-content="Plan added successfully!"
+                                            target="_self" aria-label="Add plan to cart">
+                                            <p class="mb-0 w-100 text-center">Add to cart</p>
+                                        </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -308,7 +324,7 @@
 
 
         <!-- Sección Recomendaciones -->
-        <section class="container-fluid my-element mb-4">
+        <section class="container-fluid my-element mb-4" data-aos="fade-up">
             <header class="d-flex align-items-center my-5 justify-content-between py-3">
                 <div class="border-top border-primary flex-grow-1 mx-5"></div>
                 <h2 class="text-primary fs-3 text-center">Recomended <span
@@ -319,30 +335,30 @@
             <div class="container-fluid d-flex justify-content-around flex-wrap">
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="../../../resources/logos/logo-maldives-sunny-side1.png" class="w-75 h-100"
+                        <img src="../../../resources/logos/logo-maldives-sunny-side1.webp" class="w-75 h-100"
                             alt="Logo of Maldives Sunny Side, Maldives tour operator">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="../../../resources/logos/logo-certified-tahiti-specialist1.png" class="w-75 h-100"
+                        <img src="../../../resources/logos/logo-certified-tahiti-specialist1.webp" class="w-75 h-100"
                             alt="Certified Tahiti Specialist logo, specialist in travel to Tahiti">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="../../../resources/logos/logo-visit-qatar1.png" class="w-75 h-100"
+                        <img src="../../../resources/logos/logo-visit-qatar1.webp" class="w-75 h-100"
                             alt="Logo of Visit Qatar, Qatar Tourism Authority">
                     </div>
                 </div>
                 <div class="container-fluid d-flex justify-content-around flex-wrap">
 
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="../../../resources/logos/logo-seychelles-tourism1.png" class="w-75 h-100"
+                        <img src="../../../resources/logos/logo-seychelles-tourism1.webp" class="w-75 h-100"
                             alt="Logo of Seychelles Tourism, the tourism organisation of Seychelles">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="../../../resources/logos/logo-oficina-turismo-japon-oficial.png" class="w-75 h-100"
+                        <img src="../../../resources/logos/logo-oficina-turismo-japon-oficial.webp" class="w-75 h-100"
                             alt="Logo of the Japan Tourism Office, the official Japanese tourism agency">
                     </div>
                     <div class=" mx-5 d-flex justify-content-center ">
-                        <img src="../../../resources/logos/logo-tripadvisor-copia1.png" class="w-75 h-100"
+                        <img src="../../../resources/logos/logo-tripadvisor-copia1.webp" class="w-75 h-100"
                             alt="TripAdvisor logo, travel advice and reviews platform">
                     </div>
                 </div>
@@ -355,7 +371,7 @@
     <!-- FOOTER -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <footer class="container-fluid mt-5 text-white py-4">
+    <footer class="container-fluid mt-5 text-white py-4" data-aos="fade-up">
         <div class="container">
             <h3 class="fs-4 text-light mb-4">OUR OFFICES</h3>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
@@ -441,7 +457,7 @@
             </div>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
             <div class="container">
-                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2025 Travel.</p>
                 <!-- Name -->
             </div>
         </div>
@@ -451,7 +467,14 @@
     <script src="../../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
     <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Script -->
+    <script src="../../../js/aos.js"></script>
     <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: false
+        });
         document.addEventListener('DOMContentLoaded', () => {
             // Inicializa todos los popovers
             const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
@@ -467,6 +490,62 @@
                     setTimeout(() => {
                         popover.hide();
                     }, 3000); // Tiempo en milisegundos
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Manejar el botón de "Me gusta"
+            document.querySelectorAll(".like-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    const card = this.closest(".card");
+                    if (!card) return;
+
+                    // Alternar clase de "liked" en el botón
+                    this.classList.toggle("liked");
+                    this.innerHTML = this.classList.contains("liked")
+                        ? '<i class="bi bi-heart-fill"></i>'
+                        : '<i class="bi bi-heart"></i>';
+
+                    // Si está activado, mostrar la animación, si no, no hacer nada
+                    if (this.classList.contains("liked")) {
+                        let heart = document.createElement("div");
+                        heart.classList.add("heart-animation", "bi", "bi-heart-fill", "text-danger");
+                        card.appendChild(heart);
+
+                        // Desaparecer la animación después de 0.5s
+                        setTimeout(() => {
+                            heart.classList.add("fade-out");
+                            setTimeout(() => heart.remove(), 300);
+                        }, 500);
+                    }
+                });
+            });
+
+            // Manejar el botón de "Comentar"
+            document.querySelectorAll(".comment-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    const card = this.closest(".card");
+                    if (!card) return;
+
+                    // Alternar clase de "commented" en el botón
+                    this.classList.toggle("commented");
+                    this.innerHTML = this.classList.contains("commented")
+                        ? '<i class="bi bi-chat-fill"></i>'
+                        : '<i class="bi bi-chat"></i>';
+
+                    // Si está activado, mostrar la animación, si no, no hacer nada
+                    if (this.classList.contains("commented")) {
+                        let commentIcon = document.createElement("div");
+                        commentIcon.classList.add("comment-animation", "bi", "bi-chat-fill", "text-primary");
+                        card.appendChild(commentIcon);
+
+                        // Desaparecer la animación después de 0.5s
+                        setTimeout(() => {
+                            commentIcon.classList.add("fade-out");
+                            setTimeout(() => commentIcon.remove(), 300);
+                        }, 500);
+                    }
                 });
             });
         });

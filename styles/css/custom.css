@@ -1,4 +1,55 @@
 @charset "UTF-8";
+/* Animación de rotación para el SVG */
+.boxRing svg {
+  animation: rotateRing 20s linear infinite;
+  transform-origin: 80px 80px;
+  /* Ajustado al nuevo tamaño */
+  background: transparent;
+}
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 759px) {
+  .boxRing svg {
+    opacity: 0;
+  }
+}
+/* Contenedor del SVG más grande */
+.boxRing {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  opacity: 0;
+  animation: fadeSlideIn 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+  left: 36%;
+  transform: translateX(-50%);
+  top: -55px;
+  background: transparent;
+  -webkit-mask-image: linear-gradient(to bottom, white 0%, white 40%, transparent 60%);
+  mask-image: linear-gradient(to bottom, white 0%, white 40%, transparent 60%);
+}
+
+.main-1 svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mejor definición del texto */
+.main-1 text {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Estilos de la barra de navegación */
 .search-form {
   width: 100%;
 }
@@ -28,7 +79,7 @@
 
 .styled-paragraph {
   font-size: 1.3rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 /* Texto sobre el video */
@@ -61,6 +112,76 @@
   opacity: 1;
 }
 
+/* Estilo animación marquee */
+.marque-section {
+  background: transparent;
+  height: 55px;
+}
+
+/* Estilos existentes para el marquee */
+.travel-marquee {
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  font: 400 2rem/1 "BagelFatOne", sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.travel-marquee .marquee-wrapper {
+  display: flex;
+  min-width: 200%;
+  animation: marqueeLoop 20s linear infinite;
+}
+
+@media screen and (max-width: 759px) {
+  .travel-marquee .marquee-wrapper {
+    animation: marqueeLoop 10s linear infinite;
+  }
+}
+.travel-marquee:hover,
+.marquee-wrapper:hover {
+  animation-play-state: paused;
+}
+
+.travel-marquee .marquee-content {
+  display: flex;
+  gap: 30px; /* Espaciado uniforme */
+  flex-shrink: 0;
+  padding-right: 30px; /* Agregar espacio al final */
+}
+
+/* Bocadillos estilizados con sombra */
+.bubble {
+  display: inline-block;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 25px;
+  margin-right: 20px;
+  font-size: 2rem;
+  white-space: nowrap;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+/* Efecto al pasar el cursor */
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+/* Animación del marquee */
+@keyframes marqueeLoop {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 /* Estilo del footer*/
 footer {
   background-color: rgb(39, 39, 39);
@@ -145,6 +266,77 @@ footer {
   margin-top: 3px;
 }
 
+/* Efecto hover en imágenes */
+.img-destinos {
+  transition: transform 0.3s ease;
+}
+
+.img-destinos:hover {
+  transform: scale(1.03);
+}
+
+/* Efecto hover en botones con animación de rebote */
+.rebote {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.rebote:hover {
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Efecto hover en imágenes */
+.img-destinos {
+  transition: transform 0.3s ease;
+}
+
+.img-destinos:hover {
+  transform: scale(1.03);
+}
+
+/* Animación de entrada para el título principal */
+.miFuente,
+.entrada {
+  opacity: 0;
+  animation: fadeSlideIn 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Eliminamos la animación del rombo y le damos un sutil efecto hover */
+.rombo {
+  transition: transform 0.3s ease;
+}
+
+.rombo:hover {
+  transform: scale(1.1);
+}
+
 /* Contacto */
 .contacto {
   width: 40%;
@@ -155,6 +347,82 @@ footer {
     width: 75%;
   }
 }
+html, body {
+  overflow-x: clip;
+}
+
+/* Estilos de videos de Destinos */
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(var(--bs-primary-rgb), 0.9);
+  color: white;
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  animation: heartbeat 1.5s infinite;
+}
+
+.play {
+  margin-left: 5px;
+}
+
+/* Animación de latido */
+@keyframes heartbeat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/* Ocultar el botón de Play cuando el video empieza */
+.custom-video.playing + .custom-play-button {
+  display: none;
+}
+
+/* Animacion colecciones mg y comentarios */
+/* Animación del corazón */
+.heart-animation, .comment-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 4rem;
+  opacity: 1;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.heart-animation.fade-out, .comment-animation.fade-out {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+}
+
+/* Cambiar color del botón de me gusta cuando está activo */
+.liked .bi-heart {
+  color: red !important;
+  font-weight: bold;
+}
+
+/* Cambiar color del botón de comentario cuando está activo */
+.commented .bi-chat {
+  color: #007bff !important;
+  font-weight: bold;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -167,12 +435,19 @@ footer {
   font-style: normal;
   font-size: xx-large;
 }
+@font-face {
+  font-family: "BagelFatOne";
+  src: url("../../resources/fonts/BagelFatOne-Regular.ttf") format("truetype"), url("../../resources/fonts/Sergio Trendy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-size: xx-large;
+}
 /* Estilo de letra de mi fuente*/
 .miFuente {
   font-family: "Woodland", sans-serif;
   font-size: 125px;
   color: #FFFFFF;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo:focus,
@@ -4624,7 +4899,7 @@ textarea.form-control-lg {
 }
 
 .bg-semitransparent {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.55);
 }
 
 .card {

@@ -623,6 +623,16 @@ font-style: normal;
 font-size: xx-large;
 }
 
+@font-face {
+  font-family: 'BagelFatOne';
+  src:url('../../resources/fonts/BagelFatOne-Regular.ttf') format('truetype'),
+    url('../../resources/fonts/Sergio\ Trendy.ttf') format('truetype'
+    );
+  font-weight: normal;
+  font-style: normal;
+  font-size: xx-large;
+}
+
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
@@ -1774,10 +1784,11 @@ $pre-color: null !default;
 
 /* Estilo de letra de mi fuente*/
 .miFuente {
-  font-family: 'Woodland', sans-serif;
+  font-family: 'Woodland',
+    sans-serif;
   font-size: 125px;
   color: #FFFFFF;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 @import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3

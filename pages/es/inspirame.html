@@ -7,7 +7,9 @@
     <title>WorldTravel</title>
     <link rel="stylesheet" href="../../styles/css/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="../../resources/logos/logo_web.png" type="image/x-icon">
+    <link rel="icon" href="../../resources/logos/fav_icon_web.svg" type="image/x-icon">
+    <!-- AOS CSS para animaciones en scroll -->
+    <link rel="stylesheet" href="../../styles/css/aos.css" />
 
 </head>
 
@@ -27,13 +29,14 @@
         <div class="container-fluid">
 
             <!-- Barra de navegación -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3" aria-label="Menú de navegación" role="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-semitransparent fixed-top px-3"
+                aria-label="Menú de navegación" role="navigation">
 
                 <!-- Logo -->
                 <div class="col-2 text-center">
                     <a href="../../index.html" class="logo d-flex align-items-center text-black text-decoration-none"
                         tabindex="0" aria-label="Ir a la página principal">
-                        <img src="../../resources/logos/logo_web.png" alt="Logo de la web" width="40" height="40"
+                        <img src="../../resources/logos/logo_web.svg" alt="Logo de la web" width="50" height="50"
                             class="me-2" />
                         <span class="fs-5 fw-bold" aria-hidden="true">WorldTravel</span>
                     </a>
@@ -109,13 +112,13 @@
                             <button class="btn btn-none dropdown-toggle d-flex align-items-center" type="button"
                                 id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 aria-label="Seleccionar idioma">
-                                <img src="../../resources/img/spain.png" alt="Bandera de España" width="25px"
+                                <img src="../../resources/img/spain.webp" alt="Bandera de España" width="25px"
                                     height="25px" class="me-2" /> Es
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <a class="dropdown-item text-decoration-none text-black" href="../en/inspire_me.html"
                                     aria-label="Cambiar a inglés">
-                                    <img src="../../resources/img/UK.png" alt="Bandera de Reino Unido" width="25px"
+                                    <img src="../../resources/img/UK.webp" alt="Bandera de Reino Unido" width="25px"
                                         height="25px" class="me-2" /> En
                                 </a>
                             </div>
@@ -143,15 +146,15 @@
             <div class="content-center text-center w-100">
                 <header>
                     <h1 class="miFuente">Descubre mas opciones</h1>
-                    <p class="styled-paragraph">Mas destinos disponibles en WorldTravel</p>
+                    <p class="styled-paragraph entrada">Mas destinos disponibles en WorldTravel</p>
                 </header>
             </div>
-            <img src="../../resources/img/le-meridien-maldivas-7.png" class="w-100 h-100 object-fit-cover"
+            <img src="../../resources/img/le-meridien-maldivas-7.webp" class="w-100 h-100 object-fit-cover"
                 aria-label="Playa de las maldivas con un precioso chalet en la costa"></img>
         </div>
 
         <!-- Sección de Filtrado -->
-        <section id="sri_lanka" class="container-fluid my-element offset z-1">
+        <section id="sri_lanka" class="container-fluid my-element offset z-1" data-aos="fade-up">
             <div class="container-fluid">
                 <header class="d-flex align-items-center mb-4 mt-5 justify-content-between py-3">
                     <div class="border-top border-primary flex-grow-1 mx-5"></div>
@@ -203,7 +206,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-auto">
-                                                <img src="../../resources/img/viajes-japon-hiroshima-2.png"
+                                                <img src="../../resources/img/viajes-japon-hiroshima-2.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Lago de japón con un precioso punte cruzandolo">
                                             </div>
@@ -238,7 +241,7 @@
 
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -252,11 +255,12 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/oman-10.png"
+                                                <img src="../../resources/img/oman-10.webp"
                                                     class="w-100 h-100 object-fit-cover rounded-top" alt="Destino 2">
                                             </div>
                                             <div class="card-body d-flex flex-column h-50" style="height: max-content;">
-                                                <h3 class="fs-5 card-title text-center text-primary">Omán, Tierra de Leyenda
+                                                <h3 class="fs-5 card-title text-center text-primary">Omán, Tierra de
+                                                    Leyenda
                                                 </h3>
                                                 <p class="card-text text-center text-muted">
                                                     Una joya escondida en la cima de la Península Arábiga, Omán es una
@@ -284,7 +288,7 @@
                                                 </div>
                                                 <!-- Botón Ver más -->
                                                 <div class="container-fluid d-flex my-2 justify-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -299,7 +303,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/kenia-4.png"
+                                                <img src="../../resources/img/kenia-4.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Enorme elefante en la sabana de Kenia">
                                             </div>
@@ -333,7 +337,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -347,7 +351,7 @@
                                     <div class="card-dimension mb-5 " style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/estambul-capadocia-8-nights-5-0.png"
+                                                <img src="../../resources/img/estambul-capadocia-8-nights-5-0.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Vista de montañas y un globo aerostático sobrevolandolas">
                                             </div>
@@ -382,7 +386,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -396,7 +400,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/nuevo-destino-2023-vietnam-2.png"
+                                                <img src="../../resources/img/nuevo-destino-2023-vietnam-2.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Templo de Vietnam con una mujer caminando hacia la entrada">
                                             </div>
@@ -430,7 +434,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -444,12 +448,13 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/crucero-polinesia-francesa.png"
+                                                <img src="../../resources/img/crucero-polinesia-francesa.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Vista desde el cielo de pequeñas islas en la polinesia francesa con un agua cristalina y varias motos acuaticas">
                                             </div>
                                             <div class="card-body d-flex flex-column h-50" style="height: max-content;">
-                                                <h3 class="fs-5 card-title text-center text-primary">Polinesia Francesa</h3>
+                                                <h3 class="fs-5 card-title text-center text-primary">Polinesia Francesa
+                                                </h3>
                                                 <p class="card-text text-center text-muted ">
                                                     Este crucero por la Polinesia Francesa le ofrece la oportunidad de
                                                     disfrutar de la belleza de seis islas diferentes.
@@ -477,7 +482,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -509,7 +514,7 @@
                                     <div class="card-dimension mb-5 " style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/estambul-capadocia-8-nights-5-0.png"
+                                                <img src="../../resources/img/estambul-capadocia-8-nights-5-0.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Vista de montañas y un globo aerostático sobrevolandolas">
                                             </div>
@@ -541,7 +546,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -555,7 +560,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/kenia-4.png"
+                                                <img src="../../resources/img/kenia-4.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Enorme elefante en la sabana de Kenia">
                                             </div>
@@ -587,7 +592,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -601,7 +606,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-auto">
-                                                <img src="../../resources/img/viajes-japon-hiroshima-2.png"
+                                                <img src="../../resources/img/viajes-japon-hiroshima-2.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Lago de japón con un precioso punte cruzandolo">
                                             </div>
@@ -634,7 +639,7 @@
 
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -648,7 +653,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/nuevo-destino-2023-vietnam-2.png"
+                                                <img src="../../resources/img/nuevo-destino-2023-vietnam-2.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Templo de Vietnam con una mujer caminando hacia la entrada">
                                             </div>
@@ -680,7 +685,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -694,12 +699,13 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/oman-10.png"
+                                                <img src="../../resources/img/oman-10.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Dunas de un inmenso desierto">
                                             </div>
                                             <div class="card-body d-flex flex-column h-50" style="height: max-content;">
-                                                <h3 class="fs-5 card-title text-center text-primary">Omán, Tierra de Leyenda
+                                                <h3 class="fs-5 card-title text-center text-primary">Omán, Tierra de
+                                                    Leyenda
                                                 </h3>
                                                 <p class="card-text text-center text-muted ">
                                                     Una joya escondida en la cima de la Península Arábiga, Omán es una
@@ -726,7 +732,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -740,12 +746,13 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/crucero-polinesia-francesa.png"
+                                                <img src="../../resources/img/crucero-polinesia-francesa.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Vista desde el cielo de pequeñas islas en la polinesia francesa con un agua cristalina y varias motos acuaticas">
                                             </div>
                                             <div class="card-body d-flex flex-column h-50" style="height: max-content;">
-                                                <h3 class="fs-5 card-title text-center text-primary">Polinesia Francesa</h3>
+                                                <h3 class="fs-5 card-title text-center text-primary">Polinesia Francesa
+                                                </h3>
                                                 <p class="card-text text-center text-muted ">
                                                     Este crucero por la Polinesia Francesa le ofrece la oportunidad de
                                                     disfrutar de la belleza de seis islas diferentes.
@@ -771,7 +778,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -804,7 +811,7 @@
                                     <div class="card-dimension mb-5 " style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/estambul-capadocia-8-nights-5-0.png"
+                                                <img src="../../resources/img/estambul-capadocia-8-nights-5-0.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Vista de montañas y un globo aerostático sobrevolandolas">
                                             </div>
@@ -840,7 +847,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -854,7 +861,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/nuevo-destino-2023-vietnam-2.png"
+                                                <img src="../../resources/img/nuevo-destino-2023-vietnam-2.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Templo de Vietnam con una mujer caminando hacia la entrada">
                                             </div>
@@ -889,7 +896,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -903,12 +910,13 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/oman-10.png"
+                                                <img src="../../resources/img/oman-10.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Dunas de un inmenso desierto">
                                             </div>
                                             <div class="card-body d-flex flex-column h-50" style="height: max-content;">
-                                                <h3 class="fs-5 card-title text-center text-primary">Omán, Tierra de Leyenda
+                                                <h3 class="fs-5 card-title text-center text-primary">Omán, Tierra de
+                                                    Leyenda
                                                 </h3>
                                                 <p class="card-text text-center text-muted ">
                                                     Una joya escondida en la cima de la Península Arábiga, Omán es una
@@ -938,7 +946,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -952,12 +960,13 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/crucero-polinesia-francesa.png"
+                                                <img src="../../resources/img/crucero-polinesia-francesa.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Vista desde el cielo de pequeñas islas en la polinesia francesa con un agua cristalina y varias motos acuaticas">
                                             </div>
                                             <div class="card-body d-flex flex-column h-50" style="height: max-content;">
-                                                <h3 class="fs-5 card-title text-center text-primary">Polinesia Francesa</h3>
+                                                <h3 class="fs-5 card-title text-center text-primary">Polinesia Francesa
+                                                </h3>
                                                 <p class="card-text text-center text-muted ">
                                                     Este crucero por la Polinesia Francesa le ofrece la oportunidad de
                                                     disfrutar de la belleza de seis islas diferentes.
@@ -986,7 +995,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -1000,7 +1009,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-auto">
-                                                <img src="../../resources/img/viajes-japon-hiroshima-2.png"
+                                                <img src="../../resources/img/viajes-japon-hiroshima-2.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Lago de japón con un precioso punte cruzandolo">
                                             </div>
@@ -1036,7 +1045,7 @@
 
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -1050,7 +1059,7 @@
                                     <div class="card-dimension mb-5" style="height: max-content;">
                                         <div class="card shadow h-100">
                                             <div class="container-fluid h-50">
-                                                <img src="../../resources/img/kenia-4.png"
+                                                <img src="../../resources/img/kenia-4.webp"
                                                     class=" w-100 h-100 object-fit-cover rounded-top"
                                                     alt="Enorme elefante en la sabana de Kenia">
                                             </div>
@@ -1085,7 +1094,7 @@
                                                 </div>
                                                 <div
                                                     class="container-fluid d-flex my-2 justify-content-center align-content-center">
-                                                    <a class="btn btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
+                                                    <a class="btn rebote btn-primary fw-semibold my-lg-0 my-3 w-70  d-flex align-self-center"
                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                         data-bs-title="Estamos trabajando para que puedas verlo lo antes posible"
                                                         target="_self" aria-label="Ver más">
@@ -1109,7 +1118,7 @@
     <!-- FOOTER -->
     <!-- - - - - - - - - - - - - - - - - - - - -->
 
-    <footer class="container-fluid mt-5 text-white py-4">
+    <footer class="container-fluid mt-5 text-white py-4" data-aos="fade-up">
         <div class="container">
             <h3 class="fs-4 text-light mb-4">NUESTRAS OFICINAS</h3>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
@@ -1196,7 +1205,7 @@
             </div>
             <hr class="separador-title-oficinas mb-4 border-white w-100" />
             <div class="container">
-                <p class="mb-0 text-center w-100 text-white">Copyright ©2024 Travel.</p>
+                <p class="mb-0 text-center w-100 text-white">Copyright ©2025 Travel.</p>
                 <!-- Nombre -->
             </div>
         </div>
@@ -1206,7 +1215,14 @@
     <script src="../../js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Script -->
+    <script src="../../js/aos.js"></script>
     <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: false
+        })
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
