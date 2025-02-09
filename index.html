@@ -494,6 +494,56 @@
             </div>
         </section>
 
+        <!-- Sección About us -->
+        <section class="container-fluid my-element mb-4">
+            <div data-aos="fade-up">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center">About <span
+                            class="text-primary"><strong>us</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">
+                    <span class="text-primary"><strong>World Travel</strong></span> transforma cada viaje en una
+                    experiencia inolvidable.
+                </p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">
+                    Nos apasiona llevarte más allá de lo convencional, explorando destinos donde la
+                    <span class="text-primary"><strong>cultura, la aventura y la naturaleza</strong></span> se
+                    entrelazan.
+                </p>
+                <p class="fs-6 mt-3 mb-5 mx-2 text-center text-black">
+                    Cada rincón del mundo esconde un viaje único.
+                    <span class="text-primary"><strong>¿Estás listo para descubrirlo?</strong></span>
+                </p>
+            </div>
+
+            <!-- Contenedor flexbox para centrar el video -->
+            <div class="d-flex justify-content-center">
+                <!-- Estilo del video -->
+                <div class="img-destinos img-index shadow p-2 bg-body w-sm-50 rounded-5 h-100"
+                    style="width: 50%; position: relative;" data-aos="fade-up">
+                    <video class="img-fluid rounded-5 h-100 w-100 object-fit-cover custom-video"
+                        poster="resources/img/Portada_AboutMe.svg" controls onclick="playVideo(this)" aria-label="En World Travel, transformamos cada viaje en una experiencia inolvidable. 
+                        Nos apasiona llevarte más allá de lo convencional, explorando destinos donde la cultura,
+                        la aventura y la naturaleza se entrelazan.
+                        Desde la elegancia de Udaipur, con sus palacios y lagos, hasta la adrenalina del desierto
+                        de Dubái, donde las dunas cobran vida al atardecer. Vive la magia de Sri Lanka, con su
+                        exuberante paisaje y el icónico viaje en tren entre montañas y cascadas.
+                        Más que viajes, creamos momentos que quedarán grabados para siempre.
+                        💫 Tu próxima aventura comienza aquí. ¿Estás listo para descubrirla?">
+                        <source src="resources/video/about_us.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                    <!-- Botón de Play personalizado -->
+                    <div class="custom-play-button" onclick="playVideo()">
+                        <i class="bi play bi-play"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Sección Recomendaciones -->
         <section class="container-fluid my-element mb-4">
             <div data-aos="fade-up">
@@ -715,7 +765,9 @@
             once: false,
 
         });
+       
     </script>
+    <script src="js/playVideos.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/scroll.js"></script>
 </body>

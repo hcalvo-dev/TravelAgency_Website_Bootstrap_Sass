@@ -122,7 +122,7 @@
 
 /* Estilo animación marquee */
 .marque-section {
-    background: transparent;  
+    background: transparent;
     height: 55px;
 }
 
@@ -151,16 +151,15 @@
     }
 }
 
-.travel-marquee:hover,
-.marquee-wrapper:hover {
-    animation-play-state: paused;
-}
+
 
 .travel-marquee .marquee-content {
     display: flex;
-    gap: 30px; /* Espaciado uniforme */
+    gap: 30px;
+    /* Espaciado uniforme */
     flex-shrink: 0;
-    padding-right: 30px; /* Agregar espacio al final */
+    padding-right: 30px;
+    /* Agregar espacio al final */
 }
 
 /* Bocadillos estilizados con sombra */
@@ -174,7 +173,7 @@
     font-size: 2rem;
     white-space: nowrap;
     transition: transform 0.2s ease-in-out;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 /* Efecto al pasar el cursor */
@@ -182,11 +181,17 @@
     transform: scale(1.1);
 }
 
+.travel-marquee:hover,
+.marquee-wrapper:hover {
+    animation-play-state: paused;
+}
+
 /* Animación del marquee */
 @keyframes marqueeLoop {
     from {
         transform: translateX(0%);
     }
+
     to {
         transform: translateX(-100%);
     }
@@ -195,7 +200,7 @@
 /* Estilo del footer*/
 footer {
     background-color: rgb(39, 39, 39);
-    
+
 }
 
 .link-footer {
@@ -374,12 +379,13 @@ footer {
     }
 }
 
-html, body {
-    overflow-x: clip; 
+html,
+body {
+    overflow-x: clip;
 }
 
 /* Estilos de videos de Destinos */
- .custom-play-button {
+.custom-play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -399,7 +405,7 @@ html, body {
     animation: heartbeat 1.5s infinite;
 }
 
-.play{
+.play {
     margin-left: 5px;
 }
 
@@ -408,22 +414,25 @@ html, body {
     0% {
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.1);
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
 /* Ocultar el botón de Play cuando el video empieza */
-.custom-video.playing + .custom-play-button {
+.custom-video.playing+.custom-play-button {
     display: none;
 }
 
 /* Animacion colecciones mg y comentarios */
 /* Animación del corazón */
-.heart-animation, .comment-animation {
+.heart-animation,
+.comment-animation {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -434,22 +443,28 @@ html, body {
     z-index: 10;
 }
 
-.heart-animation.fade-out, .comment-animation.fade-out {
+.heart-animation.fade-out,
+.comment-animation.fade-out {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 0;
 }
 
 /* Cambiar color del botón de me gusta cuando está activo */
 .liked .bi-heart {
-    color: red !important;
+    color: red;
     font-weight: bold;
 }
 
 /* Cambiar color del botón de comentario cuando está activo */
 .commented .bi-chat {
-    color: #007bff !important;
+    color: #007bff;
     font-weight: bold;
 }
 
-
+/* Estilo video Index*/
+@media (max-width: 992px) {
+    .img-index {
+        width: 80% !important;
+    }
+}
 @import '../bootstrap/scss/bootstrap.scss';

@@ -474,6 +474,53 @@
             </div>
         </section>
 
+        <!-- About Us Section -->
+        <section class="container-fluid my-element mb-4">
+            <div data-aos="fade-up">
+                <header class="d-flex align-items-center mt-5 justify-content-between py-3">
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                    <h2 class="text-primary fs-3 text-center">About <span
+                            class="text-primary"><strong>Us</strong></span></h2>
+                    <div class="border-top border-primary flex-grow-1 mx-5"></div>
+                </header>
+                <p class="fs-6 my-0 mx-2 text-center text-black">
+                    <span class="text-primary"><strong>World Travel</strong></span> turns every trip into an
+                    unforgettable experience.
+                </p>
+                <p class="fs-6 my-0 mx-2 text-center text-black">
+                    We are passionate about taking you beyond the ordinary, exploring destinations where
+                    <span class="text-primary"><strong>culture, adventure, and nature</strong></span> intertwine.
+                </p>
+                <p class="fs-6 mt-3 mb-5 mx-2 text-center text-black">
+                    Every corner of the world holds a unique journey.
+                    <span class="text-primary"><strong>Are you ready to discover it?</strong></span>
+                </p>
+            </div>
+
+            <!-- Flexbox container to center the video -->
+            <div class="d-flex justify-content-center">
+                <!-- Video style -->
+                <div class="img-destinations img-index shadow p-2 bg-body w-sm-50 rounded-5 h-100"
+                    style="width: 50%; position: relative;" data-aos="fade-up">
+                    <video class="img-fluid rounded-5 h-100 w-100 object-fit-cover custom-video"
+                        poster="../resources/img/Portada_AboutMe.svg" controls onclick="playVideo(this)" aria-label="At World Travel, we turn every trip into an unforgettable experience. 
+                        We are passionate about taking you beyond the ordinary, exploring destinations where culture,
+                        adventure, and nature intertwine.
+                        From the elegance of Udaipur, with its palaces and lakes, to the adrenaline of the Dubai desert,
+                        where the dunes come to life at sunset. Experience the magic of Sri Lanka, with its lush landscapes
+                        and the iconic train journey through mountains and waterfalls.
+                        More than just trips, we create moments that will last forever.
+                        💫 Your next adventure starts here. Are you ready to discover it?">
+                        <source src="../resources/video/about_us.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                    <!-- Custom Play Button -->
+                    <div class="custom-play-button" onclick="playVideo()">
+                        <i class="bi play bi-play"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Sección Recomendaciones -->
         <section class="container-fluid my-element mb-4">
@@ -693,6 +740,7 @@
             once: false,
         });
     </script>
+    <script src="../js/playVideos.js"></script>
     <script src="../js/carousel.js"></script>
     <script src="../js/scroll.js"></script>
 </body>

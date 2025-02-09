@@ -142,16 +142,13 @@
     animation: marqueeLoop 10s linear infinite;
   }
 }
-.travel-marquee:hover,
-.marquee-wrapper:hover {
-  animation-play-state: paused;
-}
-
 .travel-marquee .marquee-content {
   display: flex;
-  gap: 30px; /* Espaciado uniforme */
+  gap: 30px;
+  /* Espaciado uniforme */
   flex-shrink: 0;
-  padding-right: 30px; /* Agregar espacio al final */
+  padding-right: 30px;
+  /* Agregar espacio al final */
 }
 
 /* Bocadillos estilizados con sombra */
@@ -171,6 +168,11 @@
 /* Efecto al pasar el cursor */
 .bubble:hover {
   transform: scale(1.1);
+}
+
+.travel-marquee:hover,
+.marquee-wrapper:hover {
+  animation-play-state: paused;
 }
 
 /* Animación del marquee */
@@ -347,7 +349,8 @@ footer {
     width: 75%;
   }
 }
-html, body {
+html,
+body {
   overflow-x: clip;
 }
 
@@ -395,7 +398,8 @@ html, body {
 
 /* Animacion colecciones mg y comentarios */
 /* Animación del corazón */
-.heart-animation, .comment-animation {
+.heart-animation,
+.comment-animation {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -406,23 +410,30 @@ html, body {
   z-index: 10;
 }
 
-.heart-animation.fade-out, .comment-animation.fade-out {
+.heart-animation.fade-out,
+.comment-animation.fade-out {
   transform: translate(-50%, -50%) scale(1.5);
   opacity: 0;
 }
 
 /* Cambiar color del botón de me gusta cuando está activo */
 .liked .bi-heart {
-  color: red !important;
+  color: red;
   font-weight: bold;
 }
 
 /* Cambiar color del botón de comentario cuando está activo */
 .commented .bi-chat {
-  color: #007bff !important;
+  color: #007bff;
   font-weight: bold;
 }
 
+/* Estilo video Index*/
+@media (max-width: 992px) {
+  .img-index {
+    width: 80% !important;
+  }
+}
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
