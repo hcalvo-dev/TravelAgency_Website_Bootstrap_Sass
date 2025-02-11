@@ -467,4 +467,12 @@ body {
         width: 80% !important;
     }
 }
+
+.btn {
+    pointer-events: auto;
+}
+
+.full-height-video {
+    pointer-events: none;
+}
 @import '../bootstrap/scss/bootstrap.scss';

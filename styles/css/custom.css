@@ -434,6 +434,14 @@ body {
     width: 80% !important;
   }
 }
+.btn {
+  pointer-events: auto;
+}
+
+.full-height-video {
+  pointer-events: none;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
